@@ -1146,6 +1146,7 @@ h4{
 /*BLOG*/
 .main_blog{
     width: 100%;
+    margin-bottom: 20px;
 }
 
 /*ADVANTAGES*/
@@ -1158,6 +1159,7 @@ h4{
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .advantages_banner{
     margin: 0 auto;
@@ -1177,6 +1179,238 @@ h4{
     color: var(--black50);
     line-height: 21px;
 }
+.advantages_numbers{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.advantages_number{
+    display: flex;
+    flex-direction: column;
+}
+.advantages_number_title{
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 53px;
+    color: var(--primary1);
+    background-image: url("../img/advantage_number.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.advantages_number_text{
+    line-height: 21px;
+}
+
+/*SECTION QUESTIONS*/
+.questions{
+    background-color: var(--main-bg);
+    padding: 0 24px 20px;
+}
+.questions_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.questions_title{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--black50);
+}
+.questions_pagination{
+    display: flex;
+    gap: 22px;
+}
+.questions_pagination p{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--black30);
+}
+.questions_arrow:hover path {
+    stroke-opacity: 0.5;
+    cursor: pointer;
+}
+.question_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: var(--white100);
+}
+.question_list_item {
+    width: 100%;
+    border-radius: 12px;
+    background: rgb(249, 248, 254);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+.question_list_item input {
+    display: none;
+}
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    transition: background 0.3s;
+}
+.faq-question img{
+    height: 24px;
+    width: 24px;
+}
+.faq-answer {
+    min-width: 100%;
+    text-align: justify;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+.question_list_item input:checked ~ .faq-answer {
+    max-height: 250px; /* Достаточно для текста */
+    padding: 15px 0 0 0;
+}
+.question_list_item input:checked + label img {
+    transform: rotate(180deg);
+}
+/*SECTION LOCATIONS*/
+.locations{
+    background-color: var(--main-bg);
+    width: 100%;
+    margin-bottom: 20px;
+}
+.locations_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.locations_pagination{
+    display: none;
+}
+.locations_pagination p{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--black30);
+}
+.locations_arrow:hover path {
+    stroke-opacity: 0.5;
+    cursor: pointer;
+}
+.locations_title{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--black50);
+}
+.locations_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 12px;
+    gap: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: var(--white100);
+}
+.locations_item{
+    display: flex;
+    gap: 10px;
+}
+.locations_item_img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+}
+.locations_item_box{
+    display: flex;
+    flex-direction: column;
+}
+.locations_item_title{
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    color: var(--black100);
+}
+.locations_item_title::before{
+    content: url(../img/icons/location.svg);
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+.locations_item_amount{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--black50);
+}
+.locations_item_details{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    color: var(--purple2);
+}
+.locations_item_details::after{
+    content: url(../img/icons/location.svg);
+    margin-left: 10px;
+}
+/*SECTION NEED HELP*/
+.need_help{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-bottom: 20px;
+}
+.need_help_inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.need_help_text{
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black50);
+}
+.need_help_text:nth-child(1){
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--black50);
+    margin-right: 10px;
+}
+.need_help_btn{
+    width: 175px;
+    height: 42px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    color: var(--white100);
+    border-radius: 12px;
+}
+.need_help_btn p{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
 
 
 
@@ -1190,6 +1424,40 @@ h4{
 
 
 
+
+
+
+
+
+
+
+/*FOOTER*/
+.footer{
+    margin-top: auto;
+    border-top: 1px solid #E7E7E7;
+    background-color: var(--white100);
+}
+.footer_inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+.footer_content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: end;
+}
+.footer_links{
+    display: flex;
+    gap: 20px;
+}
+.footer_social{
+    display: flex;
+    gap: 20px;
+}
 
 /*ADAPTIVE*/
 @media (max-width: 1439px) {
@@ -1253,7 +1521,19 @@ h4{
     .who-need-it{
         padding: 0 24px;
     }
+    .main_blog{
+        padding: 0 24px;
+    }
     .advantages{
+        padding: 0 24px;
+    }
+    .locations{
+        padding: 0 24px;
+    }
+    .need_help{
+        padding: 0 24px;
+    }
+    .footer{
         padding: 0 24px;
     }
 }
@@ -1346,6 +1626,9 @@ h4{
         width: 235px;
         height: 185px;
     }
+    .locations_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media (max-width: 767px) {
     .subtitle-2{
@@ -1414,6 +1697,23 @@ h4{
     .advantages_banner_img {
         height: 100px;
     }
+    .advantages_number_title{
+        font-size: 28px;
+    }
+    .advantages_number_text{
+        font-size: 10px;
+    }
+    .need_help {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .need_help_text,
+    .need_help_text:nth-child(1){
+        font-size: 16px;
+    }
+    .need_help_btn{
+        margin: 0 auto;
+    }
 }
 @media (max-width: 639px) {
     .top_amount,
@@ -1456,6 +1756,22 @@ h4{
         mask-position: top center;
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
+    }
+    .advantages_numbers{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .advantages_number_title{
+        font-size: 32px;
+    }
+    .advantages_number_text{
+        font-size: 14px;
+    }
+    .locations_pagination{
+        display: flex;
+        gap: 22px;
+    }
+    .locations_list {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (max-width: 579px) {
@@ -1505,6 +1821,20 @@ h4{
     }
     .advantages_banner_title{
         min-height: 28px;
+    }
+    .advantages_number_title{
+        font-size: 28px;
+    }
+    .advantages_number_text{
+        font-size: 10px;
+    }
+    .footer_inner{
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    .footer_content {
+        align-items: center;
     }
 }
 @media (max-width: 375px) {
