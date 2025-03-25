@@ -1173,7 +1173,10 @@ h4{
     font-weight: 800;
     min-height: 28px;
 }
-
+.advantages_banner_text{
+    color: var(--black50);
+    line-height: 21px;
+}
 
 
 
@@ -1248,6 +1251,9 @@ h4{
         width: 40%;
     }
     .who-need-it{
+        padding: 0 24px;
+    }
+    .advantages{
         padding: 0 24px;
     }
 }
@@ -1399,11 +1405,14 @@ h4{
     .who-need-it_link{
         margin: 0 auto;
     }
+    .advantages_banners {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .advantages_banner_title{
+        min-height: 16px;
+    }
     .advantages_banner_img {
         height: 100px;
-    }
-    .advantages_banner_title {
-        min-height: 42px;
     }
 }
 @media (max-width: 639px) {
@@ -1448,12 +1457,6 @@ h4{
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
     }
-    .advantages_banners {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .advantages_banner_title{
-        min-height: 16px;
-    }
 }
 @media (max-width: 579px) {
     .features_link{
@@ -1496,6 +1499,9 @@ h4{
         top: -30px;
         left: -3px;
         z-index: 1;
+    }
+    .advantages_banners {
+        grid-template-columns: repeat(1, 1fr);
     }
     .advantages_banner_title{
         min-height: 28px;
