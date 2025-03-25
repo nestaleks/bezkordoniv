@@ -1478,9 +1478,13 @@ h4{
         display: block;
         text-align: center;
         gap: 40px 0;
+        overflow-y: auto;
     }
     .menu_list.menu--open {
         right: 0;
+    }
+    body.menu-open {
+        overflow: hidden; /* Блокировка прокрутки страницы, если открыто меню */
     }
     .menu_item-exit{
         display: block;

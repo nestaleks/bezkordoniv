@@ -943,9 +943,10 @@
 <script>
     document.querySelectorAll('.menu_btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            const menuList = btn.closest('.header-if-login, .header-if-logout')
-                .querySelector('.menu_list');
+            const header = btn.closest('.header-if-login, .header-if-logout');
+            const menuList = header.querySelector('.menu_list');
             menuList.classList.toggle('menu--open');
+            document.body.classList.toggle('menu-open'); // Блокировка прокрутки страницы, если открыто меню
         });
     });
 </script>
