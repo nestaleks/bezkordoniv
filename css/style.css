@@ -1482,6 +1482,9 @@ h4{
     .menu_list.menu--open {
         right: 0;
     }
+    .menu_item-exit{
+        display: block;
+    }
     .top_exit{
         display: none;
     }
