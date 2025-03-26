@@ -297,7 +297,7 @@ section {
     height: 2px;
     background-color: #E7E7E7;
     position: absolute;
-    top: 133px;
+    top: 132px;
     left: 0;
     right: 0;
 }
@@ -2022,12 +2022,8 @@ section {
 }
 .expert-card_info-button-info:hover,
 .expert-card_info-button-service:hover{
-    background-color: var(--white30);
-}
-.expert-card_info-button-info:active,
-.expert-card_info-button-service:active{
-    background-color: var(--white100);
     color: var(--primary1);
+    background-color: var(--white100);
 }
 .expert-card_info_items{
     display: grid;
@@ -2455,9 +2451,11 @@ label.star:before{
     padding: 16px;
 }
 .addreview_toolbar {
+    width: 266px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 }
 .addreview_toolbar-divider {
     width: 1px;
@@ -2803,6 +2801,20 @@ label.star:before{
     .my-experts_info_item:nth-child(3){
         border-right: 1px solid #E7E7E7;
     }
+    .expert-card_inner {
+        flex-direction: column;
+    }
+    .expert-card_right {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .expert-card_lastreviews {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .addreview_toolbar {
+        margin: 0;
+    }
 }
 @media (max-width: 767px) {
     .subtitle-2{
@@ -2914,6 +2926,10 @@ label.star:before{
         width: 100%;
         flex-direction: column;
     }
+    .expert-card_lastreviews {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }
 @media (max-width: 639px) {
     .top_amount,
