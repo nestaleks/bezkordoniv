@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bezkordoniv</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+        <header class="header">
+            <div class="header_inner">
+                <!--HEADER IF USER NOT LOGIN-->
+                <!--        <div class="header-if-logout">-->
+                <!--            <div class="header_top">-->
+                <!--                <div class="header_logo">-->
+                <!--                    <img src="./img/logo.svg" alt="">-->
+                <!--                    <p>Без Кордонів</p>-->
+                <!--                </div>-->
+                <!--                <div class="header_buttons">-->
+                <!--                    <button class="header_button-expert button-secondary">-->
+                <!--                        <p>Шукаєте Клієнта або Експерта?</p>-->
+                <!--                    </button>-->
+                <!--                    <button class="header_button-support button-clear">-->
+                <!--                        <p>Техн-підтримка</p>-->
+                <!--                    </button>-->
+                <!--                    <button class="header_button-login button-primary">-->
+                <!--                        <p>Увійти</p>-->
+                <!--                    </button>-->
+                <!--                    <button class="header_button-signup button-clear">-->
+                <!--                        <p>Реєстрація</p>-->
+                <!--                    </button>-->
+                <!--                    <button class="menu_btn">-->
+                <!--                        <span></span>-->
+                <!--                        <span></span>-->
+                <!--                        <span></span>-->
+                <!--                    </button>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--            <div class="header_divider"></div>-->
+                <!--            <nav class="menu">-->
+                <!--                <ul class="menu_list menu-if-logout">-->
+                <!--                    <li class="menu_item">-->
+                <!--                        <a class="menu_item-link" href="#">-->
+                <!--                            <svg class="menu_icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                <!--                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 0.125L13.3 4.85L13 5.75H12.5V11.5H1.50001V5.75H1.00001L0.700012 4.85L7.00001 0.125ZM2.50001 4.75V10.5H11.5V4.75L7.00001 1.375L2.50001 4.75Z" fill="black" fill-opacity="0.7"/>-->
+                <!--                            </svg>-->
+                <!--                            <p class="menu_item-text">Головна</p>-->
+                <!--                        </a>-->
+                <!--                    </li>-->
+                <!--                    <li class="menu_item">-->
+                <!--                        <a class="menu_item-link" href="#">-->
+                <!--                            <svg class="menu_icon" width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+                <!--                                <path id="Vector" d="M11.66 1C12.4 1 13 1.59 13 2.33L13 11.66C13 12.4 12.4 13 11.66 13L2.33 13C1.59 13 1 12.4 1 11.66L1 2.33C1 1.59 1.59 1 2.33 1L11.66 1ZM1 7L13 7M7 1L7 13" stroke="#000000" stroke-opacity="0.700000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>-->
+                <!--                            </svg>-->
+                <!--                            <p class="menu_item-text">інформаційна панель</p>-->
+                <!--                        </a>-->
+                <!--                    </li>-->
+                <!--                    <li class="menu_item">-->
+                <!--                        <a class="menu_item-link" href="#">-->
+                <!--                            <svg class="menu_icon" width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                <!--                                <path d="M0.979167 16.5714H1.70833V10.9286H0.979167C0.576448 10.9286 0.25 10.5788 0.25 10.1473V8.28125C0.25 7.84977 0.576448 7.5 0.979167 7.5H5.0625C5.46522 7.5 5.79167 7.84977 5.79167 8.28125V16.5714H6.52083C6.92355 16.5714 7.25 16.9212 7.25 17.3527V19.2188C7.25 19.6502 6.92355 20 6.52083 20H0.979167C0.576448 20 0.25 19.6502 0.25 19.2188V17.3527C0.25 16.9212 0.576448 16.5714 0.979167 16.5714ZM3.75 0C2.30023 0 1.125 1.25918 1.125 2.8125C1.125 4.36582 2.30023 5.625 3.75 5.625C5.19977 5.625 6.375 4.36582 6.375 2.8125C6.375 1.25918 5.19973 0 3.75 0Z" fill="black" fill-opacity="0.7"/>-->
+                <!--                            </svg>-->
+                <!--                            <p class="menu_item-text">Про нас</p>-->
+                <!--                        </a>-->
+                <!--                    </li>-->
+                <!--                    <li class="menu_item">-->
+                <!--                        <a class="menu_item-link" href="#">-->
+                <!--                            <svg class="menu_icon" width="22.000046" height="20.000000" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+                <!--                                <path id="Vector" d="M17 19C17 16.87 16.15 14.84 14.65 13.34C13.15 11.84 11.12 11 9 11C6.87 11 4.84 11.84 3.34 13.34C1.84 14.84 1 16.87 1 19M9 11C6.23 11 4 8.76 4 6C4 3.23 6.23 1 9 1C11.76 1 14 3.23 14 6C14 8.76 11.76 11 9 11M21 17.99C21 14.62 19 11.49 17 9.99C17.65 9.5 18.18 8.85 18.53 8.11C18.87 7.36 19.03 6.55 18.99 5.72C18.94 4.9 18.7 4.11 18.27 3.4C17.84 2.7 17.25 2.11 16.54 1.69" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>-->
+                <!--                            </svg>-->
+                <!--                            <p class="menu_item-text">Експерти</p>-->
+                <!--                        </a>-->
+                <!--                    </li>-->
+                <!--                </ul>-->
+                <!--                <div class="overlay"></div>-->
+                <!--            </nav>-->
+                <!--        </div>-->
+                <!--HEADER IF USER LOGIN-->
+                <div class="header-if-login">
+                    <div class="header_top">
+                        <div class="header_logo">
+                            <img src="./img/logo.svg" alt="">
+                            <p class="current_user_name">Вітаємо, Костянтине  👋</p>
+                        </div>
+                        <div class="header_buttons">
+                            <a href="#" class="top_amount">
+                                <img src="./img/icons/money.svg" alt="">
+                                <p class="top_amount_title">Баланс:</p>
+                                <p>$120.00</p>
+                            </a>
+                            <a href="#" class="top_next_appointment">
+                                <svg width="14.000000" height="15.333336" viewBox="0 0 14 15.3333" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M4.33 1L4.33 3.66M9.66 1L9.66 3.66M11.66 2.33C12.4 2.33 13 2.93 13 3.66L13 13C13 13.73 12.4 14.33 11.66 14.33L2.33 14.33C1.59 14.33 1 13.73 1 13L1 3.66C1 2.93 1.59 2.33 2.33 2.33L11.66 2.33ZM1 6.33L13 6.33" stroke="#000000" stroke-opacity="0.500000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
+                                <p class="top_next_appointment_title">Наступна зустріч:</p>
+                                <p>12:34:47</p>
+                            </a>
+                            <a href="#" class="top_messages">
+                                <svg width="15.333374" height="15.340660" viewBox="0 0 15.3334 15.3407" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M4.83 2.17C5.58 1.42 6.6 1 7.66 1C8.72 1 9.74 1.42 10.49 2.17C11.24 2.92 11.66 3.94 11.66 5C11.66 9.67 13.66 11 13.66 11L1.66 11C1.66 11 3.66 9.67 3.66 5C3.66 3.94 4.08 2.92 4.83 2.17ZM6.53 13.67C6.64 13.87 6.8 14.04 7 14.16C7.2 14.27 7.43 14.34 7.66 14.34C7.89 14.34 8.12 14.27 8.32 14.16C8.52 14.04 8.68 13.87 8.8 13.67M2.33 1C1.53 2.13 1 3.47 1 5M14.33 5C14.33 3.47 13.8 2.13 13 1" stroke="#000000" stroke-opacity="0.500000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
+                                <p class="messages-count">15</p>
+                            </a>
+                            <a href="#" class="top_notice">
+                                <svg width="14.672119" height="14.672310" viewBox="0 0 14.6721 14.6723" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M9.06 12.83C10.45 12.5 11.67 11.68 12.52 10.53C13.36 9.37 13.76 7.95 13.65 6.53C13.54 5.1 12.92 3.76 11.91 2.75C10.9 1.74 9.56 1.12 8.13 1.01C6.71 0.9 5.29 1.3 4.13 2.15C2.98 2.99 2.16 4.22 1.83 5.61C1.5 7 1.68 8.46 2.33 9.73L0.99 13.67L4.93 12.33C6.2 12.99 7.66 13.16 9.06 12.83Z" stroke="#000000" stroke-opacity="0.500000" stroke-width="2.000000" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="notice-count">5</p>
+                            </a>
+                            <a href="#" class="top_exit">
+                                <svg width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M5 13L2.33 13C1.97 13 1.64 12.85 1.39 12.6C1.14 12.35 1 12.02 1 11.66L1 2.33C1 1.97 1.14 1.64 1.39 1.39C1.64 1.14 1.97 1 2.33 1L5 1M9.66 10.33L13 7L9.66 3.66M13 7L5 7" stroke="#000000" stroke-opacity="0.500000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                            <button class="menu_btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header_divider"></div>
+                    <nav class="menu">
+                        <ul class="menu_list  menu-if-login">
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="./index.html">
+                                    <svg class="menu_icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 0.125L13.3 4.85L13 5.75H12.5V11.5H1.50001V5.75H1.00001L0.700012 4.85L7.00001 0.125ZM2.50001 4.75V10.5H11.5V4.75L7.00001 1.375L2.50001 4.75Z" fill="black" fill-opacity="0.7"/>
+                                    </svg>
+                                    <p class="menu_item-text">Головна</p>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="./dashboard.html">
+                                    <svg class="menu_icon" width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path id="Vector" d="M11.66 1C12.4 1 13 1.59 13 2.33L13 11.66C13 12.4 12.4 13 11.66 13L2.33 13C1.59 13 1 12.4 1 11.66L1 2.33C1 1.59 1.59 1 2.33 1L11.66 1ZM1 7L13 7M7 1L7 13" stroke="#000000" stroke-opacity="0.700000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                    </svg>
+                                    <p class="menu_item-text">інформаційна панель</p>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="#">
+                                    <svg class="menu_icon" width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.979167 16.5714H1.70833V10.9286H0.979167C0.576448 10.9286 0.25 10.5788 0.25 10.1473V8.28125C0.25 7.84977 0.576448 7.5 0.979167 7.5H5.0625C5.46522 7.5 5.79167 7.84977 5.79167 8.28125V16.5714H6.52083C6.92355 16.5714 7.25 16.9212 7.25 17.3527V19.2188C7.25 19.6502 6.92355 20 6.52083 20H0.979167C0.576448 20 0.25 19.6502 0.25 19.2188V17.3527C0.25 16.9212 0.576448 16.5714 0.979167 16.5714ZM3.75 0C2.30023 0 1.125 1.25918 1.125 2.8125C1.125 4.36582 2.30023 5.625 3.75 5.625C5.19977 5.625 6.375 4.36582 6.375 2.8125C6.375 1.25918 5.19973 0 3.75 0Z" fill="black" fill-opacity="0.7"/>
+                                    </svg>
+                                    <p class="menu_item-text">Про нас</p>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="./experts.html">
+                                    <svg class="menu_icon" width="22.000046" height="20.000000" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path id="Vector" d="M17 19C17 16.87 16.15 14.84 14.65 13.34C13.15 11.84 11.12 11 9 11C6.87 11 4.84 11.84 3.34 13.34C1.84 14.84 1 16.87 1 19M9 11C6.23 11 4 8.76 4 6C4 3.23 6.23 1 9 1C11.76 1 14 3.23 14 6C14 8.76 11.76 11 9 11M21 17.99C21 14.62 19 11.49 17 9.99C17.65 9.5 18.18 8.85 18.53 8.11C18.87 7.36 19.03 6.55 18.99 5.72C18.94 4.9 18.7 4.11 18.27 3.4C17.84 2.7 17.25 2.11 16.54 1.69" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                    </svg>
+                                    <p class="menu_item-text">Експерти</p>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="#">
+                                    <svg class="menu_icon" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.33333 1.33333V3.99999M9.66667 1.33333V3.99999M13 8.66666V3.99999C13 3.64637 12.8595 3.30723 12.6095 3.05719C12.3594 2.80714 12.0203 2.66666 11.6667 2.66666H2.33333C1.97971 2.66666 1.64057 2.80714 1.39052 3.05719C1.14048 3.30723 1 3.64637 1 3.99999V13.3333C1 13.687 1.14048 14.0261 1.39052 14.2761C1.64057 14.5262 1.97971 14.6667 2.33333 14.6667H7.66667M1 6.66666H13M9.66667 12.6667H13.6667M11.6667 10.6667V14.6667" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="menu_item-text">Мої зустрічі</p>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="#">
+                                    <svg class="menu_icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.1333 8.33333H11.14M4.46665 3.66667H12.4667C12.8203 3.66667 13.1594 3.80714 13.4095 4.05719C13.6595 4.30724 13.8 4.64638 13.8 5V11.6667C13.8 12.0203 13.6595 12.3594 13.4095 12.6095C13.1594 12.8595 12.8203 13 12.4667 13H3.13332C2.7797 13 2.44056 12.8595 2.19051 12.6095C1.94046 12.3594 1.79999 12.0203 1.79999 11.6667V2.33333C1.79999 1.97971 1.94046 1.64057 2.19051 1.39052C2.44056 1.14048 2.7797 1 3.13332 1H12.4667" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="menu_item-text">Гаманець</p>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="#">
+                                    <svg class="menu_icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.09993 7.66667C8.94088 7.66667 10.4333 6.17428 10.4333 4.33333C10.4333 2.49238 8.94088 1 7.09993 1C5.25899 1 3.7666 2.49238 3.7666 4.33333C3.7666 6.17428 5.25899 7.66667 7.09993 7.66667ZM7.09993 7.66667C8.51442 7.66667 9.87098 8.22857 10.8712 9.22876C11.8714 10.229 12.4333 11.5855 12.4333 13M7.09993 7.66667C5.68545 7.66667 4.32889 8.22857 3.3287 9.22876C2.3285 10.229 1.7666 11.5855 1.7666 13" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="menu_item-text">Профіль</p>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a class="menu_item-link" href="#">
+                                    <svg class="menu_icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.33333 1.33333V3.99999M9.66667 1.33333V3.99999M1 6.66666H13M2.33333 2.66666H11.6667C12.403 2.66666 13 3.26362 13 3.99999V13.3333C13 14.0697 12.403 14.6667 11.6667 14.6667H2.33333C1.59695 14.6667 1 14.0697 1 13.3333V3.99999C1 3.26362 1.59695 2.66666 2.33333 2.66666Z" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="menu_item-text">Календар</p>
+                                </a>
+                            </li>
+                            <li class="menu_item menu_item-exit">
+                                <a class="menu_item-link" href="#">
+                                    <svg class="menu_icon" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 13.5H2.33333C1.97971 13.5 1.64057 13.3595 1.39052 13.1095C1.14048 12.8594 1 12.5203 1 12.1667V2.83333C1 2.47971 1.14048 2.14057 1.39052 1.89052C1.64057 1.64048 1.97971 1.5 2.33333 1.5H5M9.66667 10.8333L13 7.5M13 7.5L9.66667 4.16667M13 7.5H5" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="menu_item-text">Вийти</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="overlay"></div>
+                    </nav>
+                </div>
+            </div>
+            <div class="header_divider2"></div>
+        </header>
+        <main class="main">
+            <!--BREADCRUMB-->
+            <div class="breadcrumb">
+                <div class="container">
+                    <ul class="breadcrumb-links">
+                        <li>
+                            <a href="#" class="breadcrumb-box">
+                                <svg width="20.000000" height="20.999512" viewBox="0 0 20 20.9995" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M13 19.99L13 11.99C13 11.73 12.89 11.47 12.7 11.29C12.51 11.1 12.26 10.99 12 10.99L8 10.99C7.73 10.99 7.48 11.1 7.29 11.29C7.1 11.47 7 11.73 7 11.99L7 19.99M1.18 8.15C1.3 7.89 1.48 7.65 1.7 7.47L8.7 1.47C9.06 1.16 9.52 1 10 1C10.47 1 10.93 1.16 11.29 1.47L18.29 7.47C18.51 7.65 18.69 7.89 18.81 8.15C18.93 8.42 19 8.7 19 8.99L19 17.99C19 18.52 18.78 19.03 18.41 19.41C18.03 19.78 17.53 19.99 17 19.99L3 19.99C2.46 19.99 1.96 19.78 1.58 19.41C1.21 19.03 1 18.52 1 17.99L1 8.99C0.99 8.7 1.06 8.42 1.18 8.15Z" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>/</li>
+                        <li>
+                            <div class="breadcrumb-box">
+                                <div class="breadcrumb-img">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 8H14M8 2V14M3.33333 2H12.6667C13.403 2 14 2.59695 14 3.33333V12.6667C14 13.403 13.403 14 12.6667 14H3.33333C2.59695 14 2 13.403 2 12.6667V3.33333C2 2.59695 2.59695 2 3.33333 2Z" stroke="#2E66E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+
+                                </div>
+                                <a href="#" class="breadcrumb-text">Дешборд</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--DASHBOARD-DIAGRAM-->
+            <section class="dashboard-diagram">
+                <div class="container">
+                    <h4 class="diagrams_title page_title">Дешборд</h4>
+                    <div class="dashboard_banners">
+                        <div class="dashboard_notification">
+                            <div class="dashboard_notification_buttons">
+                                <a href="#" class="dashboard_notice">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.86686 14C6.97845 14.203 7.14249 14.3722 7.34186 14.4901C7.54122 14.608 7.76858 14.6702 8.0002 14.6702C8.23181 14.6702 8.45917 14.608 8.65853 14.4901C8.8579 14.3722 9.02194 14.203 9.13353 14M2.66683 1.33334C1.86683 2.46668 1.3335 3.80001 1.3335 5.33334M14.6668 5.33334C14.6668 3.80001 14.1335 2.46668 13.3335 1.33334M4.00016 5.33334C4.00016 4.27248 4.42159 3.25506 5.17174 2.50492C5.92188 1.75477 6.9393 1.33334 8.00016 1.33334C9.06103 1.33334 10.0784 1.75477 10.8286 2.50492C11.5787 3.25506 12.0002 4.27248 12.0002 5.33334C12.0002 10 14.0002 11.3333 14.0002 11.3333H2.00016C2.00016 11.3333 4.00016 10 4.00016 5.33334Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="dashboard_notice-text">Новини</p>
+                                    <div class="dashboard_notification-btn">
+                                        <img class="dashboard_notification-btn-img" src="./img/icons/details-white.svg" alt="">
+                                        <p class="notice-count">5</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dashboard_amount">
+                                    <p class="dashboard_amount-text">Баланс:</p>
+                                    <p>$120.00</p>
+                                    <div class="dashboard_notification-btn">
+                                        <img class="dashboard_notification-btn-img" src="./img/icons/details-white.svg" alt="">
+                                    </div>
+                                </a>
+                                <a href="#" class="dashboard_messages">
+                                    <svg width="14.672363" height="14.672302" viewBox="0 0 14.6724 14.6723" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path id="Vector" d="M9.06 12.83C10.45 12.5 11.67 11.68 12.52 10.53C13.36 9.37 13.76 7.95 13.65 6.53C13.54 5.1 12.92 3.76 11.91 2.75C10.9 1.74 9.56 1.12 8.13 1.01C6.71 0.9 5.29 1.3 4.13 2.15C2.98 2.99 2.16 4.22 1.83 5.61C1.5 7 1.68 8.46 2.33 9.73L1 13.67L4.93 12.33C6.2 12.99 7.66 13.16 9.06 12.83Z" stroke="#000000" stroke-opacity="0.500000" stroke-width="2.000000" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="dashboard_messages-text">Повідомлення</p>
+                                    <div class="dashboard_notification-btn">
+                                        <img class="dashboard_notification-btn-img" src="./img/icons/details-white.svg" alt="">
+                                        <p class="messages-count">15</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="dashboard_appointment">
+                                    <p class="dashboard_appointment-text">Наступна зустріч:</p>
+                                    <p>12:34:47</p>
+                                    <div class="dashboard_notification-btn">
+                                        <img class="dashboard_notification-btn-img" src="./img/icons/details-white.svg" alt="">
+                                        <p class="dashboard_appointment_count">5</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dashboard_diagram">
+                            <img class="dashboard_diagram_img" src="./img/diagram.svg" alt="">
+                            <ul class="dashboard_diagram_list">
+                                <li class="diagram_list_item">
+                                    <svg width="10.000000" height="10.000000" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle id="Ellipse 3" cx="5.000000" cy="5.000000" r="5.000000" fill="#A35BFF" fill-opacity="1.000000"/>
+                                    </svg>
+                                    <p class="diagram_list_title">Doctors</p>
+                                    <p class="diagram_list_number">12</p>
+                                </li>
+                                <li class="diagram_list_item">
+                                    <svg width="10.000000" height="10.000000" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle id="Ellipse 3" cx="5.000000" cy="5.000000" r="5.000000" fill="#F8B647" fill-opacity="1.000000"/>
+                                    </svg>
+                                    <p class="diagram_list_title">Legal Experts</p>
+                                    <p class="diagram_list_number">8</p>
+                                </li>
+                                <li class="diagram_list_item">
+                                    <svg width="10.000000" height="10.000000" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle id="Ellipse 3" cx="5.000000" cy="5.000000" r="5.000000" fill="#4AC195" fill-opacity="1.000000"/>
+                                    </svg>
+                                    <p class="diagram_list_title">Teachers</p>
+                                    <p class="diagram_list_number">2</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--LAST MEETINGS-->
+            <section class="last-meetings">
+                <div class="container">
+                    <p class="last-meetings_title">Останні зустрічі</p>
+                    <div class="last-meetings_table-container">
+                        <div class="last-meetings_table">
+                            <div class="last-meetings_table-header">
+                                <div class="header-cell">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.33333 1.33334V4.00001M10.6667 1.33334V4.00001M2 6.66668H14M3.33333 2.66668H12.6667C13.403 2.66668 14 3.26363 14 4.00001V13.3333C14 14.0697 13.403 14.6667 12.6667 14.6667H3.33333C2.59695 14.6667 2 14.0697 2 13.3333V4.00001C2 3.26363 2.59695 2.66668 3.33333 2.66668Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Дата</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 7H13M7 1V13M2.33333 1H11.6667C12.403 1 13 1.59695 13 2.33333V11.6667C13 12.403 12.403 13 11.6667 13H2.33333C1.59695 13 1 12.403 1 11.6667V2.33333C1 1.59695 1.59695 1 2.33333 1Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Категорія</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50684 2.00002C5.26916 2.00002 4.08217 2.49169 3.207 3.36686C2.33183 4.24203 1.84017 5.42901 1.84017 6.66669C1.84017 8.10623 2.65129 9.65779 3.70533 11.0427C4.72418 12.3813 5.8933 13.4654 6.50684 13.9978C7.12037 13.4654 8.28949 12.3813 9.30834 11.0427C10.3624 9.65779 11.1735 8.10623 11.1735 6.66669C11.1735 5.42901 10.6818 4.24203 9.80667 3.36686C8.9315 2.49169 7.74451 2.00002 6.50684 2.00002ZM2.2642 2.42405C3.38941 1.29883 4.91554 0.666687 6.50684 0.666687C8.09814 0.666687 9.62426 1.29883 10.7495 2.42405C11.8747 3.54926 12.5068 5.07539 12.5068 6.66669C12.5068 8.55581 11.4716 10.4019 10.3693 11.8502C9.25159 13.3188 7.97998 14.4875 7.34319 15.0373C7.33184 15.0471 7.32016 15.0565 7.30817 15.0655C7.07713 15.2392 6.7959 15.3332 6.50684 15.3332C6.21777 15.3332 5.93654 15.2392 5.7055 15.0655C5.69351 15.0565 5.68183 15.0471 5.67048 15.0373C5.03369 14.4875 3.76208 13.3188 2.64434 11.8502C1.54205 10.4019 0.506836 8.55581 0.506836 6.66669C0.506836 5.07539 1.13898 3.54926 2.2642 2.42405ZM6.50684 5.33335C5.77046 5.33335 5.1735 5.93031 5.1735 6.66669C5.1735 7.40307 5.77046 8.00002 6.50684 8.00002C7.24322 8.00002 7.84017 7.40307 7.84017 6.66669C7.84017 5.93031 7.24322 5.33335 6.50684 5.33335ZM3.84017 6.66669C3.84017 5.19393 5.03408 4.00002 6.50684 4.00002C7.9796 4.00002 9.1735 5.19393 9.1735 6.66669C9.1735 8.13945 7.9796 9.33335 6.50684 9.33335C5.03408 9.33335 3.84017 8.13945 3.84017 6.66669Z" fill="black" fill-opacity="0.5"/>
+                                    </svg>
+
+                                    <p>Локація</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 1.33333C0 0.596954 0.596954 0 1.33333 0H10.6667C11.403 0 12 0.596954 12 1.33333V10.6667C12 11.403 11.403 12 10.6667 12H1.33333C0.596954 12 0 11.403 0 10.6667V1.33333ZM10.6667 1.33333H1.33333V10.6667H10.6667V1.33333Z" fill="black" fill-opacity="0.5"/>
+                                    </svg>
+                                    <p>Note</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 1.33333C0 0.596954 0.596954 0 1.33333 0H10.6667C11.403 0 12 0.596954 12 1.33333V10.6667C12 11.403 11.403 12 10.6667 12H1.33333C0.596954 12 0 11.403 0 10.6667V1.33333ZM10.6667 1.33333H1.33333V10.6667H10.6667V1.33333Z" fill="black" fill-opacity="0.5"/>
+                                    </svg>
+                                    <p>Summary</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 1.33333C0 0.596954 0.596954 0 1.33333 0H10.6667C11.403 0 12 0.596954 12 1.33333V10.6667C12 11.403 11.403 12 10.6667 12H1.33333C0.596954 12 0 11.403 0 10.6667V1.33333ZM10.6667 1.33333H1.33333V10.6667H10.6667V1.33333Z" fill="black" fill-opacity="0.5"/>
+                                    </svg>
+                                    <p>Documents</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.3333 8.33333H10.34M3.66667 3.66667H11.6667C12.0203 3.66667 12.3594 3.80714 12.6095 4.05719C12.8595 4.30724 13 4.64638 13 5V11.6667C13 12.0203 12.8595 12.3594 12.6095 12.6095C12.3594 12.8595 12.0203 13 11.6667 13H2.33333C1.97971 13 1.64057 12.8595 1.39052 12.6095C1.14048 12.3594 1 12.0203 1 11.6667V2.33333C1 1.97971 1.14048 1.64057 1.39052 1.39052C1.64057 1.14048 1.97971 1 2.33333 1H11.6667" stroke="black" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Cost</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.3335 6.66668L8.00016 9.33334L10.6668 6.66668M14.6668 8.00001C14.6668 11.6819 11.6821 14.6667 8.00016 14.6667C4.31826 14.6667 1.3335 11.6819 1.3335 8.00001C1.3335 4.31811 4.31826 1.33334 8.00016 1.33334C11.6821 1.33334 14.6668 4.31811 14.6668 8.00001Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Fee Status</p>
+                                </div>
+                                <div class="header-cell">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.3335 6.66668L8.00016 9.33334L10.6668 6.66668M14.6668 8.00001C14.6668 11.6819 11.6821 14.6667 8.00016 14.6667C4.31826 14.6667 1.3335 11.6819 1.3335 8.00001C1.3335 4.31811 4.31826 1.33334 8.00016 1.33334C11.6821 1.33334 14.6668 4.31811 14.6668 8.00001Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Appointment Status</p>
+                                </div>
+                            </div>
+                            <!-- Данные -->
+                            <div class="last-meetings_table-row">
+                                <div class="last-meetings_table-date table-cell">
+                                    <p>03.01.2025</p>
+                                </div>
+                                <div class="last-meetings_table-category table-cell">
+                                    <a href="">Медицина</a>
+                                </div>
+                                <div class="last-meetings_table-location table-cell">
+                                    <img src="./img/icons/online-icon.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-note table-cell">
+                                    <img src="./img/icons/note.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-summary table-cell">
+                                    <img src="./img/icons/summary.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-documents table-cell">
+                                    <img src="./img/icons/documents.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-cost table-cell">
+                                    <img src="./img/icons/money.svg" alt="">
+                                    <p>$100.00</p>
+                                </div>
+                                <div class="last-meetings_table-feestatus table-cell">
+                                    <img src="./img/icons/fee-paid.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-appointstatus table-cell">
+                                    <img src="./img/icons/appoints-canceled.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="last-meetings_table-row">
+                                <div class="last-meetings_table-date table-cell">
+                                    <p>03.01.2025</p>
+                                </div>
+                                <div class="last-meetings_table-category table-cell">
+                                    <a href="">Технічні експерти</a>
+                                </div>
+                                <div class="last-meetings_table-location table-cell">
+                                    <img src="./img/icons/online-icon.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-note table-cell">
+                                    <img src="./img/icons/note.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-summary table-cell">
+                                    <img src="./img/icons/summary.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-documents table-cell">
+                                    <img src="./img/icons/documents.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-cost table-cell">
+                                    <img src="./img/icons/money.svg" alt="">
+                                    <p>$100.00</p>
+                                </div>
+                                <div class="last-meetings_table-feestatus table-cell">
+                                    <img src="./img/icons/fee-notpaid.svg" alt="">
+                                </div>
+                                <div class="last-meetings_table-appointstatus table-cell">
+                                    <img src="./img/icons/appoints-scheduled.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <img class="footer_logo" src="./img/logo.svg" alt="">
+
+                    <div class="footer_content">
+                        <nav class="footer_links">
+                            <a class="footer_link" href="">FAQ</a>
+                            <a class="footer_link" href="">Jobs</a>
+                            <a class="footer_link" href="">Blog</a>
+                            <a class="footer_link" href="">Terms & Conditions</a>
+                        </nav>
+                        <div class="footer_social">
+                            <img src="./img/icons/facebook.svg" alt="">
+                            <img src="./img/icons/instagram.svg" alt="">
+                            <img src="./img/icons/linkedin.svg" alt="">
+                            <img src="./img/icons/telegram.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script>
+        document.querySelectorAll('.menu_btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const header = btn.closest('.header-if-login, .header-if-logout');
+                const menuList = header.querySelector('.menu_list');
+                menuList.classList.toggle('menu--open');
+                document.body.classList.toggle('menu-open'); // Блокировка прокрутки страницы, если открыто меню
+            });
+        });
+    </script>
+</body>
+</html>
