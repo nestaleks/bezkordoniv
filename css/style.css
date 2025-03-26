@@ -525,7 +525,6 @@ section {
 /*SECTION SEARCH*/
 .search_box{
     width: 100%;
-    margin-top: 133px;
     margin-bottom: 20px;
 }
 .search_box_inner{
@@ -2592,9 +2591,6 @@ label.star:before{
     .top_exit{
         display: none;
     }
-    .search_box{
-        margin-top: 67px;
-    }
     .search_box_inner{
         padding: 0 24px;
     }
@@ -2652,6 +2648,13 @@ label.star:before{
     .last-meetings{
         padding: 0 24px;
     }
+    .to-prev-page{
+        padding: 0 24px;
+    }
+    .expert-card{
+        padding: 0 24px;
+    }
+
 }
 
 @media (max-width: 1024px) {
