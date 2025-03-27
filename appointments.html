@@ -205,7 +205,7 @@
         </header>
         <main class="main">
             <!--BREADCRUMB-->
-            <div class="breadcrumb">
+            <nav class="breadcrumb">
                 <div class="container">
                     <ul class="breadcrumb-links">
                         <li>
@@ -219,36 +219,33 @@
                         <li>
                             <div class="breadcrumb-box">
                                 <div class="breadcrumb-img">
-                                    <svg width="22.000046" height="20.000000" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <path id="Vector" d="M17 19C17 16.87 16.15 14.84 14.65 13.34C13.15 11.84 11.12 11 9 11C6.87 11 4.84 11.84 3.34 13.34C1.84 14.84 1 16.87 1 19M9 11C6.23 11 4 8.76 4 6C4 3.23 6.23 1 9 1C11.76 1 14 3.23 14 6C14 8.76 11.76 11 9 11M21 17.99C21 14.62 19 11.49 17 9.99C17.65 9.5 18.18 8.85 18.53 8.11C18.87 7.36 19.03 6.55 18.99 5.72C18.94 4.9 18.7 4.11 18.27 3.4C17.84 2.7 17.25 2.11 16.54 1.69" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                    <svg width="14.666016" height="15.333328" viewBox="0 0 14.666 15.3333" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M4.33 1L4.33 3.66M9.66 1L9.66 3.66M13 8.33L13 3.66C13 3.31 12.85 2.97 12.6 2.72C12.35 2.47 12.01 2.33 11.66 2.33L2.33 2.33C1.98 2.33 1.64 2.47 1.39 2.72C1.14 2.97 1 3.31 1 3.66L1 13C1 13.35 1.14 13.69 1.39 13.94C1.64 14.19 1.98 14.33 2.33 14.33L7.66 14.33M1 6.33L13 6.33M9.66 12.33L13.66 12.33M11.66 10.33L11.66 14.33" stroke="#2E66E2" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
                                     </svg>
                                 </div>
-                                <a href="#" class="breadcrumb-text">Мої Експерти</a>
+                                <a href="#" class="breadcrumb-text">Мої Зустрічі</a>
                             </div>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <!--MY EXPERTS-->
-            <section class="my-experts">
+            </nav>
+            <!--MY APPOINTMENTS-->
+            <section class="appointments">
                 <div class="container">
-                    <h4 class="my-experts_title">Мої Експерти</h4>
-                    <div class="input-container">
-                        <div class="search_input_name">
-                            <img src="./img/icons/search.svg" alt="">
-                            <input type="text" placeholder="Імʼя, Спеціальність, Категорія">
-                        </div>
-                        <div class="divider"></div>
-                        <div class="search_input_place">
-                            <img src="./img/icons/location.svg" alt="">
-                            <input type="text" placeholder="Адреса, Індекс">
-                            <img src="./img/icons/filter.svg" alt="">
-                            <button class="search_btn button-primary" type="submit">
-                                <p>Пошук</p>
-                                <svg width="6.004028" height="10.008179" viewBox="0 0 6.00403 10.0082" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector" d="M1 9L5 5L1 1" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                                </svg>
-                            </button>
+                    <h4 class="appointments_title">Мої Зустрічі</h4>
+                    <div class="appointments-buttons">
+                        <div class="container">
+                            <div class="appointments-buttons_inner">
+                                <a href="#" class="appointments-buttons_link">
+                                    <p>Всі</p>
+                                </a>
+                                <a href="#" class="appointments-buttons_link">
+                                    <p>Поточні</p>
+                                </a>
+                                <a href="#" class="appointments-buttons_link">
+                                    <p>Історія</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="filters-dropdowns">
@@ -372,159 +369,143 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="my-experts_list">
-                        <li class="my-experts_card">
-                            <div class="my-experts_box">
-                                <div class="my-experts_content">
-                                    <div class="my-experts_head">
-                                        <img class="my-experts_img" src="./img/expert-1.png" alt="">
-                                        <!--одно и то же имя, но при разных разрешениях экрана отображается только одно из них-->
-                                        <a href="./expert-page.html" class="my-experts_name1">Антон Багінський</a>
-                                    </div>
-                                    <div class="my-experts_data">
-                                        <!--одно и то же имя, но при разных разрешениях экрана отображается только одно из них-->
-                                        <a href="./expert-page.html" class="my-experts_name2">Антон Багінський</a>
-                                        <a class="my-experts_country" href="#">Німеччина</a>
-                                        <div class="my-experts_amount">
-                                            <div class="my-experts_amount-rating">
-                                                <svg width="15.336609" height="14.714844" viewBox="0 0 15.3366 14.7148" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <path id="Vector" d="M7.48 1.05C7.53 1.01 7.6 1 7.66 1C7.73 1 7.79 1.01 7.85 1.05C7.91 1.08 7.95 1.13 7.98 1.19L9.52 4.31C9.62 4.52 9.77 4.69 9.96 4.83C10.14 4.96 10.36 5.05 10.58 5.08L14.03 5.59C14.09 5.6 14.15 5.63 14.2 5.67C14.26 5.71 14.29 5.77 14.31 5.83C14.33 5.89 14.34 5.96 14.32 6.02C14.3 6.09 14.27 6.14 14.22 6.19L11.73 8.62C11.57 8.78 11.45 8.97 11.38 9.19C11.3 9.41 11.29 9.64 11.33 9.87L11.91 13.29C11.93 13.36 11.92 13.43 11.89 13.49C11.87 13.55 11.83 13.6 11.77 13.64C11.72 13.68 11.66 13.7 11.59 13.71C11.52 13.71 11.46 13.7 11.4 13.67L8.32 12.05C8.12 11.94 7.89 11.89 7.66 11.89C7.43 11.89 7.21 11.94 7.01 12.05L3.93 13.67C3.87 13.7 3.8 13.71 3.74 13.71C3.67 13.7 3.61 13.68 3.55 13.64C3.5 13.6 3.46 13.55 3.44 13.49C3.41 13.43 3.4 13.36 3.41 13.29L4 9.87C4.04 9.64 4.02 9.41 3.95 9.19C3.88 8.97 3.76 8.78 3.59 8.62L1.1 6.19C1.06 6.15 1.02 6.09 1.01 6.02C0.99 5.96 0.99 5.89 1.01 5.83C1.03 5.77 1.07 5.71 1.12 5.67C1.17 5.62 1.23 5.6 1.3 5.59L4.74 5.08C4.97 5.05 5.19 4.96 5.37 4.83C5.56 4.69 5.71 4.52 5.81 4.31L7.35 1.19C7.38 1.13 7.42 1.08 7.48 1.05Z" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-                                                </svg>
-                                                <p>4,5 / 5</p>
-                                            </div>
-                                            <div class="my-experts_amount-appoints">
-                                                <svg width="14.666687" height="15.333374" viewBox="0 0 14.6667 15.3334" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <path id="Vector" d="M4.33 1L4.33 3.66M9.66 1L9.66 3.66M13 8.33L13 3.66C13 3.31 12.85 2.97 12.6 2.72C12.35 2.47 12.02 2.33 11.66 2.33L2.33 2.33C1.97 2.33 1.64 2.47 1.39 2.72C1.14 2.97 1 3.31 1 3.66L1 13C1 13.35 1.14 13.69 1.39 13.94C1.64 14.19 1.97 14.33 2.33 14.33L7.66 14.33M1 6.33L13 6.33M9.66 12.33L13.66 12.33M11.66 10.33L11.66 14.33" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                                                </svg>
-                                                <p>12 <span>консультацій</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="input-container">
+                        <div class="search_input_name">
+                            <img src="./img/icons/search.svg" alt="">
+                            <input type="text" placeholder="Імʼя, Спеціальність, Категорія">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search_input_place">
+                            <img src="./img/icons/location.svg" alt="">
+                            <input type="text" placeholder="Адреса, Індекс">
+                            <img src="./img/icons/filter.svg" alt="">
+                            <button class="search_btn button-primary" type="submit">
+                                <p>Пошук</p>
+                                <svg width="6.004028" height="10.008179" viewBox="0 0 6.00403 10.0082" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M1 9L5 5L1 1" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="appointments_list">
+                        <li class="appointments_item">
+                            <div class="appointments_item-header">
+                                <div class="appointments_item-date">
+                                    <img src="./img/icons/calendar-blue.svg" alt="">
+                                    <p>04.03.2025</p>
                                 </div>
-                                <button class="my-experts_new-appointment button-primary">
-                                    <p>Записатись</p>
-                                </button>
-                                <button class="my-experts_write-message button-secondary">
-                                    <p>Звʼязатись</p>
-                                </button>
+                                <div class="appointments_item-time">
+                                    <img src="./img/icons/clock-blue.svg" alt="">
+                                    <p>9:00</p>
+                                </div>
+                                <div class="appointments_item-location">
+                                    <img src="./img/icons/location-blue.svg" alt="">
+                                    <p>Online</p>
+                                </div>
                             </div>
-                            <div class="my-experts_info">
-                                <div class="my-experts_info_speciality">
-                                    <p class="my-experts_info_title">спеціальність</p>
-                                    <p class="my-experts_info_value">Сімейний лікар</p>
-                                </div>
-                                <ul class="my-experts_info_items">
-                                    <li class="my-experts_info_item">
-                                        <a class="categories_list_item3" href="">
-                                            <div class="">
-                                                <p class="categories_list_title3">Медицина</p>
-                                            </div>
-                                            <img class="categories_list_img3" src="./img/icons/ctgr_list_med.svg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">мови</p>
-                                        <p class="my-experts_info_value">Українська, німецька, англійська</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">досвід</p>
-                                        <p class="my-experts_info_value">4 роки</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">ціна за консультацію</p>
-                                        <p class="my-experts_info_value">50.00€  25.00€</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">вік</p>
-                                        <p class="my-experts_info_value">44 р.</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">локація</p>
-                                        <div class="my-experts_info_locations">
-                                            <img src="./img/icons/online-icon.svg" alt="">
-                                            <img src="./img/icons/on-site-icon.svg" alt="">
+                            <div class="appointments_item-body">
+                                <div class="appointments_item-info">
+                                    <div class="appointments_item-expert">
+                                        <img class="appointments_item-img" src="./img/expert-1.png" alt="">
+                                        <div class="appointments_item-about">
+                                            <p class="appointments_item-expert-name">Антон Багінський. Перша Консультація</p>
+                                            <div class="appointments_item-expert-speciality">Сімейний лікар</div>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                    <div class="appointments_item-payments">
+                                        <div class="appointments_item-cost">
+                                            <img src="./img/icons/money.svg" alt="">
+                                            <p>$100.00</p>
+                                        </div>
+                                        <button class="appointments_item-pay button-primary">
+                                            <img src="./img/icons/money-white.svg" alt="">
+                                            <p>Сплатити</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="appointments_item-status-box">
+                                    <div class="appointments_item-status">
+                                        <p>статус зустрічі</p>
+                                        <img src="./img/icons/waiting.svg" alt="">
+                                    </div>
+                                    <div class="appointments_item-payment-status">
+                                        <p>статус оплати</p>
+                                        <img src="./img/icons/approoved.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="appointments_item-buttons">
+                                    <button class="button-secondary">
+                                        <p>Відмінити</p>
+                                    </button>
+                                    <button class="button-secondary">
+                                        <img src="./img/icons/video_camera_front.svg" alt="">
+                                        <p>Дзвінок</p>
+                                    </button>
+                                </div>
                             </div>
                         </li>
-                        <li class="my-experts_card">
-                            <div class="my-experts_box">
-                                <div class="my-experts_content">
-                                    <div class="my-experts_head">
-                                        <img class="my-experts_img" src="./img/expert-2.png" alt="">
-                                        <!--одно и то же имя, но при разных разрешениях экрана отображается только одно из них-->
-                                        <p class="my-experts_name1">Оксана Поліщук</p>
-                                    </div>
-                                    <div class="my-experts_data">
-                                        <!--одно и то же имя, но при разных разрешениях экрана отображается только одно из них-->
-                                        <p class="my-experts_name2">Оксана Поліщук</p>
-                                        <a class="my-experts_country" href="#">Німеччина</a>
-                                        <div class="my-experts_amount">
-                                            <div class="my-experts_amount-rating">
-                                                <svg width="15.336609" height="14.714844" viewBox="0 0 15.3366 14.7148" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <path id="Vector" d="M7.48 1.05C7.53 1.01 7.6 1 7.66 1C7.73 1 7.79 1.01 7.85 1.05C7.91 1.08 7.95 1.13 7.98 1.19L9.52 4.31C9.62 4.52 9.77 4.69 9.96 4.83C10.14 4.96 10.36 5.05 10.58 5.08L14.03 5.59C14.09 5.6 14.15 5.63 14.2 5.67C14.26 5.71 14.29 5.77 14.31 5.83C14.33 5.89 14.34 5.96 14.32 6.02C14.3 6.09 14.27 6.14 14.22 6.19L11.73 8.62C11.57 8.78 11.45 8.97 11.38 9.19C11.3 9.41 11.29 9.64 11.33 9.87L11.91 13.29C11.93 13.36 11.92 13.43 11.89 13.49C11.87 13.55 11.83 13.6 11.77 13.64C11.72 13.68 11.66 13.7 11.59 13.71C11.52 13.71 11.46 13.7 11.4 13.67L8.32 12.05C8.12 11.94 7.89 11.89 7.66 11.89C7.43 11.89 7.21 11.94 7.01 12.05L3.93 13.67C3.87 13.7 3.8 13.71 3.74 13.71C3.67 13.7 3.61 13.68 3.55 13.64C3.5 13.6 3.46 13.55 3.44 13.49C3.41 13.43 3.4 13.36 3.41 13.29L4 9.87C4.04 9.64 4.02 9.41 3.95 9.19C3.88 8.97 3.76 8.78 3.59 8.62L1.1 6.19C1.06 6.15 1.02 6.09 1.01 6.02C0.99 5.96 0.99 5.89 1.01 5.83C1.03 5.77 1.07 5.71 1.12 5.67C1.17 5.62 1.23 5.6 1.3 5.59L4.74 5.08C4.97 5.05 5.19 4.96 5.37 4.83C5.56 4.69 5.71 4.52 5.81 4.31L7.35 1.19C7.38 1.13 7.42 1.08 7.48 1.05Z" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-                                                </svg>
-                                                <p>4,5 / 5</p>
-                                            </div>
-                                            <div class="my-experts_amount-appoints">
-                                                <svg width="14.666687" height="15.333374" viewBox="0 0 14.6667 15.3334" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <path id="Vector" d="M4.33 1L4.33 3.66M9.66 1L9.66 3.66M13 8.33L13 3.66C13 3.31 12.85 2.97 12.6 2.72C12.35 2.47 12.02 2.33 11.66 2.33L2.33 2.33C1.97 2.33 1.64 2.47 1.39 2.72C1.14 2.97 1 3.31 1 3.66L1 13C1 13.35 1.14 13.69 1.39 13.94C1.64 14.19 1.97 14.33 2.33 14.33L7.66 14.33M1 6.33L13 6.33M9.66 12.33L13.66 12.33M11.66 10.33L11.66 14.33" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                                                </svg>
-                                                <p>12 <span>консультацій</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <li class="appointments_item">
+                            <div class="appointments_item-header">
+                                <div class="appointments_item-date">
+                                    <img src="./img/icons/calendar-blue.svg" alt="">
+                                    <p>24.03.2025</p>
                                 </div>
-                                <button class="my-experts_new-appointment button-primary">
-                                    <p>Записатись</p>
-                                </button>
-                                <button class="my-experts_write-message button-secondary">
-                                    <p>Звʼязатись</p>
-                                </button>
+                                <div class="appointments_item-time">
+                                    <img src="./img/icons/clock-blue.svg" alt="">
+                                    <p>15:45</p>
+                                </div>
+                                <div class="appointments_item-location">
+                                    <img src="./img/icons/location-blue.svg" alt="">
+                                    <p>Alte Elbgaustraße 14</p>
+                                </div>
                             </div>
-                            <div class="my-experts_info">
-                                <div class="my-experts_info_speciality">
-                                    <p class="my-experts_info_title">спеціальність</p>
-                                    <p class="my-experts_info_value">Оскарження адміністративних рішень, спадкові справи, пенсійні справи</p>
-                                </div>
-                                <ul class="my-experts_info_items">
-                                    <li class="my-experts_info_item">
-                                        <a class="categories_list_item3" href="">
-                                            <div class="">
-                                                <p class="categories_list_title3">Адвокат</p>
-                                            </div>
-                                            <img class="categories_list_img3" src="./img/icons/ctgr_list_law.svg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">мови</p>
-                                        <p class="my-experts_info_value">Українська, англійська</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">досвід</p>
-                                        <p class="my-experts_info_value">5 років</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">ціна за консультацію</p>
-                                        <p class="my-experts_info_value">50.00€  25.00€</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">вік</p>
-                                        <p class="my-experts_info_value">40 р.</p>
-                                    </li>
-                                    <li class="my-experts_info_item">
-                                        <p class="my-experts_info_title">локація</p>
-                                        <div class="my-experts_info_locations">
-                                            <img src="./img/icons/online-icon.svg" alt="">
+                            <div class="appointments_item-body">
+                                <div class="appointments_item-info">
+                                    <div class="appointments_item-expert">
+                                        <img class="appointments_item-img" src="./img/expert-3.png" alt="">
+                                        <div class="appointments_item-about">
+                                            <p class="appointments_item-expert-name">Марта Скандинавська. Пломбування</p>
+                                            <div class="appointments_item-expert-speciality">Дантист</div>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                    <div class="appointments_item-payments">
+                                        <div class="appointments_item-cost">
+                                            <img src="./img/icons/money.svg" alt="">
+                                            <p>$100.00</p>
+                                        </div>
+                                        <button class="appointments_item-pay button-primary">
+                                            <img src="./img/icons/money-white.svg" alt="">
+                                            <p>Сплатити</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="appointments_item-status-box">
+                                    <div class="appointments_item-status">
+                                        <p>статус зустрічі</p>
+                                        <img src="./img/icons/waiting.svg" alt="">
+                                    </div>
+                                    <div class="appointments_item-payment-status">
+                                        <p>статус оплати</p>
+                                        <img src="./img/icons/approoved.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="appointments_item-buttons">
+                                    <button class="button-secondary">
+                                        <p>Відмінити</p>
+                                    </button>
+                                    <button class="button-secondary">
+                                        <img src="./img/icons/video_camera_front.svg" alt="">
+                                        <p>Дзвінок</p>
+                                    </button>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
+            
+            
+
         </main>
         <!--FOOTER-->
         <footer class="footer">
