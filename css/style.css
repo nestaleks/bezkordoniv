@@ -2627,6 +2627,7 @@ label.star:before{
     display: flex;
     gap: 10px;
     margin-bottom: 13px;
+    cursor: pointer;
 }
 .appointments_item-img{
     border-radius: 50%;
@@ -2682,7 +2683,6 @@ label.star:before{
     display: flex;
     border-top: 1px solid var(--black10);
     border-bottom: 1px solid var(--black10);
-    
 }
 .appointments_item-status{
     width: 100%;
@@ -2724,22 +2724,196 @@ label.star:before{
     line-height: 21px;
 }
 
+/* APPOINTMENT */
+.appointment_title{
+    color: var(--black50);
+    margin-bottom: 20px;
+}
+.appointment_item{
+    border-radius: 8px;
+    background-color: var(--white100);
+}
+.appointment_item-header{
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--primary7);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 10px;
+    line-height: 15px;
+}
+.appointment_item-date{
+    display: flex;
+    gap: 6px;
+    width: 78px;
+}
+.appointment_item-time{
+    display: flex;
+    gap: 6px;
+    width: 58px;
+}
+.appointment_item-location{
+    display: flex;
+    gap: 6px;
+}
+.appointment_item-body{
+    display: flex;
+    border: 1px solid var(--black10);
+    border-radius: 8px;
+}
+.appointment_item-left{
+    min-width: 240px;
+}
+.appointment_item-expert{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px;
+    border-bottom: 1px solid var(--black10);
+}
+.appointment_item-img{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+.appointment_item-expert-name{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+.appointment_item-expert-speciality{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.appointment_item-payments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black10);
+}
+.appointment_item-cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--black10);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+}
+.appointment_item-pay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    
+}
+.appointment_item-cost img,
+.appointment_item-pay img{
+    width: 16px;
+    height: 16px;
+}
+.appointment_item-status-box{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid var(--black10);
+}
+.appointment_item-status{
+    width: 100%;
+    border-right: 1px solid var(--black10);
+    padding: 12px;
+}
+.appointment_item-payment-status{
+    width: 100%;
+    padding: 12px;
+}
+.appointment_item-status p,
+.appointment_item-payment-status p{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black50);
+}
+.appointment_item-category{
+    padding: 12px;
+    border-bottom: 1px solid var(--black10);
+}
+.appointment_item-experience{
+    padding: 12px;
+    border-bottom: 1px solid var(--black10);
+}
+.appointment_item-languages{
+    padding: 12px;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.appointment_item-right{
+    width: 100%;
+    border-left: 1px solid var(--black10);
+    background-color: var(--main-bg);
+}
+.appointment_item-buttons{
+    padding: 12px;
+    border-bottom: 1px solid var(--black10);
+}
+.appointment_item-buttons{
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background-color: var(--white100);
+}
+.appointment_item-buttons button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    height: 39px;
+}
+.appointment_item-buttons img{
+    width: 16px;
+    height: 16px;
+}
+.appointment_item-buttons p{
+    font-weight: 800;
+    line-height: 21px;
+}
+.appointment_item-files{
+    padding: 12px;
+}
+.appointment_item-files button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: Circe;
+    background-color: var(--white100);
+    color: var(--black50);
+    border: 1px solid var(--black10);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+.appointment_item-files button p{
+    margin-top: 3px;
+}
 
 
 
@@ -2850,6 +3024,9 @@ label.star:before{
         padding: 0 24px;
     }
     .appointments {
+        padding: 0 24px;
+    }
+    .appointment {
         padding: 0 24px;
     }
 }
