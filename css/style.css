@@ -152,6 +152,18 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
 }
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
+header, footer {
+    flex: 0 0 auto;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -2885,6 +2897,8 @@ label.star:before{
 
 
 .appointment_item-right{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     border-left: 1px solid var(--black-10);
     background-color: var(--background);
