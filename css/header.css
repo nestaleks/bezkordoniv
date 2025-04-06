@@ -206,7 +206,7 @@
 .menu_item:hover .menu_icon path {
     stroke: var(--primary-01);
 }
-.menu_item-link{
+.menu_link{
     display: flex;
     justify-content: center;
     align-items: center;
