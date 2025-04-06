@@ -911,10 +911,10 @@
     <script>
         document.querySelectorAll('.menu_btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                const header = btn.closest('.header-if-login, .header-if-logout');
-                const menuList = header.querySelector('.menu_list');
+                // Находим меню напрямую, без использования closest
+                const menuList = document.querySelector('.menu_list');
                 menuList.classList.toggle('menu--open');
-                document.body.classList.toggle('menu-open'); // Блокировка прокрутки страницы, если открыто меню
+                document.body.classList.toggle('menu-open');
             });
         });
 
@@ -924,13 +924,13 @@
             const loginMenuItems = document.querySelectorAll('.menu-if-login');
             
             if (isLoggedIn) {
-                logoutBlock.hidden = true;
-                loginBlock.hidden = false;
-                loginMenuItems.forEach(item => item.hidden = false);
+                logoutBlock.classList.add('hidden');
+                loginBlock.classList.remove('hidden');
+                loginMenuItems.forEach(item => item.classList.remove('hidden'));
             } else {
-                logoutBlock.hidden = false;
-                loginBlock.hidden = true;
-                loginMenuItems.forEach(item => item.hidden = true);
+                logoutBlock.classList.remove('hidden');
+                loginBlock.classList.add('hidden');
+                loginMenuItems.forEach(item => item.classList.add('hidden'));
             }
         }
     </script>
