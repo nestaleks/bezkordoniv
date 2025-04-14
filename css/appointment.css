@@ -1,0 +1,192 @@
+/* APPOINTMENT */
+.appointment-title{
+    color: var(--black-50);
+    margin-bottom: 20px;
+}
+.appointment-item{
+    border-radius: 8px;
+    background-color: var(--white-100);
+}
+.appointment-item-header{
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--primary-07);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 10px;
+    line-height: 15px;
+}
+.appointment-item-date{
+    display: flex;
+    gap: 6px;
+    width: 78px;
+}
+.appointment-item-time{
+    display: flex;
+    gap: 6px;
+    width: 58px;
+}
+.appointment-item-location{
+    display: flex;
+    gap: 6px;
+}
+.appointment-item-body{
+    display: flex;
+    border: 1px solid var(--black-10);
+    border-radius: 8px;
+}
+.appointment-item-left{
+    min-width: 240px;
+}
+.appointment-item-expert{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.appointment-item-img{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+.appointment-item-expert-name{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+.appointment-item-expert-speciality{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.appointment-item-payments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.appointment-item-cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+}
+.appointment-item-pay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    
+}
+.appointment-item-cost img,
+.appointment-item-pay img{
+    width: 16px;
+    height: 16px;
+}
+.appointment-item-status-box{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid var(--black-10);
+}
+.appointment-item-status{
+    width: 100%;
+    border-right: 1px solid var(--black-10);
+    padding: 12px;
+}
+.appointment-item-payment-status{
+    width: 100%;
+    padding: 12px;
+}
+.appointment-item-status p,
+.appointment-item-payment-status p{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.appointment-item-category{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.appointment-item-experience{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.appointment-item-languages{
+    padding: 12px;
+}
+
+
+
+.appointment-item-right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-left: 1px solid var(--black-10);
+    background-color: var(--background);
+}
+.appointment-item-buttons{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.appointment-item-buttons{
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background-color: var(--white-100);
+}
+.appointment-item-buttons button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    height: 39px;
+}
+.appointment-item-buttons img{
+    width: 16px;
+    height: 16px;
+}
+.appointment-item-buttons p{
+    font-weight: 800;
+    line-height: 21px;
+}
+.appointment-item-files{
+    padding: 12px;
+}
+.appointment-item-files button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: Circe;
+    background-color: var(--white-100);
+    color: var(--black-50);
+    border: 1px solid var(--black-10);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+.appointment-item-files button p{
+    margin-top: 3px;
+}

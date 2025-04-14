@@ -1,0 +1,38 @@
+/* Bez kordoniv styles */
+
+/* Import main styles */
+@import url(./css/reset.css);
+@import url(./css/variables.css);
+@import url(./css/fonts.css);
+@import url(./css/base.css);
+
+/* Import component styles */
+
+/* Buttons styles */
+@import url(./css/buttons.css);
+/* Header styles */
+@import url(./css/header.css);
+/* Footer styles */
+@import url(./css/footer.css);
+/*Components styles*/
+@import url(./css/components.css);
+/* Breadcrumb styles */
+@import url(./css/breadcrumb.css);
+
+
+/* Import pages styles */
+/* Home */
+@import url(./css/home.css);
+
+/* Dashboard */
+@import url(./css/dashboard.css);
+/* Experts List */
+@import url(./css/experts-list.css);
+/* Expert page */
+@import url(./css/expert.css);
+/* Calendar  */
+@import url(./css/calendar.css);
+/* Appointments List*/
+@import url(./css/appointments.css);
+/* Appointment*/
+@import url(./css/appointment.css);

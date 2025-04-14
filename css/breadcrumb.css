@@ -1,0 +1,31 @@
+/*BREADCRUMB*/
+.breadcrumb {
+    padding-top: 24px;
+}
+.breadcrumb-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.breadcrumb-box{
+    height: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 7px;
+    border-radius: 12px;
+    background: var(--primary-08);
+}
+.breadcrumb-box svg{
+    height: 16px;
+    width: 16px;
+}
+.breadcrumb-img svg path{
+    stroke: var(--primary-01);
+}
+.breadcrumb-text {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    color: var(--primary-01);
+}
