@@ -267,6 +267,14 @@
     font-weight: 800;
     line-height: 24px;
     background-color: var(--white-100);
+    z-index: 2;
+}
+.category-tile img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 .category-tile.color-1 {
     background: radial-gradient(50% 50% at 50% 50%, #D1DDF9 0%, #B9CCF5 100%);
