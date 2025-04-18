@@ -1,4 +1,3 @@
-
 // Menu Toggle
 document.querySelectorAll('.menu-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -24,8 +23,6 @@ function updateHeader(isLoggedIn) {
         loginMenuItems.forEach(item => item.classList.add('hidden'));
     }
 }
-
-
 
 // Category Slider
 function initCategoriesSlider() {
@@ -58,7 +55,6 @@ function initCategoriesSlider() {
         }
     }
 
-    // Получаем текущее количество слайдов для отображения
     let slidesPerView = getSlidesPerView();
 
     // Вычисляем общее количество позиций с учетом адаптивности
@@ -146,8 +142,6 @@ function initCategoriesSlider() {
     prevBtn.addEventListener('click', prevSlide);
 }
 
-
-
 // Top Experts Slider
 function initExpertsSlider() {
     const slider = document.querySelector('.top-experts-list');
@@ -179,7 +173,6 @@ function initExpertsSlider() {
         }
     }
 
-    // Получаем текущее количество слайдов для отображения
     let slidesPerView = getSlidesPerView();
 
     // Вычисляем общее количество позиций с учетом адаптивности
@@ -267,7 +260,6 @@ function initExpertsSlider() {
     prevBtn.addEventListener('click', prevSlide);
 }
 
-
 // Blog Slider
 function initBlogSlider() {
     const slider = document.querySelector('.main-blog-list');
@@ -299,7 +291,6 @@ function initBlogSlider() {
         }
     }
 
-    // Получаем текущее количество слайдов для отображения
     let slidesPerView = getSlidesPerView();
 
     // Вычисляем общее количество позиций с учетом адаптивности
@@ -398,26 +389,22 @@ function initFaqCategories() {
 
     // Функция для отображения вопросов выбранной категории
     function showCategory(categoryId) {
-        // Убираем активный класс со всех категорий
-        categories.forEach(cat => {
-            cat.classList.remove('active');
+        // Обновляем активный класс у категорий
+        categories.forEach(category => {
+            if (category.id === categoryId) {
+                category.classList.add('active');
+            } else {
+                category.classList.remove('active');
+            }
         });
 
-        // Добавляем активный класс для выбранной категории
-        const activeCategory = document.getElementById(categoryId);
-        if (activeCategory) {
-            activeCategory.classList.add('active');
-        }
-
-        // Скрываем все вопросы
+        // Показываем/скрываем вопросы
         questionItems.forEach(item => {
-            item.classList.remove('visible');
-        });
-
-        // Показываем вопросы соответствующей категории
-        const visibleQuestions = document.querySelectorAll(`.question-list-item[data-category="${categoryId}"]`);
-        visibleQuestions.forEach(question => {
-            question.classList.add('visible');
+            if (item.dataset.category === categoryId) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
         });
     }
 
@@ -433,6 +420,35 @@ function initFaqCategories() {
     const firstCategoryId = categories[0].id;
     showCategory(firstCategoryId);
 }
+
+// Expert card tabs
+document.addEventListener('DOMContentLoaded', function() {
+    const infoButton = document.querySelector('.expert-card-info-button-info');
+    const serviceButton = document.querySelector('.expert-card-info-button-service');
+    const infoBox = document.querySelector('.expert-card-info-box');
+    const serviceBox = document.querySelector('.expert-card-service-box');
+
+    if (infoButton && serviceButton && infoBox && serviceBox) {
+        // По умолчанию показываем информационный таб
+        infoBox.style.display = 'block';
+        serviceBox.style.display = 'none';
+        infoButton.classList.add('active');
+
+        infoButton.addEventListener('click', () => {
+            infoBox.style.display = 'block';
+            serviceBox.style.display = 'none';
+            infoButton.classList.add('active');
+            serviceButton.classList.remove('active');
+        });
+
+        serviceButton.addEventListener('click', () => {
+            infoBox.style.display = 'none';
+            serviceBox.style.display = 'block';
+            serviceButton.classList.add('active');
+            infoButton.classList.remove('active');
+        });
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     initCategoriesSlider();

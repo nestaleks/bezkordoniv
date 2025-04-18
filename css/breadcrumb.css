@@ -1,6 +1,9 @@
 /*BREADCRUMB*/
 .breadcrumb {
-    padding-top: 24px;
+    padding: 20px 0;
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
 }
 .breadcrumb-links{
     display: flex;
@@ -8,24 +11,44 @@
     gap: 10px;
 }
 .breadcrumb-box{
-    height: 28px;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 5px 7px;
+    padding: 5px 10px;
     border-radius: 12px;
-    background: var(--primary-08);
+    background-color: var(--black-10);
+    color: var(--primary-05);
+    transition: all 0.3s ease;
+}
+.breadcrumb-box:hover {
+    background-color: var(--primary-07);
+    color: var(--black-50);
+}
+.breadcrumb-box.active {
+    background-color: var(--primary-08);
+    color: var(--primary-01);
 }
 .breadcrumb-box svg{
     height: 16px;
     width: 16px;
+    color: var(--black-50);
 }
 .breadcrumb-img svg path{
     stroke: var(--primary-01);
 }
 .breadcrumb-text {
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 18px;
-    color: var(--primary-01);
+}
+.breadcrumb-separator {
+    color: var(--black-50);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.breadcrumb-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

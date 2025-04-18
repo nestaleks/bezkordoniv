@@ -24,6 +24,12 @@
 /* Home */
 @import url(./css/home.css);
 
+/* Signup */
+@import url(./css/signup.css);
+/* Login */
+@import url(./css/login.css);
+/* Reset password */
+@import url(./css/reset-password.css);
 /* Dashboard */
 @import url(./css/dashboard.css);
 /* Experts List */
