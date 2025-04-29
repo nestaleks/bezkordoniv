@@ -1,0 +1,77 @@
+
+/* Primary button */
+.button-primary {
+    font-family: Circe;
+    border: none;
+    padding: 0;
+    background-color: var(--secondary-02);
+    color: var(--white-100);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+.button-primary:hover{
+    background-color: var(--secondary-03);
+}
+.button-primary:active{
+    background-color: var(--secondary-01);
+}
+
+/* Secondary button */
+.button-secondary {
+    font-family: Circe;
+    padding: 0;
+    background-color: var(--white-100);
+    border-radius: 12px;
+    border: 1px solid rgb(248, 182, 71);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    color: var(--black-50);
+}
+.button-secondary:hover{
+    background-color: var(--white-10);
+}
+.button-secondary:active{
+    background-color: var(--black-10);
+}
+
+/* Contained button */
+.button-contained {
+    font-family: Circe;
+    border: none;
+    padding: 0;
+    background-color: var(--secondary-07);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+.button-contained:hover{
+    background-color: var(--secondary-03);
+}
+.button-contained:active{
+    background-color: var(--secondary-01);
+}
+
+/* Clear button */
+.button-clear {
+    font-family: Circe;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    color: var(--secondary-02);
+}
+.button-clear:hover{
+    background-color: var(--black-10);
+    color: var(--black-50);
+}
+.button-clear:active{
+    background-color: var(--black-20);
+    color: var(--black-50);
+}

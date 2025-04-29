@@ -1,0 +1,52 @@
+/* Bez kordoniv styles */
+
+/* Import main styles */
+@import url(./css/reset.css);
+@import url(./css/variables.css);
+@import url(./css/fonts.css);
+@import url(./css/base.css);
+
+/* Import component styles */
+
+/* Buttons styles */
+@import url(./css/buttons.css);
+/* Header styles */
+@import url(./css/header.css);
+/* Footer styles */
+@import url(./css/footer.css);
+/*Components styles*/
+@import url(./css/components.css);
+/* Breadcrumb styles */
+@import url(./css/breadcrumb.css);
+/* Filter styles */
+@import url(./css/filter-dropdown.css);
+
+
+/* Import pages styles */
+/* Home */
+@import url(./css/home.css);
+
+/* Signup */
+@import url(./css/signup.css);
+/* Login */
+@import url(./css/login.css);
+/* Reset password */
+@import url(./css/reset-password.css);
+/* FAQ */
+@import url(./css/faq.css);
+/* Dashboard */
+@import url(./css/dashboard.css);
+/* Experts List */
+@import url(./css/experts.css);
+/* Expert page */
+@import url(./css/expert-page.css);
+/* Calendar  */
+@import url(./css/calendar.css);
+/* Appointments List*/
+@import url(./css/appointments.css);
+/* Appointment*/
+@import url(./css/appointment.css);
+/* Client Profile */
+@import url(./css/client-profile.css);
+/* Expert Profile */
+@import url(./css/expert-profile.css);

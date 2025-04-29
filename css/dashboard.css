@@ -1,0 +1,284 @@
+/*DASHBOARD*/
+.dashboard-banners{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.dashboard-notification{
+    width: 100%;
+    position: relative;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-08);
+    border-radius: 12px;
+}
+.dashboard-notification-buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 10px;
+    height: 140px;
+    padding: 23px 20px;
+}
+.dashboard-notice,
+.dashboard-messages,
+.dashboard-appointment,
+.dashboard-amount{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 2px 2px 2px 12px;
+    color: var(--black-50);
+    background-color: var(--white-100);
+    position: relative;
+    border-radius: 12px;
+    width: 100%;
+    height: 42px;
+}
+.dashboard-notification-btn{
+    margin-left: auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background-color: var(--secondary-02);
+    padding: 14px;
+}
+.dashboard-notification-btn-img{
+    height: 10px;
+    width: 10px;
+}
+.dashboard-diagram{
+    min-width: 398px;
+    height: 140px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--white-100);
+}
+.dashboard-diagram-img{
+    width: 100px;
+    height: 100px;
+}
+.dashboard-diagram-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.diagram-list-item{
+    display: flex;
+    width: 238px;
+}
+.diagram-list-title{
+    margin-left: 6px;
+}
+.diagram-list-number{
+    margin-left: auto;
+}
+
+
+/*LAST MEETINGS*/
+.last-meetings-title{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--black-50);
+    margin-bottom: 20px;
+}
+
+.last-meetings-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.last-meeting-card{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid var(--black-10);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08),0px 1px 4px 0px rgba(0, 0, 0, 0.04);
+}
+
+.last-meeting-header{
+    background-color: var(--white-100);
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    /* border: 1px solid var(--black-10); */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+.last-meeting-img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    border-radius: 40px;
+    background-color: var(--secondary-08);
+}
+.last-meeting-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.last-meeting-header:hover{
+    background-color: var(--black-10);
+}
+
+.last-meeting-title{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+
+.last-meeting-pills{
+    display: flex;
+    gap: 12px;
+}
+
+.last-meeting-pills div{
+    display: flex;
+    gap: 6px;
+}
+
+.last-meeting-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.last-meeting-content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+    border-top: 1px solid var(--black-10);
+    border-right: 1px solid var(--black-10);
+    border-bottom: 1px solid var(--black-10);
+}
+
+.last-meeting-content > div:nth-child(even) {
+    border-right: none;
+}
+.last-meeting-content > div:nth-child(1),
+.last-meeting-content > div:nth-child(2) {
+    border-bottom: none;
+}
+
+.last-meeting-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+    border-top: 1px solid var(--black-10);
+    border-right: 1px solid var(--black-10);
+}
+.last-meeting-price-title{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.last-meeting-price-value{
+    font-size: 14px;
+    line-height: 21px;
+    max-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: var(--white-100);
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
+.last-meeting-status{
+    width: 100%;
+    border-right: 1px solid var(--black-10);
+    padding: 12px;
+}
+.last-meeting-payment-status{
+    width: 100%;
+    padding: 12px;
+}
+.last-meeting-status p,
+.last-meeting-payment-status p{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.last-meeting-status img,
+.last-meeting-payment-status img{
+    width: 32px;
+    height: 32px;
+}
+
+.last-meeting-files{
+    padding: 12px;
+}
+.last-meeting-files button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: Circe;
+    background-color: var(--white-100);
+    color: var(--black-50);
+    border: 1px solid var(--black-10);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+.last-meeting-files button p{
+    margin-top: 3px;
+}
+
+
+
+
+
+
+/*ADAPTIVE*/
+@media (max-width: 1024px) {
+    .dashboard-diagram {
+        min-width: 345px;
+    }
+    .diagram-list-item {
+        width: 185px;
+    }
+    .dashboard-banners{
+        flex-direction: column;
+    }
+    .dashboard-diagram-list {
+        width: 100%;
+    }
+    .diagram-list-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .dashboard-notification {
+        height: 244px;
+    }
+    .dashboard-notification-buttons {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .dashboard-diagram {
+        min-width: 100%;
+    }
+}

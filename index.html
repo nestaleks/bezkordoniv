@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bezkordoniv</title>
+    <link href="./app.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-top">
+            <a href="./home.html" class="header-logo">
+                <img src="./img/logo.svg" alt="">
+                <p>Без Кордонів</p>
+            </a>
+
+            <!-- buttons for unauthorized users -->
+            <div class="header-if-logout hidden">
+                <div class="header-buttons">
+                    <button class="header-button-expert button-secondary">
+                        <p>Шукаєте Клієнта або Експерта?</p>
+                    </button>
+                    <button class="header-button-support button-clear">
+                        <p>Техн-підтримка</p>
+                    </button>
+                    <a class="header-button-login button-primary" href="./login.html">
+                        <img src="./img/icons/login.svg" alt="">
+                        <p>Увійти</p>
+                    </a>
+                    <a class="header-button-signup button-clear" href="./signup.html">
+                        <img src="./img/icons/signup.svg" alt="">
+                        <p>Реєстрація</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- buttons for authorized users -->
+            <div class="header-if-login">
+                <div class="header-buttons">
+                    <a href="#" class="top-amount">
+                        <img src="./img/icons/money.svg" alt="">
+                        <p class="top-amount-title">Баланс:</p>
+                        <p>$120.00</p>
+                    </a>
+                    <a href="#" class="top-next-appointment">
+                        <img src="img/icons/calendar-gray.svg" alt="">
+                        </svg>
+                        <p class="top-next-appointment-title">Наступна зустріч:</p>
+                        <p>12:34:47</p>
+                    </a>
+                    <button class="header-button-support button-clear">
+                        <p>Техн-підтримка</p>
+                    </button>
+                    <a href="#" class="top-messages">
+                        <img src="./img/icons/alarm.svg" alt="">
+                        <p class="messages-count">15</p>
+                    </a>
+                    <a href="#" class="top-notice">
+                        <img src="./img/icons/message.svg" alt="">
+                        <p class="notice-count">5</p>
+                    </a>
+                    <a href="#" class="top-exit">
+                        <img src="./img/icons/exit.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu toggle -->
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- First divider line -->
+        <div class="header-divider"></div>
+
+        <!-- Menu navigation -->
+        <nav class="menu">
+            <!-- General menu (always visible) -->
+            <ul class="menu-list">
+                <!-- General menu items (available to everyone) -->
+                <li class="menu-item">
+                    <a href="./home.html" class="menu-link">
+                        <svg class="menu-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 0.125L13.3 4.85L13 5.75H12.5V11.5H1.50001V5.75H1.00001L0.700012 4.85L7.00001 0.125ZM2.50001 4.75V10.5H11.5V4.75L7.00001 1.375L2.50001 4.75Z" fill="black" fill-opacity="0.7"/>
+                        </svg>
+                        <p class="menu-item-text">Головна</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="./dashboard.html" class="menu-link">
+                        <svg class="menu-icon" width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="Vector" d="M11.66 1C12.4 1 13 1.59 13 2.33L13 11.66C13 12.4 12.4 13 11.66 13L2.33 13C1.59 13 1 12.4 1 11.66L1 2.33C1 1.59 1.59 1 2.33 1L11.66 1ZM1 7L13 7M7 1L7 13" stroke="#000000" stroke-opacity="0.700000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                        </svg>
+                        <p class="menu-item-text">інформаційна панель</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <svg class="menu-icon" width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.979167 16.5714H1.70833V10.9286H0.979167C0.576448 10.9286 0.25 10.5788 0.25 10.1473V8.28125C0.25 7.84977 0.576448 7.5 0.979167 7.5H5.0625C5.46522 7.5 5.79167 7.84977 5.79167 8.28125V16.5714H6.52083C6.92355 16.5714 7.25 16.9212 7.25 17.3527V19.2188C7.25 19.6502 6.92355 20 6.52083 20H0.979167C0.576448 20 0.25 19.6502 0.25 19.2188V17.3527C0.25 16.9212 0.576448 16.5714 0.979167 16.5714ZM3.75 0C2.30023 0 1.125 1.25918 1.125 2.8125C1.125 4.36582 2.30023 5.625 3.75 5.625C5.19977 5.625 6.375 4.36582 6.375 2.8125C6.375 1.25918 5.19973 0 3.75 0Z" fill="black" fill-opacity="0.7"/>
+                        </svg>
+                        <p class="menu-item-text">Про нас</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="./experts.html" class="menu-link">
+                        <svg class="menu-icon" width="22.000046" height="20.000000" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="Vector" d="M17 19C17 16.87 16.15 14.84 14.65 13.34C13.15 11.84 11.12 11 9 11C6.87 11 4.84 11.84 3.34 13.34C1.84 14.84 1 16.87 1 19M9 11C6.23 11 4 8.76 4 6C4 3.23 6.23 1 9 1C11.76 1 14 3.23 14 6C14 8.76 11.76 11 9 11M21 17.99C21 14.62 19 11.49 17 9.99C17.65 9.5 18.18 8.85 18.53 8.11C18.87 7.36 19.03 6.55 18.99 5.72C18.94 4.9 18.7 4.11 18.27 3.4C17.84 2.7 17.25 2.11 16.54 1.69" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                        </svg>
+                        <p class="menu-item-text">Експерти</p>
+                    </a>
+                </li>
+
+                <!-- menu items for authorized users only -->
+                <li class="menu-item">
+                    <a href="./clients.html" class="menu-link">
+                        <svg class="menu-icon" width="22.000046" height="20.000000" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="Vector" d="M17 19C17 16.87 16.15 14.84 14.65 13.34C13.15 11.84 11.12 11 9 11C6.87 11 4.84 11.84 3.34 13.34C1.84 14.84 1 16.87 1 19M9 11C6.23 11 4 8.76 4 6C4 3.23 6.23 1 9 1C11.76 1 14 3.23 14 6C14 8.76 11.76 11 9 11M21 17.99C21 14.62 19 11.49 17 9.99C17.65 9.5 18.18 8.85 18.53 8.11C18.87 7.36 19.03 6.55 18.99 5.72C18.94 4.9 18.7 4.11 18.27 3.4C17.84 2.7 17.25 2.11 16.54 1.69" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                        </svg>
+                        <p class="menu-item-text">Клієнти</p>
+                    </a>
+                </li>
+                <li class="menu-item menu-if-login">
+                    <a href="#" class="menu-link">
+                        <svg class="menu-icon" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.33333 1.33333V3.99999M9.66667 1.33333V3.99999M13 8.66666V3.99999C13 3.64637 12.8595 3.30723 12.6095 3.05719C12.3594 2.80714 12.0203 2.66666 11.6667 2.66666H2.33333C1.97971 2.66666 1.64057 2.80714 1.39052 3.05719C1.14048 3.30723 1 3.64637 1 3.99999V13.3333C1 13.687 1.14048 14.0261 1.39052 14.2761C1.64057 14.5262 1.97971 14.6667 2.33333 14.6667H7.66667M1 6.66666H13M9.66667 12.6667H13.6667M11.6667 10.6667V14.6667" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="menu-item-text">Мої зустрічі</p>
+                    </a>
+                </li>
+                <li class="menu-item menu-if-login">
+                    <a href="#" class="menu-link">
+                        <svg class="menu-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.1333 8.33333H11.14M4.46665 3.66667H12.4667C12.8203 3.66667 13.1594 3.80714 13.4095 4.05719C13.6595 4.30724 13.8 4.64638 13.8 5V11.6667C13.8 12.0203 13.6595 12.3594 13.4095 12.6095C13.1594 12.8595 12.8203 13 12.4667 13H3.13332C2.7797 13 2.44056 12.8595 2.19051 12.6095C1.94046 12.3594 1.79999 12.0203 1.79999 11.6667V2.33333C1.79999 1.97971 1.94046 1.64057 2.19051 1.39052C2.44056 1.14048 2.7797 1 3.13332 1H12.4667" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="menu-item-text">Гаманець</p>
+                    </a>
+                </li>
+                <li class="menu-item menu-if-login">
+                    <a href="#" class="menu-link">
+                        <svg class="menu-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.09993 7.66667C8.94088 7.66667 10.4333 6.17428 10.4333 4.33333C10.4333 2.49238 8.94088 1 7.09993 1C5.25899 1 3.7666 2.49238 3.7666 4.33333C3.7666 6.17428 5.25899 7.66667 7.09993 7.66667ZM7.09993 7.66667C8.51442 7.66667 9.87098 8.22857 10.8712 9.22876C11.8714 10.229 12.4333 11.5855 12.4333 13M7.09993 7.66667C5.68545 7.66667 4.32889 8.22857 3.3287 9.22876C2.3285 10.229 1.7666 11.5855 1.7666 13" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="menu-item-text">Профіль</p>
+                    </a>
+                </li>
+                <li class="menu-item menu-if-login">
+                    <a href="#" class="menu-link">
+                        <svg class="menu-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.33333 1.33333V3.99999M9.66667 1.33333V3.99999M1 6.66666H13M2.33333 2.66666H11.6667C12.403 2.66666 13 3.26362 13 3.99999V13.3333C13 14.0697 12.403 14.6667 11.6667 14.6667H2.33333C1.59695 14.6667 1 14.0697 1 13.3333V3.99999C1 3.26362 1.59695 2.66666 2.33333 2.66666Z" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="menu-item-text">Календар</p>
+                    </a>
+                </li>
+                <li class="menu-item menu-item-exit menu-if-login">
+                    <a href="#" class="menu-link">
+                        <svg class="menu-icon" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 13.5H2.33333C1.97971 13.5 1.64057 13.3595 1.39052 13.1095C1.14048 12.8594 1 12.5203 1 12.1667V2.83333C1 2.47971 1.14048 2.14057 1.39052 1.89052C1.64057 1.64048 1.97971 1.5 2.33333 1.5H5M9.66667 10.8333L13 7.5M13 7.5L9.66667 4.16667M13 7.5H5" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="menu-item-text">Вийти</p>
+                    </a>
+                </li>
+            </ul>
+            <!-- Blur and gray overlay when mobile menu is open -->
+            <div class="overlay"></div>
+        </nav>
+        <!-- Second divider line -->
+        <div class="header-divider2"></div>
+    </div>
+</header>
+<main class="main home-page">
+    <!--SEARCH-->
+    <section class="search-box">
+        <div class="search-box-inner">
+            <div class="search-container">
+                <div class="search-block">
+                    <p class="search-box-title">Об'єднуймо <span>українців та експертів</span> без кордонів</p>
+                    <p class="search-box-text">Онлайн-консультації з медицини, права, фінансів та освіти від професіоналів, які розуміють Вашу мову</p>
+                    <div class="input-container">
+                        <div class="search-input-name">
+                            <img src="./img/icons/search.svg" alt="">
+                            <input type="text" placeholder="Імʼя, Спеціальність, Категорія">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-input-place">
+                            <img src="./img/icons/location.svg" alt="">
+                            <input type="text" placeholder="Адреса, Індекс">
+                            <img src="./img/icons/filter.svg" alt="">
+                            <button class="search-btn button-primary" type="submit">
+                                <p>Пошук</p>
+                                <svg width="6.004028" height="10.008179" viewBox="0 0 6.00403 10.0082" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M1 9L5 5L1 1" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box-img"></div>
+        </div>
+        <div class="container">
+            <div class="search-banners">
+                <div class="search-banner">
+                    <div class="search-banner-content">
+                        <p class="search-banner-text">Чому саме ми?</p>
+                        <a class="search-banner-link" href="">
+                            <p>Детальніше</p>
+                        </a>
+                    </div>
+                    <img class="search-banner-img" src="./img/search-banner-1.png" alt="">
+                </div>
+                <div class="search-banner">
+                    <div class="search-banner-content">
+                        <p class="search-banner-text">Як це працює: швидкий гайд</p>
+                        <a class="search-banner-link" href="">
+                            <p>Детальніше</p>
+                        </a>
+                    </div>
+                    <img class="search-banner-img" src="./img/search-banner-2.png" alt="">
+                </div>
+                <div class="search-banner">
+                    <div class="search-banner-content">
+                        <p class="search-banner-text">Топ пропозиції за категоріями</p>
+                        <a class="search-banner-link" href="">
+                            <p>Детальніше</p>
+                        </a>
+                    </div>
+                    <img class="search-banner-img" src="./img/search-banner-3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FEATURES-->
+    <section class="features-buttons">
+        <div class="container">
+            <div class="features-buttons-inner">
+                <a href="#how-to-order" class="features-buttons-link">
+                    <p>Як замовити?</p>
+                </a>
+                <a href="#who-need-it" class="features-buttons-link">
+                    <p>Кому допоможе?</p>
+                </a>
+                <a href="#faq" class="features-buttons-link">
+                    <p>FAQ</p>
+                </a>
+                <a href="#blog" class="features-buttons-link">
+                    <p>Блог</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--CATEGORIES-->
+    <section class="categories section-lg">
+        <div class="section-lg-inner">
+            <div class="categories-header mb-20">
+                <p class="section-title">Всі Категорії</p>
+                <div class="categories-pagination">
+                    <svg class="categories-arrow arrow-prev" width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Vector" d="M11 21C5.47 21 1 16.52 1 11C1 5.47 5.47 1 11 1C16.52 1 21 5.47 21 11C21 16.52 16.52 21 11 21ZM13 15L9 11L13 7" stroke="#000000" stroke-opacity="0.300000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    <p class="categories-pages">1/3</p>
+                    <svg class="categories-arrow arrow-next" width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Vector" d="M11 21C5.47 21 1 16.52 1 11C1 5.47 5.47 1 11 1C16.52 1 21 5.47 21 11C21 16.52 16.52 21 11 21ZM9 7L13 11L9 15" stroke="#000000" stroke-opacity="0.300000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <ul class="categories-tiles">
+                <li class="category-tile color-1">
+                    <a href="">Медицина</a>
+                    <img src="./img/patterns/med.svg" alt="">
+                </li>
+                <li class="category-tile color-2">
+                    <a href="">Психологія</a>
+                    <img src="./img/patterns/psyhology.svg" alt="">
+                </li>
+                <li class="category-tile color-3">
+                    <a href="">Юридичні послуги</a>
+                    <img src="./img/patterns/law-service.svg" alt="">
+                </li>
+                <li class="category-tile color-4">
+                    <a href="">Освіта</a>
+                    <img src="./img/patterns/education.svg" alt="">
+                </li>
+                <li class="category-tile color-1">
+                    <a href="">ІТ та технології</a>
+                </li>
+                <li class="category-tile color-2">
+                    <a href="">Маркетинг</a>
+                </li>
+                <li class="category-tile color-3">
+                    <a href="">Бізнес</a>
+                </li>
+                <li class="category-tile color-4">
+                    <a href="">Дизайн</a>
+                </li>
+                <li class="category-tile color-1">
+                    <a href="">Комунікації</a>
+                </li>
+                <li class="category-tile color-2">
+                    <a href="">Продажі</a>
+                </li>
+                <li class="category-tile color-3">
+                    <a href="">Логістика</a>
+                </li>
+                <li class="category-tile color-4">
+                    <a href="">Віртуальні послуги</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </section>
+    <!--TOP EXPERTS-->
+    <section class="top-experts section-lg">
+        <div class="section-lg-inner">
+            <div class="top-experts-header">
+                <p class="section-title">Топ Експерти</p>
+                <div class="top-experts-pagination">
+                    <svg class="top-experts-arrow arrow-prev" width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Vector" d="M11 21C5.47 21 1 16.52 1 11C1 5.47 5.47 1 11 1C16.52 1 21 5.47 21 11C21 16.52 16.52 21 11 21ZM13 15L9 11L13 7" stroke="#000000" stroke-opacity="0.300000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    <p class="top-experts-pages">1/3</p>
+                    <svg class="top-experts-arrow arrow-next" width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Vector" d="M11 21C5.47 21 1 16.52 1 11C1 5.47 5.47 1 11 1C16.52 1 21 5.47 21 11C21 16.52 16.52 21 11 21ZM9 7L13 11L9 15" stroke="#000000" stroke-opacity="0.300000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <ul class="top-experts-list">
+                <li class="top-experts-card">
+                    <a href="#">
+                        <div class="top-experts-box mb-20">
+                            <img class="top-experts-img" src="./img/expert-1.png" alt="">
+                            <div class="top-experts-info">
+                                <a class="top-experts-name" href="">
+                                    <p>Антон Багінський</p>
+                                </a>
+                                <div class="top-experts-amount">
+                                    <a class="top-experts-country highlight-pill" href="#">Німеччина</a>
+                                    <p class="top-experts-rating highlight-pill">4,5 / 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-experts-category">
+                            <a class="expert-category-md" href="">
+                                <p>Медицина</p>
+                                <img src="./img/icons/ctgr-list-med.svg" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-experts-card">
+                    <a href="#">
+                        <div class="top-experts-box mb-20">
+                            <img class="top-experts-img" src="./img/expert-2.png" alt="">
+                            <div class="top-experts-info">
+                                <a class="top-experts-name" href="">
+                                    <p>Андрій Романів</p>
+                                </a>
+                                <div class="top-experts-amount">
+                                    <a class="top-experts-country highlight-pill" href="#">Німеччина</a>
+                                    <p class="top-experts-rating highlight-pill">4,5 / 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-experts-category">
+                            <a class="expert-category-md" href="">
+                                <p>Технічні експерти</p>
+                                <img src="./img/icons/ctgr-list-tech.svg" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-experts-card">
+                    <a href="#">
+                        <div class="top-experts-box mb-20">
+                            <img class="top-experts-img" src="./img/expert-3.png" alt="">
+                            <div class="top-experts-info">
+                                <a class="top-experts-name" href="">
+                                    <p>Марʼяна Костенко</p>
+                                </a>
+                                <div class="top-experts-amount">
+                                    <a class="top-experts-country highlight-pill" href="#">Німеччина</a>
+                                    <p class="top-experts-rating highlight-pill">4,5 / 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-experts-category">
+                            <a class="expert-category-md" href="">
+                                <p>Дизайнери</p>
+                                <img src="./img/icons/ctgr-list-design.svg" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-experts-card">
+                    <a href="#">
+                        <div class="top-experts-box mb-20">
+                            <img class="top-experts-img" src="./img/expert-4.png" alt="">
+                            <div class="top-experts-info">
+                                <a class="top-experts-name" href="">
+                                    <p>Оксана Поліщук</p>
+                                </a>
+                                <div class="top-experts-amount">
+                                    <a class="top-experts-country highlight-pill" href="#">Німеччина</a>
+                                    <p class="top-experts-rating highlight-pill">4,5 / 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-experts-category">
+                            <a class="expert-category-md" href="">
+                                <p>Адвокат</p>
+                                <img src="./img/icons/ctgr-list-law.svg" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-experts-card">
+                    <a href="#">
+                        <div class="top-experts-box mb-20">
+                            <img class="top-experts-img" src="./img/expert-5.png" alt="">
+                            <div class="top-experts-info">
+                                <a class="top-experts-name" href="">
+                                    <p>Карина Мартиненко</p>
+                                </a>
+                                <div class="top-experts-amount">
+                                    <a class="top-experts-country highlight-pill" href="#">Данія</a>
+                                    <p class="top-experts-rating highlight-pill">4 / 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-experts-category">
+                            <a class="expert-category-md" href="">
+                                <p>Нігтьовий сервіс</p>
+                                <img src="./img/icons/ctgr-list-nails.svg" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-experts-card">
+                    <a href="#">
+                        <div class="top-experts-box mb-20">
+                            <img class="top-experts-img" src="./img/expert-6.png" alt="">
+                            <div class="top-experts-info">
+                                <a class="top-experts-name" href="">
+                                    <p>Ганна Костенко</p>
+                                </a>
+                                <div class="top-experts-amount">
+                                    <a class="top-experts-country highlight-pill" href="#">Польша</a>
+                                    <p class="top-experts-rating highlight-pill">4,8 / 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-experts-category">
+                            <a class="expert-category-md" href="">
+                                <p>Копірайтери</p>
+                                <img src="./img/icons/ctgr-list-copywriter.svg" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-experts-card">
+                    <a href="#">
+                        <div class="top-experts-box mb-20">
+                            <img class="top-experts-img" src="./img/expert-7.png" alt="">
+                            <div class="top-experts-info">
+                                <a class="top-experts-name" href="">
+                                    <p>Константин Вакуленко</p>
+                                </a>
+                                <div class="top-experts-amount">
+                                    <a class="top-experts-country highlight-pill" href="#">Україна</a>
+                                    <p class="top-experts-rating highlight-pill">4,1 / 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-experts-category">
+                            <a class="expert-category-md" href="">
+                                <p>Events creating</p>
+                                <img src="./img/icons/ctgr-list-events.svg" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--HOW TO ORDER-->
+    <section class="how-to-order section-lg" id="how-to-order">
+        <div class="section-lg-inner">
+            <div class="how-to-order-inner">
+                <p class="section-title">Як замовити?</p>
+                <ul class="how-to-order-list">
+                    <li class="how-to-order-item">
+                        <div class="how-to-order-images">
+                            <img class="how-to-order-ellipse-1" src="./img/how-to-order-1a.svg" alt="">
+                            <img class="how-to-order-hero" src="./img/how-to-order-1b.png" alt="">
+                            <img class="how-to-order-ellipse-2" src="./img/how-to-order-1c.svg" alt="">
+                        </div>
+                        <p class="how-to-order-text">Оберіть фільтр <b>прямо зараз</b> або <b>найближчий запис</b> на зручний час</p>
+                    </li>
+                    <li class="how-to-order-item">
+                        <div class="how-to-order-images">
+                            <img class="how-to-order-ellipse-1" src="./img/how-to-order-2a.svg" alt="">
+                            <img class="how-to-order-hero" src="./img/how-to-order-2b.png" alt="">
+                            <img class="how-to-order-ellipse-2" src="./img/how-to-order-2c.svg" alt="">
+                        </div>
+                        <p class="how-to-order-text">Оберіть лікаря за <b>рейтингом, відгуком, вартістю</b></p>
+                    </li>
+                    <li class="how-to-order-item">
+                        <div class="how-to-order-images">
+                            <img class="how-to-order-ellipse-1" src="./img/how-to-order-3a.svg" alt="">
+                            <img class="how-to-order-hero" src="./img/how-to-order-3b.png" alt="">
+                            <img class="how-to-order-ellipse-2" src="./img/how-to-order-3c.svg" alt="">
+                        </div>
+                        <p class="how-to-order-text">Спаліть послугу та <b>отримайте підтвердження оплати</b></p>
+                    </li>
+                    <li class="how-to-order-item">
+                        <div class="how-to-order-images">
+                            <img class="how-to-order-ellipse-1" src="./img/how-to-order-4a.svg" alt="">
+                            <img class="how-to-order-hero" src="./img/how-to-order-4b.png" alt="">
+                            <img class="how-to-order-ellipse-2" src="./img/how-to-order-4c.svg" alt="">
+                        </div>
+                        <p class="how-to-order-text">Отримайте консультацію онлайні <b>bez-kordoniv.com</b> </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--WHO NEED IT-->
+    <section class="who-need-it section-lg" id="who-need-it">
+        <div class="section-lg-inner">
+            <div class="who-need-it-inner">
+                <div class="who-need-it-left">
+                    <div class="who-need-it-images">
+                        <img class="who-need-it-ellipse-1" src="./img/who-need-it-ellipse-1.svg" alt="">
+                        <img class="who-need-it-hero" src="./img/who-need-it-hero.jpeg" alt="">
+                        <img class="who-need-it-ellipse-2" src="./img/who-need-it-ellipse-2.svg" alt="">
+                    </div>
+                    <div class="who-need-it-contact-md">
+                        <p class="who-need-it-text">Наша екосистема об'єднує українських експертів із різних галузей для вашої підтримки. Отримуйте консультації онлайн у зручний час, рідною мовою та без географічних обмежень.</p>
+                        <a class="who-need-it-link" href="">
+                            <p>Знайти спеціаліста</p>
+                            <img src="./img/icons/details-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="who-need-it-content">
+                    <p class="who-need-it-title">Кому допоможе «Без Кордонів»?</p>
+                    <p class="who-need-it-text">Вам, якщо:</p>
+                    <ul class="who-need-it-list">
+                        <li>Ви <span>українець за кордоном</span> і потребуєте <span>консультації рідною мовою</span></li>
+                        <li>Потребуєте <span>швидкої медичної допомоги без довгих черг</span> та поїздок;</li>
+                        <li>Маєте <span>юридичні питання</span> та потребуєте <span>кваліфікованої консультації</span>;</li>
+                        <li>Плануєте <span>фінансові рішення</span> і хочете <span>порадитися з експертом</span>;</li>
+                        <li>Шукаєте <span>освітні можливості</span> та потребуєте <span>допомоги у виборі</span>;</li>
+                        <li>Потребуєте <span>психологічної підтримки</span> у <span>комфортній обстановці</span>;</li>
+                        <li>Плануєте <span>дизайн-проект</span> чи розробку <span>технічного рішення</span>;</li>
+                    </ul>
+                    <div class="who-need-it-contact-lg">
+                        <p class="who-need-it-text">Наша екосистема об'єднує українських експертів із різних галузей для вашої підтримки. Отримуйте консультації онлайн у зручний час, рідною мовою та без географічних обмежень.</p>
+                        <a class="who-need-it-link" href="">
+                            <p>Знайти спеціаліста</p>
+                            <img src="./img/icons/details-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--BLOG-->
+    <section class="main-blog section-lg" id="blog">
+        <div class="section-lg-inner">
+            <div class="main-blog-header">
+                <p class="section-title">Блог</p>
+                <div class="main-blog-pagination">
+                    <svg class="main-blog-arrow arrow-prev" width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Vector" d="M11 21C5.47 21 1 16.52 1 11C1 5.47 5.47 1 11 1C16.52 1 21 5.47 21 11C21 16.52 16.52 21 11 21ZM13 15L9 11L13 7" stroke="#000000" stroke-opacity="0.300000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    <p class="main-blog-pages">1/3</p>
+                    <svg class="main-blog-arrow arrow-next" width="22.000000" height="22.000000" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Vector" d="M11 21C5.47 21 1 16.52 1 11C1 5.47 5.47 1 11 1C16.52 1 21 5.47 21 11C21 16.52 16.52 21 11 21ZM9 7L13 11L9 15" stroke="#000000" stroke-opacity="0.300000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <ul class="main-blog-list">
+                <li class="main-blog-item">
+                    <a href="">
+                        <div class="main-blog-content">
+                            <p class="main-blog-title">Як отримати максимум користі від онлайн-консультації з лікарем: інструкція для пацієнтів</p>
+                            <p class="main-blog-text">Практична стаття, яка допоможе користувачам підготуватися до консультації, правильно описати симптоми, підготувати необхідні док</p>
+                            <a class="main-blog-link" href="">
+                                <p>Детальніше</p>
+                            </a>
+                        </div>
+                        <img class="main-blog-img" src="./img/blog-item-1.png" alt="">
+                    </a>
+                </li>
+                <li class="main-blog-item">
+                    <a href="">
+                        <div class="main-blog-content">
+                            <p class="main-blog-title">Юридичні питання українців за кордоном: 5 найпоширеніших проблем та їхні рішення</p>
+                            <p class="main-blog-text">Інформативна стаття, яка висвітлює актуальні правові виклики для українців в інших країнах (документи, працевлаштування, податки тощо).</p>
+                            <a class="main-blog-link" href="">
+                                <p>Детальніше</p>
+                            </a>
+                        </div>
+                        <img class="main-blog-img" src="./img/blog-item-2.png" alt="">
+                    </a>
+                </li>
+                <li class="main-blog-item">
+                    <a href="">
+                        <div class="main-blog-content">
+                            <p class="main-blog-title">Адаптація за кордоном: психологічні поради для українців на новому місці</p>
+                            <p class="main-blog-text">Корисна стаття з практичними порадами від психологів платформи щодо подолання культурного шоку, будування нового соціального кола, збереження зв'язку з рідною культу</p>
+                            <a class="main-blog-link" href="">
+                                <p>Детальніше</p>
+                            </a>
+                        </div>
+                        <img class="main-blog-img" src="./img/blog-item-3.png" alt="">
+                    </a>
+                </li>
+                <li class="main-blog-item">
+                    <a href="">
+                        <div class="main-blog-content">
+                            <p class="main-blog-title">Юридичні питання українців за кордоном: 5 найпоширеніших проблем та їхні рішення</p>
+                            <p class="main-blog-text">Інформативна стаття, яка висвітлює актуальні правові виклики для українців в інших країнах (документи, працевлаштування, податки тощо).</p>
+                            <a class="main-blog-link" href="">
+                                <p>Детальніше</p>
+                            </a>
+                        </div>
+                        <img class="main-blog-img" src="./img/blog-item-4.png" alt="">
+                    </a>
+                </li>
+                <li class="main-blog-item">
+                    <a href="">
+                        <div class="main-blog-content">
+                            <p class="main-blog-title">Адаптація за кордоном: психологічні поради для українців на новому місці</p>
+                            <p class="main-blog-text">Корисна стаття з практичними порадами від психологів платформи щодо подолання культурного шоку, будування нового соціального кола, збереження зв'язку з рідною культу</p>
+                            <a class="main-blog-link" href="">
+                                <p>Детальніше</p>
+                            </a>
+                        </div>
+                        <img class="main-blog-img" src="./img/blog-item-5.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--ADVANTAGES-->
+    <section class="advantages section-lg">
+        <div class="section-lg-inner">
+            <div class="advantages-inner">
+                <p class="section-title">Переваги онлайн консультації</p>
+                <div class="advantages-banners">
+                    <div class="advantages-banner">
+                        <img class="advantages-banner-img" src="./img/advantages-1.svg" alt="">
+                        <p class="advantages-banner-title">Доступність</p>
+                        <p class="advantages-banner-text">Консультації з українськими спеціалістами онлайн, де б ви не були</p>
+                    </div>
+                    <div class="advantages-banner">
+                        <img class="advantages-banner-img" src="./img/advantages-2.svg" alt="">
+                        <p class="advantages-banner-title">Мовна підтримка</p>
+                        <p class="advantages-banner-text">Спілкування з будь-яким експертом рідною українською мовою</p>
+                    </div>
+                    <div class="advantages-banner">
+                        <img class="advantages-banner-img" src="./img/advantages-3.svg" alt="">
+                        <p class="advantages-banner-title">Зручність</p>
+                        <p class="advantages-banner-text">Простий та зручний інтерфейс для запису на консультації</p>
+                    </div>
+                    <div class="advantages-banner">
+                        <img class="advantages-banner-img" src="./img/advantages-4.svg" alt="">
+                        <p class="advantages-banner-title">Гнучкість</p>
+                        <p class="advantages-banner-text">Платформа постійно розширюється, додаючи нові послуги</p>
+                    </div>
+                </div>
+                <div class="advantages-numbers">
+                    <div class="advantages-number">
+                        <p class="advantages-number-title">+12600</p>
+                        <p class="advantages-number-text">Проведених консультацій</p>
+                    </div>
+                    <div class="advantages-number">
+                        <p class="advantages-number-title">+8000</p>
+                        <p class="advantages-number-text">Експертів на платформі</p>
+                    </div>
+                    <div class="advantages-number">
+                        <p class="advantages-number-title">+12600</p>
+                        <p class="advantages-number-text">Користувачів з різних країн</p>
+                    </div>
+                    <div class="advantages-number">
+                        <p class="advantages-number-title">+5000</p>
+                        <p class="advantages-number-text">Партнерів та сертифікатів</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--QUESTIONS-->
+    <section class="questions section-lg"  id="faq">
+        <div class="section-lg-inner">
+            <div class="questions-header">
+                <p class="section-title">Часті запитання</p>
+                <a href="./faq.html" class="questions-more">
+                    <p>Детальніше</p>
+                </a>
+            </div>
+            <div class="questions-box">
+                <div class="questions-categories">
+                    <div class="questions-category active" id="faq-consultations">
+                        <p>Консультації</p>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 7L13 11L9 15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="questions-category" id="faq-users">
+                        <p>Користувачам</p>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 7L13 11L9 15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="questions-category" id="faq-experts">
+                        <p>Експертам</p>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 7L13 11L9 15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="question-list">
+                    <!-- Questions for category Consultations -->
+                    <div class="question-list-item" data-category="faq-consultations">
+                        <input type="checkbox" id="faq1">
+                        <label class="faq-question" for="faq1">
+                            <p>Як знайти експерта за локацією?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            Ви можете фільтрувати результати за галуззю та локацією, щоб знайти потрібного експерта.
+                        </div>
+                    </div>
+                    <div class="question-list-item" data-category="faq-consultations">
+                        <input type="checkbox" id="faq2">
+                        <label class="faq-question" for="faq2">
+                            <p>Скільки коштують консультації?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            Вартість консультацій залежить від експерта та галузі. Ціни зазначені на сторінці кожного спеціаліста.
+                        </div>
+                    </div>
+                    <div class="question-list-item" data-category="faq-consultations">
+                        <input type="checkbox" id="faq3">
+                        <label class="faq-question" for="faq3">
+                            <p>Як скасувати заплановану консультацію?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            Для скасування консультації увійдіть до особистого кабінету, знайдіть заплановану зустріч у розділі "Мої консультації" та натисніть кнопку "Скасувати". Зверніть увагу, що скасування можливе не пізніше ніж за 24 години до початку консультації.
+                        </div>
+                    </div>
+
+                    <!-- Questions for category Users -->
+                    <div class="question-list-item" data-category="faq-users">
+                        <input type="checkbox" id="faq4">
+                        <label class="faq-question" for="faq4">
+                            <p>Як додати кредитну картку?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            <p><b>Увійдіть в акаунт:</b></p>
+                            <p>- авторизуйтеся у своєму акаунті.</p>
+                            <p>- перейдіть до налаштувань оплати.</p>
+                            <br>
+                            <p><b>Знайдіть розділ "Способи оплати":</b></p>
+                            <p>- у деяких сервісах це може бути у розділі "Налаштування" або "Білінг".</p>
+                            <p>- додайте нову картку.</p>
+                            <br>
+                            <p><b>Натисніть кнопку "Додати спосіб оплати":</b></p>
+                            <p>- введіть дані картки (номер, термін дії, CVV-код).</p>
+                            <p>- підтвердьте картку.</p>
+                            <br>
+                            <p>Після успішного додавання картка з'явиться у вашому списку способів оплати.</p>
+                        </div>
+                    </div>
+                    <div class="question-list-item" data-category="faq-users">
+                        <input type="checkbox" id="faq6">
+                        <label class="faq-question" for="faq6">
+                            <p>Правила та умови використання Без Кордонів</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            Онлайн-сервіс надає можливість знайти кваліфікованого спеціаліста та отримати консультацію з різних питань. Платформа об'єднує експертів з різних галузей, доступних для користувачів з будь-якої точки Європи. Завдяки зручному пошуку та відеоконсультаціям ви можете швидко отримати професійну допомогу без необхідності відвідувати офіс спеціаліста. Безпека даних та якість послуг гарантуються перевіреними фахівцями та сучасними технологіями.
+                        </div>
+                    </div>
+                    <div class="question-list-item" data-category="faq-users">
+                        <input type="checkbox" id="faq7">
+                        <label class="faq-question" for="faq7">
+                            <p>Як змінити особисті дані в акаунті?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            Перейдіть до свого профілю, натисніть на іконку редагування. У режимі редагування ви зможете змінити своє ім'я, фото профілю та контактну інформацію.
+                        </div>
+                    </div>
+
+                    <!-- Questions for category Experts -->
+                    <div class="question-list-item" data-category="faq-experts">
+                        <input type="checkbox" id="faq8">
+                        <label class="faq-question" for="faq8">
+                            <p>Як стати експертом на платформі?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            Щоб стати експертом, натисніть кнопку "Для експертів" у верхньому меню, заповніть анкету та завантажте необхідні документи для верифікації. Після перевірки адміністрацією ви отримаєте доступ до особистого кабінету експерта.
+                        </div>
+                    </div>
+                    <div class="question-list-item" data-category="faq-experts">
+                        <input type="checkbox" id="faq9">
+                        <label class="faq-question" for="faq9">
+                            <p>Як встановити вартість своїх послуг?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            У кабінеті експерта перейдіть до розділу "Мої послуги", де ви можете вказати вартість для різних типів консультацій. Ви можете змінювати ціни в будь-який момент, але це не вплине на вже заплановані консультації.
+                        </div>
+                    </div>
+                    <div class="question-list-item" data-category="faq-experts">
+                        <input type="checkbox" id="faq11">
+                        <label class="faq-question" for="faq11">
+                            <p>Як налаштувати графік доступності?</p>
+                            <img src="./img/icons/accordion-arrow.svg" alt="">
+                        </label>
+                        <div class="faq-answer">
+                            У розділі "Календар" кабінету експерта ви можете вказати дні та години, коли ви доступні для консультацій. Користувачі зможуть записатися тільки на вільний час у вашому графіку.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--LOCATIONS-->
+    <section class="locations section-lg">
+        <div class="section-lg-inner">
+            <p class="section-title mb-20">Наші локації</p>
+            <div class="locations-list">
+                <div class="locations-item">
+                    <img class="locations-item-img" src="./img/icons/countries/germany.svg" alt="">
+                    <div class="locations-item-box">
+                        <p class="locations-item-title highlight-pill">Німеччина</p>
+                        <a class="locations-item-details" href="">Детальніше</a>
+                    </div>
+                </div>
+                <div class="locations-item">
+                    <img class="locations-item-img" src="./img/icons/countries/slovakia.svg" alt="">
+                    <div class="locations-item-box">
+                        <p class="locations-item-title highlight-pill">Словаччина</p>
+                        <a class="locations-item-details" href="">Детальніше</a>
+                    </div>
+                </div>
+                <div class="locations-item">
+                    <img class="locations-item-img" src="./img/icons/countries/poland.svg" alt="">
+                    <div class="locations-item-box">
+                        <p class="locations-item-title highlight-pill">Польща</p>
+                        <a class="locations-item-details" href="">Детальніше</a>
+                    </div>
+                </div>
+                <div class="locations-item">
+                    <img class="locations-item-img" src="./img/icons/countries/ukraine.svg" alt="">
+                    <div class="locations-item-box">
+                        <p class="locations-item-title highlight-pill">Україна</p>
+                        <a class="locations-item-details" href="">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--HELP-->
+    <section class="need-help section-lg">
+        <div class="section-lg-inner">
+            <div class="need-help-inner">
+                <p class="need-help-text">Маєте запитання?</p>
+                <p class="need-help-text">Допомога онлайн або сервісний центр</p>
+                <button class="need-help-btn button-primary">
+                    <svg width="15.333374" height="15.333374" viewBox="0 0 15.3334 15.3334" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Vector" d="M7.66 10.33L7.67 10.33M7.66 5L7.66 7.66M10.81 1.39L13.94 4.51C14.19 4.76 14.33 5.1 14.33 5.45L14.33 9.87C14.33 10.22 14.19 10.56 13.94 10.81L10.81 13.94C10.56 14.19 10.22 14.33 9.87 14.33L5.45 14.33C5.1 14.33 4.76 14.19 4.51 13.94L1.39 10.81C1.14 10.56 1 10.22 1 9.87L1 5.45C1 5.1 1.14 4.76 1.39 4.51L4.51 1.39C4.76 1.14 5.1 1 5.45 1L9.87 1C10.22 1 10.56 1.14 10.81 1.39Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    <p>Допомога онлайн</p>
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <img src="./img/logo.svg" alt="">
+            <p>Без Кордонів</p>
+        </div>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="">Про нас</a>
+                <a href="">Партнерам</a>
+                <a href="">Правила сервісу</a>
+                <a href="">Політика конфіденційності </a>
+                <a href="">Політика безпеки передачі реквізитів платіжної картки</a>
+                <a href="">Умови повернення грошей</a>
+                <a href="">FAQ</a>
+                <a href="">Блог</a>
+            </nav>
+            <div class="footer-contacts">
+                <p class="footer-contacts-title">Контакти: Телефонуйте нам:</p>
+                <p class="footer-contacts-text">
+                    <span>Пн-Пт:</span> з 8:00 до 20:00
+                </p>
+                <p class="footer-contacts-text">
+                    <span>Сб-Нд:</span> з 9:00 до 20:00
+                </p>
+                <p class="footer-contacts-text">
+                    <span>Служба турботи:</span> <a href="tel:+380977777777">0977777777</a> 
+                </p>
+                <div class="footer-socials">
+                    <img src="./img/icons/facebook.svg" alt="">
+                    <img src="./img/icons/instagram.svg" alt="">
+                    <img src="./img/icons/linkedin.svg" alt="">
+                    <img src="./img/icons/telegram.svg" alt="">
+                    <img src="./img/icons/whatsapp.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-copyright">
+        <p>©bezkordoniv.com, 2025 Використання матеріалів дозволено тільки при наявності активного посилання на джерело</p>
+        <p class="footer-copyright-lang">UA</p>
+    </div>
+</footer>
+<script src="./js/main.js"></script>
+</body>
+</html>

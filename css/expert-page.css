@@ -1,0 +1,838 @@
+/*EXPERT PAGE*/
+.prev-page-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 24px;
+}
+.prev-page-btn p{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: var(--black-50);
+}
+.expert-card-inner{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.expert-card-left{
+    border-radius: 20px;
+    border: 1px solid var(--black-10);
+    width: 100%;
+    height: fit-content;
+}
+.expert-card-head{
+    padding: 12px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid var(--black-10);
+    background-color: var(--white-100);
+    display: flex;
+    gap: 12px;
+}
+.expert-card-head-img{
+    width: 95px;
+    height: 95px;
+}
+.expert-card-name{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+.expert-card-country{
+
+}
+.expert-card-country p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.expert-card-amount{
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+.expert-card-amount-rating,
+.expert-card-amount-appoints{
+    border-radius: 20px;
+    background-color: var(--black-10);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 33px;
+    width: fit-content;
+}
+.expert-card-amount-rating p,
+.expert-card-amount-appoints p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.expert-card-info-buttons{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-info-buttons-inner{
+    height: 47px;
+    border-radius: 40px;
+    border: 1px solid var(--primary-07);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 6px;
+}
+.expert-card-info-button-info,
+.expert-card-info-button-service{
+    width: 100%;
+    color: var(--black-50);
+    font-family: Circe;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    border: none;
+    background-color: transparent;
+    border-radius: 30px;
+}
+.expert-card-info-button-info:hover,
+.expert-card-info-button-service:hover{
+    color: var(--primary-01);
+    background-color: var(--primary-08);
+}
+.expert-card-info-items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--black-10);
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-info-item{
+    background-color: var(--background);
+}
+.expert-card-info-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+}
+.expert-card-info-title{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.expert-card-info-value{
+    font-size: 14px;
+    line-height: 21px;
+    max-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.expert-card-price{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 800;
+    color: var(--black-50);
+    border: 1px solid var(--black-10);
+    padding: 10px;
+    overflow: visible;
+}
+.expert-card-price:before{
+    content: url(../img/icons/money.svg);
+    margin-right: 5px;
+    margin-top: 4px;
+}
+.expert-card-work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-work-title{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.expert-card-work-value{
+    font-size: 14px;
+    line-height: 21px;
+}
+.expert-card-practice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-practice-title{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.expert-card-practice-value{
+    font-size: 14px;
+    line-height: 21px;
+}
+.expert-card-verification{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-verification-title{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.expert-card-verification-box{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.expert-card-verification-box p{
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--primary-01);
+    margin-top: 2px;
+}
+.expert-card-verification-box img:last-child {
+    margin-left: auto;
+}
+.expert-card-certificates{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+}
+.expert-card-certificates-title{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.expert-card-certificates-list{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.expert-card-certificates-item{
+    display: flex;
+    border-radius: 12px;
+    background-color: var(--white-100);
+    border: 1px solid var(--black-10);
+    padding: 10px;
+    gap: 10px;
+}
+.expert-card-certificates-item p{
+    color: var(--black-50);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    margin-top: 2px;
+}
+.expert-card-service-items{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+.expert-card-service-item{
+    border-radius: 12px;
+    background-color: var(--white-100);
+    border: 1px solid var(--black-10);
+    padding: 12px;
+}
+.expert-card-service-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 33px;
+    margin-bottom: 6px;
+}
+
+.expert-card-service-top p{
+    font-size: 16px;
+    font-weight: 800;
+}
+.expert-card-service-price{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--black-10);
+    border: 1px solid var(--purple-02);
+    color: var(--purple-01);
+    padding: 6px 12px;
+    gap: 7px;
+    height: 33px;
+    width: fit-content;
+}
+.expert-card-service-price p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 2px;
+}
+.expert-card-service-details{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+.expert-card-service-detail{
+    border-radius: 20px;
+    background-color: var(--black-10);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 33px;
+    width: fit-content;
+}
+.expert-card-service-detail p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.expert-card-service-about{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 6px;
+}
+
+.expert-card-right{
+    min-width: 350px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.expert-card-buttons{
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--white-100);
+}
+
+.expert-card-buttons-mobile{
+    display: none;
+    min-width: 300px;
+    border: none;
+    margin-left: auto;
+}
+
+.expert-card-reviews{
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-100);
+}
+.expert-card-rating{
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-rating-title{
+    padding-top: 21px;
+    padding-left: 12px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    color: var(--black-50);
+    font-size: 10px;
+    font-weight: 700;
+}
+.expert-card-rating-numbers{
+    padding-left: 12px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--black-100);
+    margin-bottom: 21px;
+}
+.expert-card-rating-numbers::before{
+    content: url(../img/icons/star.svg);
+    margin-right: 10px;
+}
+.expert-card-allreview{
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-allreview-title{
+    padding-top: 21px;
+    padding-left: 12px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    color: var(--black-50);
+    font-size: 10px;
+    font-weight: 700;
+}
+.expert-card-allreview-numbers{
+    padding-left: 12px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--black-100);
+}
+.expert-card-allreview-numbers::before{
+    content: url(../img/icons/review.svg);
+    margin-right: 10px;
+}
+.expert-card-allreview-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 12px;
+    margin-bottom: 21px;
+}
+.expert-card-allreview-link{
+    font-weight: 700;
+    color: var(--primary-02);
+}
+.expert-card-allreview-link:after{
+    content: url(../img/icons/details.svg);
+    margin-left: 10px;
+}
+.expert-card-lastreviews{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-lastreview{
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--black-10);
+    display: flex;
+    gap: 12px;
+    background-color: var(--background);
+}
+.expert-card-lastreview-photo{
+    width: 51px;
+    height: 51px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.expert-card-lastreview-rating{
+    font-weight: 700;
+    font-size: 12px;
+}
+.expert-card-lastreview-rating:before{
+    content: url(../img/icons/star-gold.svg);
+    margin-top: 2px;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+}
+.expert-card-lastreview-right{
+    width: 100%;
+}
+.expert-card-lastreview-title{
+    display: flex;
+    justify-content: space-between;
+}
+.expert-card-lastreview-name{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+}
+.expert-card-lastreview-date{
+    color: var(--black-50);
+    font-size: 12px;
+    font-weight: 700;
+}
+.expert-card-lastreview-text{
+    font-size: 12px;
+    line-height: 18px;
+}
+.expert-card-addrating{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-addrating-title{
+    color: var(--black-50);
+    font-weight: 800;
+    line-height: 21px;
+    position: relative;
+    padding-left: 28px;
+}
+.expert-card-addrating-title:before{
+    content: url(../img/icons/star.svg);
+    margin-left: -28px;
+    line-height: 21px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 2px;
+}
+.expert-card-addrating-text{
+    color: var(--black-50);
+    font-weight: 400;
+    line-height: 18px;
+    padding-left: 28px;
+    margin-bottom: 12px;
+}
+.rating-stars{
+    display: inline-block;
+    padding-left: 23px;
+}
+input.star{
+    display: none;
+}
+label.star {
+    float: right;
+    padding: 0 5px;
+    transition: all .2s;
+}
+input.star:checked ~ label.star:before {
+    content:url(../img/icons/rating-star-fill.svg);
+    transition: all .25s;
+}
+label.star:hover{
+    transform: scale(1.2);
+}
+label.star:before{
+    content:url(../img/icons/rating-star-empty.svg);
+}
+.expert-card-addreview{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+.expert-card-addreview-title{
+    color: var(--black-50);
+    font-weight: 800;
+    line-height: 21px;
+    position: relative;
+    padding-left: 28px;
+}
+.expert-card-addreview-title:before{
+    content: url(../img/icons/review.svg);
+    margin-left: -28px;
+    line-height: 21px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 2px;
+}
+.expert-card-addreview-text{
+    color: var(--black-50);
+    font-weight: 400;
+    line-height: 18px;
+    padding-left: 28px;
+    margin-bottom: 12px;
+}
+.addreview-container {
+    width: 100%;
+    border: 1px solid var(--secondary-05);
+    border-radius: 12px;
+    padding: 16px;
+}
+.addreview-toolbar {
+    width: 266px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.addreview-toolbar-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--black-30);
+}
+.addreview-toolbar button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 5px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.review-textarea {
+    font-family: Circe;
+    width: 100%;
+    height: 150px;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+}
+.expert-card-addreview-buttons{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+}
+.expert-card-addreview-buttons button{
+    color: var(--black-50);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* Modal styles */
+.modal-verification,
+.modal-founder {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: auto;
+    padding: 20px;
+}
+
+.modal-verification:before,
+.modal-founder:before {
+    content: "";
+    display: block;
+    height: 20vh;
+}
+
+.modal-verification > div,
+.modal-founder > div {
+    font-family: Circe;
+    max-width: 725px;
+    margin: 0 auto;
+    background-color: var(--white-100);
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-window-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-window-close:hover {
+    transform: scale(1.1);
+}
+
+.modal-window-close img {
+    width: 16px;
+    height: 16px;
+}
+
+.modal-verification-title,
+.modal-founder-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 29px;
+}
+
+.modal-verification-title span,
+.modal-founder-title span {
+    font-weight: 800;
+}
+
+.modal-verification-box,
+.modal-founder-box{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 40px;
+}
+.modal-verification-box p,
+.modal-founder-box p{
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--primary-01);
+    margin-top: 2px;
+}
+
+.modal-verification-text,
+.modal-founder-text{
+    margin-bottom: 10px;
+    line-height: 21px;
+}
+
+.modal-verification-list,
+.modal-founder-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-verification-item,
+.modal-founder-item {
+    padding: 6px 12px 6px 32px;
+    background-color: var(--black-10);
+    border-radius: 20px;
+    width: fit-content;
+    position: relative;
+    line-height: 21px;
+}
+
+.modal-verification-item p:before,
+.modal-founder-item p:before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icons/check-gray.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+/*ADAPTIVE*/
+
+@media (max-width: 1024px) {
+    .expert-card-inner {
+        flex-direction: column;
+    }
+    .expert-card-buttons-mobile{
+        display: flex;
+    }
+    .expert-card-buttons-desktop{
+        display: none;
+    }
+    .expert-card-right {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .expert-card-lastreviews {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .addreview-toolbar {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .expert-card-lastreviews {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    /* Modify the expert card head to allow wrapping */
+    .expert-card-head {
+        flex-wrap: wrap;
+    }
+    
+    /* Set explicit order for elements inside expert-card-head */
+    .expert-card-head-img {
+        order: 1;
+    }
+    
+    .expert-card-head-info {
+        order: 2;
+        flex: 1;
+    }
+    
+    .expert-card-buttons-mobile {
+        order: 3;
+        width: 100%;
+        margin-top: 12px;
+        margin-left: 0;
+        flex-direction: row;
+        padding: 0;
+    }
+    
+    .modal-verification > div,
+    .modal-founder > div {
+        padding: 20px;
+    }
+
+    .modal-verification-title,
+    .modal-founder-title {
+    font-size: 16px;
+    line-height: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .modal-verification-title,
+    .modal-founder-title {
+    font-size: 14px;
+    line-height: 21px;
+    }
+}
+
+@media (max-width: 560px) {
+    .expert-card-buttons-mobile {
+        flex-direction: column;
+    }
+    .expert-card-service-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .expert-card-head-img{
+        width: 65px;
+        height: 65px;
+    }
+    .expert-card-country p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .expert-card-amount-rating p, 
+    .expert-card-amount-appoints p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .expert-card-info-button-info,
+    .expert-card-info-button-service{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .modal-verification > div,
+    .modal-founder > div {
+        padding: 10px;
+}
+    .modal-verification-item,
+    .modal-founder-item {
+        font-size: 10px;
+    }
+}
+
