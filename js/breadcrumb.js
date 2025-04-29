@@ -9,21 +9,21 @@ class BreadcrumbGenerator {
     getCurrentPage() {
         const path = window.location.pathname;
         const page = path.split('/').pop();
-        return page || 'home.html';
+        return page || 'index.html';
     }
 
     getBreadcrumbData() {
         const pages = {
-            'home.html': { title: 'Головна', icon: './img/icons/home.svg' },
-            'dashboard.html': { title: 'Дешборд', icon: './img/icons/dashboard.svg', parent: 'home.html' },
-            'experts.html': { title: 'Експерти', icon: './img/icons/clients.svg', parent: 'home.html' },
+            'index.html': { title: 'Головна', icon: './img/icons/home.svg' },
+            'dashboard.html': { title: 'Дешборд', icon: './img/icons/dashboard.svg', parent: 'index.html' },
+            'experts.html': { title: 'Експерти', icon: './img/icons/clients.svg', parent: 'index.html' },
             'expert-page.html': { title: 'Антон Багінський', icon: './img/icons/clients.svg', parent: 'experts.html' },
-            'appointments.html': { title: 'Мої Зустрічі', icon: 'appointments', parent: 'home.html' },
+            'appointments.html': { title: 'Мої Зустрічі', icon: 'appointments', parent: 'index.html' },
             'appointment.html': { title: 'Антон Багінський. Перша Консультація', icon: 'appointment', parent: 'appointments.html' },
-            'calendar.html': { title: 'Календар', icon: 'calendar', parent: 'home.html' },
-            'faq.html': { title: 'Техн-підтримка', icon: './img/icons/support-blue.svg', parent: 'home.html' },
-            'client-profile.html': { title: 'Профіль клієнта', icon: './img/icons/user.svg', parent: 'home.html' },
-            'expert-profile.html': { title: 'Профіль експерта', icon: './img/icons/user.svg', parent: 'home.html' }
+            'calendar.html': { title: 'Календар', icon: 'calendar', parent: 'index.html' },
+            'faq.html': { title: 'Техн-підтримка', icon: './img/icons/support-blue.svg', parent: 'index.html' },
+            'client-profile.html': { title: 'Профіль клієнта', icon: './img/icons/user.svg', parent: 'index.html' },
+            'expert-profile.html': { title: 'Профіль експерта', icon: './img/icons/user.svg', parent: 'index.html' }
         };
 
         return pages;
@@ -41,9 +41,9 @@ class BreadcrumbGenerator {
         // Get breadcrumb trail
         const trail = this.getBreadcrumbTrail();
         
-        // Add trail links (skip home.html as it's already represented by home icon)
+        // Add trail links (skip index.html as it's already represented by home icon)
         trail.forEach((page, index) => {
-            if (page === 'home.html') return;
+            if (page === 'index.html') return;
             
             if (index > 0) {
                 ul.appendChild(this.createSeparator());
@@ -58,7 +58,7 @@ class BreadcrumbGenerator {
     createHomeLink() {
         const li = document.createElement('li');
         const a = document.createElement('a');
-        a.href = './home.html';
+        a.href = './index.html';
         a.className = 'breadcrumb-box';
         a.innerHTML = `
             <svg width="20.000000" height="20.999512" viewBox="0 0 20 20.9995" fill="none" xmlns="http://www.w3.org/2000/svg">
