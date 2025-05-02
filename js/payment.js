@@ -103,18 +103,16 @@ function initPaymentModal() {
         });
     }
     
-    // Добавляем обработчик для кнопки подтверждения оплаты
-    const submitBtn = document.querySelector('.payment-modal-submit');
-    if (!submitBtn) {
-        console.warn('Кнопка подтверждения оплаты не найдена');
-    } else {
-        submitBtn.addEventListener('click', processPayment);
-    }
-
     // Добавляем обработчики для кнопок в модальных окнах
-    const closeModalBtns = document.querySelectorAll('#paymentModalClose');
+    const closeModalBtns = document.querySelectorAll('#paymentModalCloseMain, #paymentModalCloseCard');
     closeModalBtns.forEach(btn => {
         btn.addEventListener('click', closePaymentModal);
+    });
+
+    // Добавляем обработчики для кнопок оплаты
+    const payModalBtns = document.querySelectorAll('#paymentModalPayMain, #paymentModalPayCard');
+    payModalBtns.forEach(btn => {
+        btn.addEventListener('click', processPayment);
     });
 
     // Инициализация валидации карты
@@ -129,7 +127,7 @@ function initCardValidation() {
     const cardNumberInput = document.querySelector('.payment-modal-newcard input[placeholder="Номер картки"]');
     const cardExpiryInput = document.querySelector('.payment-modal-newcard input[placeholder="Термін дії картки"]');
     const cardCvvInput = document.querySelector('.payment-modal-newcard input[placeholder="CVV код"]');
-    const cardPayButton = document.querySelector('.payment-modal-newcard #paymentModalPay');
+    const cardPayButton = document.querySelector('#paymentModalPayCard');
 
     // Проверка наличия элементов на странице
     if (!cardNumberInput || !cardExpiryInput || !cardCvvInput || !cardPayButton) {
@@ -312,12 +310,19 @@ function hideError(input) {
  * Показать основное модальное окно оплаты
  */
 function showMainPaymentModal() {
+    console.log('Showing main payment modal');
     const paymentModalContent = document.querySelector('.payment-modal-content');
     const paymentModalNewcard = document.querySelector('.payment-modal-newcard');
     
     if (paymentModalContent && paymentModalNewcard) {
+        console.log('Found modal elements, switching to main payment');
         paymentModalContent.style.display = 'block';
         paymentModalNewcard.style.display = 'none';
+    } else {
+        console.error('Modal elements not found', {
+            paymentModalContent,
+            paymentModalNewcard
+        });
     }
 }
 
@@ -325,12 +330,21 @@ function showMainPaymentModal() {
  * Показать модальное окно с деталями карты
  */
 function showCardDetailsModal() {
+    console.log('Showing card details modal');
+    const paymentModal = document.querySelector('.payment-modal');
     const paymentModalContent = document.querySelector('.payment-modal-content');
     const paymentModalNewcard = document.querySelector('.payment-modal-newcard');
     
-    if (paymentModalContent && paymentModalNewcard) {
+    if (paymentModal && paymentModalContent && paymentModalNewcard) {
+        console.log('Found modal elements, switching to card details');
         paymentModalContent.style.display = 'none';
         paymentModalNewcard.style.display = 'block';
+    } else {
+        console.error('Modal elements not found', {
+            paymentModal,
+            paymentModalContent,
+            paymentModalNewcard
+        });
     }
 }
 
@@ -438,5 +452,59 @@ function updatePaymentStatus() {
     }
 }
 
-// Инициализация модуля при загрузке страницы
-document.addEventListener('DOMContentLoaded', initPaymentModal); 
+// Функция для инициализации обработчиков после загрузки модальных окон
+function initPaymentModalHandlers() {
+    console.log('Initializing payment modal handlers');
+    
+    // Проверяем, загружено ли модальное окно в DOM
+    const paymentModal = document.querySelector('.payment-modal');
+    if (!paymentModal) {
+        console.warn('Payment modal not found in DOM, scheduling retry');
+        // Если модальное окно ещё не загружено, пробуем позже
+        setTimeout(initPaymentModalHandlers, 500);
+        return;
+    }
+    
+    console.log('Payment modal found in DOM, setting up handlers');
+    
+    // Обработчик для кнопки перехода к вводу данных карты
+    const cardPaymentBtn = paymentModal.querySelector('.payment-modal-card');
+    if (cardPaymentBtn) {
+        console.log('Found card payment button, adding click listener');
+        cardPaymentBtn.addEventListener('click', function() {
+            console.log('Card payment button clicked');
+            showCardDetailsModal();
+        });
+    } else {
+        console.warn('Card payment button not found');
+    }
+    
+    // Обработчик для кнопки "Назад"
+    const backBtn = paymentModal.querySelector('.prev-page-btn');
+    if (backBtn) {
+        console.log('Found back button, adding click listener');
+        backBtn.addEventListener('click', function(e) {
+            console.log('Back button clicked');
+            e.preventDefault();
+            showMainPaymentModal();
+        });
+    } else {
+        console.warn('Back button not found');
+    }
+}
+
+// Запускаем инициализацию после загрузки DOM
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, starting payment modal initialization');
+    
+    // Инициализируем обработчики для модальных окон
+    initPaymentModalHandlers();
+    
+    // Проверяем, была ли уже определена функция initPaymentModal
+    if (typeof initPaymentModal === 'function') {
+        console.log('Initializing payment module');
+        initPaymentModal();
+    } else {
+        console.warn('initPaymentModal function not found');
+    }
+}); 

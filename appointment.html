@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bezkordoniv</title>
     <link href="" rel="stylesheet">
+    <link href="./css/modal.css" rel="stylesheet">
     <link href="./app.css" rel="stylesheet">
 </head>
 <body>
@@ -218,7 +219,7 @@
                                             <img src="./img/icons/money.svg" alt="">
                                             <p>$100.00</p>
                                         </div>
-                                        <button class="appointment-item-pay button-primary" data-amount="$100.00" data-service="Консультація">
+                                        <button class="appointment-item-pay button-primary" data-amount="$100.00" data-service="Консультація" data-modal="payment">
                                             <img src="./img/icons/money-white.svg" alt="">
                                             <p>Сплатити</p>
                                         </button>
@@ -346,19 +347,21 @@
                             </a>
                         </div>
                     </div>
-                    <p class="subtitle-2">Введіть деталі картки</p>
+                    <div class="modal-header">
+                        <p class="subtitle-2">Введіть деталі картки</p>
+                    </div>
                     <div class="payment-modal-card-info">
                         <div class="card-info">
-                            <input type="text" placeholder="Номер картки" class="card-input" maxlength="19">
+                            <input type="text" placeholder="Номер картки" class="card-input card-number" maxlength="19">
                             <p class="form-undertext">Номер картки</p>
                         </div>
                         <div class="card-info-row">
                             <div class="card-info">
-                                <input type="text" placeholder="Термін дії картки" class="card-input" maxlength="5">
+                                <input type="text" placeholder="Термін дії картки" class="card-input card-date" maxlength="5">
                                 <p class="form-undertext">Термін дії картки</p>
                             </div>
                             <div class="card-info">
-                                <input type="text" placeholder="CVV код" class="card-input" maxlength="3">
+                                <input type="text" placeholder="CVV код" class="card-input card-cvv" maxlength="3">
                                 <p class="form-undertext">CVV код</p>
                             </div>
                         </div>
@@ -377,7 +380,6 @@
                     </div>
                 </div>
             </div>
-
         </main>
         <!--FOOTER-->
         <footer class="footer">
@@ -405,6 +407,7 @@
         <script src="./js/breadcrumb.js"></script>
         <script src="./js/filters.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/modal-manager.js"></script>
         <script src="./js/payment.js"></script>
 </body>
 </html>

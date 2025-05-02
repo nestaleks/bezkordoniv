@@ -23,7 +23,9 @@ class BreadcrumbGenerator {
             'calendar.html': { title: 'Календар', icon: 'calendar', parent: 'index.html' },
             'faq.html': { title: 'Техн-підтримка', icon: './img/icons/support-blue.svg', parent: 'index.html' },
             'client-profile.html': { title: 'Профіль клієнта', icon: './img/icons/user.svg', parent: 'index.html' },
-            'expert-profile.html': { title: 'Профіль експерта', icon: './img/icons/user.svg', parent: 'index.html' }
+            'expert-profile.html': { title: 'Профіль експерта', icon: './img/icons/user.svg', parent: 'index.html' },
+            'client-wallet.html': { title: 'Гаманець', icon: './img/icons/money.svg', parent: 'index.html' },
+            'expert-wallet.html': { title: 'Гаманець', icon: './img/icons/money.svg', parent: 'index.html' }
         };
 
         return pages;

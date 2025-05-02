@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bezkordoniv</title>
+    <title>Expert Page</title>
     <link href="./app.css" rel="stylesheet">
 </head>
 <body>
@@ -469,7 +469,7 @@
                     </div>
                 </div>
             </section>
-            <div class="modal-verification">
+            <div class="modal modal-verification">
                 <div>
                     <div class="modal-window-close">
                         <img src="./img/icons/close.svg" alt="">
@@ -499,7 +499,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="modal-founder">
+            <div class=" modal modal-founder">
                 <div>
                     <div class="modal-window-close">
                         <img src="./img/icons/close.svg" alt="">
@@ -529,6 +529,8 @@
                     </ul>
                 </div>
             </div>
+
+
         </main>
         <!--FOOTER-->
 <footer class="footer">
@@ -577,5 +579,93 @@
 </footer>
         <script src="./js/breadcrumb.js"></script>
         <script src="./js/main.js"></script>
+        <!-- <script src="./js/modal.js"></script> -->
+        
+        <!-- Специальный скрипт для модальных окон verification и founder -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('Initializing verification and founder modals');
+                
+                // Модальное окно верификации
+                const verificationTrigger = document.querySelector('[data-modal="verification"]');
+                const verificationModal = document.querySelector('.modal-verification');
+                
+                if (verificationTrigger && verificationModal) {
+                    console.log('Found verification trigger and modal');
+                    
+                    // Открытие модального окна
+                    verificationTrigger.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Verification trigger clicked');
+                        
+                        verificationModal.classList.add('active');
+                        verificationModal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                    
+                    // Закрытие модального окна
+                    const closeBtn = verificationModal.querySelector('.modal-window-close');
+                    if (closeBtn) {
+                        closeBtn.addEventListener('click', function() {
+                            verificationModal.classList.remove('active');
+                            verificationModal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        });
+                    }
+                    
+                    // Закрытие при клике вне контента
+                    verificationModal.addEventListener('click', function(e) {
+                        if (e.target === verificationModal) {
+                            verificationModal.classList.remove('active');
+                            verificationModal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        }
+                    });
+                } else {
+                    console.log('Verification trigger or modal not found');
+                }
+                
+                // Модальное окно founder
+                const founderTrigger = document.querySelector('[data-modal="founder"]');
+                const founderModal = document.querySelector('.modal-founder');
+                
+                if (founderTrigger && founderModal) {
+                    console.log('Found founder trigger and modal');
+                    
+                    // Открытие модального окна
+                    founderTrigger.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Founder trigger clicked');
+                        
+                        founderModal.classList.add('active');
+                        founderModal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                    
+                    // Закрытие модального окна
+                    const closeBtn = founderModal.querySelector('.modal-window-close');
+                    if (closeBtn) {
+                        closeBtn.addEventListener('click', function() {
+                            founderModal.classList.remove('active');
+                            founderModal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        });
+                    }
+                    
+                    // Закрытие при клике вне контента
+                    founderModal.addEventListener('click', function(e) {
+                        if (e.target === founderModal) {
+                            founderModal.classList.remove('active');
+                            founderModal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        }
+                    });
+                } else {
+                    console.log('Founder trigger or modal not found');
+                }
+            });
+        </script>
 </body>
 </html>

@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
-      <change beforePath="$PROJECT_DIR$/css/reset-password.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset-password.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/appointment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/filter-dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/filter-dropdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/breadcrumb.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -34,6 +43,9 @@
     &quot;accountId&quot;: &quot;03f25fd1-f23f-48ee-b116-a9f3f843f0db&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -42,21 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "Z:/bezkordoniv",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Z:/bezkordoniv&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\bezkordoniv" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -74,7 +92,10 @@
       <updated>1745930945009</updated>
       <workItem from="1745930946189" duration="373000" />
       <workItem from="1745931334842" duration="1930000" />
-      <workItem from="1745933301037" duration="718000" />
+      <workItem from="1745933301037" duration="5559000" />
+      <workItem from="1745990464598" duration="16758000" />
+      <workItem from="1746023541689" duration="5074000" />
+      <workItem from="1746085610446" duration="2503000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
