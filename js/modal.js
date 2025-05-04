@@ -79,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализация всех модальных окон на странице
     initModals();
     
+    // Инициализация обработчиков для таблицы транзакций эксперта
+    setupExpertIncomingTableHandlers();
+    
     /**
      * Инициализация обработчиков для всех модальных окон
      */
@@ -104,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const closeButtons = document.querySelectorAll('.modal-window-close, .modal-close-btn');
         closeButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const modal = this.closest('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard');
+                const modal = this.closest('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about');
                 if (modal) {
                     closeModal(modal.id);
                 } else {
@@ -120,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
                  e.target.classList.contains('modal-recharge-balance') || 
                  e.target.classList.contains('modal-pay-appointments') ||
                  e.target.classList.contains('payment-modal') ||
-                 e.target.classList.contains('modal-pay-appointment-item')) && 
+                 e.target.classList.contains('modal-pay-appointment-item') ||
+                 e.target.classList.contains('modal-incoming-about')) && 
                 e.target.classList.contains('active')) {
                 closeModal(e.target.id);
             }
@@ -131,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupPayAppointmentsModal();
         setupPayAppointmentItemModal();
         setupPaymentNewcardModal();
+        setupIncomingAboutModal();
         
         // НОВЫЙ ПОДХОД - прямые обработчики для специфических элементов
         setupSpecificHandlers();
@@ -275,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Если это было активное модальное окно, сбрасываем его
         if (activeModal === modal) {
             activeModal = null;
-            document.body.style.overflow = ''; // Восстанавливаем прокрутку страницы
+        document.body.style.overflow = ''; // Восстанавливаем прокрутку страницы
         }
         
         console.log(`Modal.js: Modal ${modalId} closed`);
@@ -292,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Modal.js: Closing all modals');
         
         // Находим все модальные окна
-        const modals = document.querySelectorAll('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard');
+        const modals = document.querySelectorAll('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about');
         
         // Закрываем каждое модальное окно
         modals.forEach(modal => {
@@ -339,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitButton.addEventListener('click', function(e) {
                     if (validateCardForm(e, cardNumberInput, cardDateInput, cardCvvInput)) {
                         alert('Баланс успешно пополнен!');
-                        closeModal('modal-recharge-balance');
+                closeModal('modal-recharge-balance');
                     }
                 });
             }
@@ -478,6 +483,38 @@ document.addEventListener('DOMContentLoaded', function() {
             setupCardNumberValidation(cardNumberInput);
             setupCardDateValidation(cardDateInput);
             setupCardCvvValidation(cardCvvInput);
+        }
+    }
+    
+    /**
+     * Настройка модального окна информации о транзакции
+     */
+    function setupIncomingAboutModal() {
+        const incomingAboutModal = document.getElementById('modal-incoming-about');
+        
+        if (!incomingAboutModal) {
+            console.log('Modal.js: Incoming about modal not found on this page');
+            return;
+        }
+        
+        console.log('Modal.js: Setting up incoming about modal');
+        
+        // Прямой обработчик для кнопки закрытия
+        const closeButton = incomingAboutModal.querySelector('.modal-window-close');
+        if (closeButton) {
+            // Удаляем все существующие обработчики
+            const buttonClone = closeButton.cloneNode(true);
+            closeButton.parentNode.replaceChild(buttonClone, closeButton);
+            
+            // Добавляем новый обработчик
+            buttonClone.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Modal.js: Close button clicked in modal-incoming-about');
+                closeModal('modal-incoming-about');
+            });
+        } else {
+            console.log('Modal.js: Close button not found in modal-incoming-about');
         }
     }
     
@@ -672,4 +709,80 @@ document.addEventListener('DOMContentLoaded', function() {
             // element.classList.remove('input-valid');
         }
     }
+
+    /**
+     * Настройка обработчиков для строк таблицы поступлений эксперта
+     */
+    function setupExpertIncomingTableHandlers() {
+        console.log('Modal.js: Looking for expert-incoming-table...');
+        
+        // Используем setTimeout чтобы убедиться, что DOM полностью загружен
+        setTimeout(function() {
+            const expertIncomingTable = document.querySelector('.expert-incoming-table');
+            
+            if (!expertIncomingTable) {
+                console.log('Modal.js: Expert incoming table not found on this page');
+                return;
+            }
+            
+            console.log('Modal.js: Found expert-incoming-table, setting up row handlers');
+            
+            // Получаем все строки в tbody таблицы
+            const tableRows = expertIncomingTable.querySelectorAll('tbody tr');
+            
+            if (tableRows.length === 0) {
+                console.log('Modal.js: No rows found in expert-incoming-table');
+                return;
+            }
+            
+            console.log(`Modal.js: Found ${tableRows.length} rows in expert-incoming-table`);
+            
+            // Добавляем обработчик клика для каждой строки
+            tableRows.forEach((row, index) => {
+                row.style.cursor = 'pointer'; // Меняем курсор, чтобы показать кликабельность
+                
+                // Удаляем существующие обработчики (на всякий случай)
+                const newRow = row.cloneNode(true);
+                row.parentNode.replaceChild(newRow, row);
+                
+                console.log(`Modal.js: Adding click handler to row ${index + 1}`);
+                
+                newRow.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('Modal.js: Table row clicked, opening modal-incoming-about');
+                    
+                    // Открываем модальное окно с информацией о транзакции
+                    const modalId = 'modal-incoming-about';
+                    
+                    // Получаем данные из строки таблицы
+                    const userName = this.querySelector('td:first-child p').textContent;
+                    const userImg = this.querySelector('td:first-child img').src;
+                    
+                    // Находим модальное окно
+                    const modal = document.getElementById(modalId);
+                    
+                    if (modal) {
+                        // Обновляем данные в модальном окне
+                        const modalUserName = modal.querySelector('.modal-incoming-user p');
+                        const modalUserImg = modal.querySelector('.modal-incoming-user img');
+                        
+                        if (modalUserName) modalUserName.textContent = userName;
+                        if (modalUserImg) modalUserImg.src = userImg;
+                        
+                        // Открываем модальное окно
+                        openModal(modalId);
+                    } else {
+                        console.error(`Modal.js: Modal with ID ${modalId} not found`);
+                    }
+                });
+            });
+        }, 500); // Даем время на загрузку DOM
+    }
+
+    // Дополнительный вызов на случай, если таблица загружается динамически
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(setupExpertIncomingTableHandlers, 1000);
+    });
 }); 

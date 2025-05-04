@@ -43,59 +43,6 @@
     margin-left: auto;
 }
 
-
-.faq-buttons{
-    padding: 12px;
-    border-bottom: 1px solid var(--black-10);
-}
-.faq-buttons-inner{
-    height: 47px;
-    border-radius: 40px;
-    border: 1px solid var(--primary-07);
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 6px;
-}
-.faq-button-all,
-.faq-button-clients,
-.faq-button-experts{
-    width: 100%;
-    color: var(--black-50);
-    font-family: Circe;
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 21px;
-    border: none;
-    background-color: transparent;
-    border-radius: 30px;
-}
-.faq-button-all:hover,
-.faq-button-clients:hover,
-.faq-button-experts:hover{
-    color: var(--primary-01);
-    background-color: var(--primary-08);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 480px) {
     .faq-search-btn{
         width: 42px;

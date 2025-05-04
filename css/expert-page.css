@@ -69,36 +69,6 @@
     font-weight: 400;
 }
 
-.expert-card-info-buttons{
-    padding: 12px;
-    border-bottom: 1px solid var(--black-10);
-}
-.expert-card-info-buttons-inner{
-    height: 47px;
-    border-radius: 40px;
-    border: 1px solid var(--primary-07);
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 6px;
-}
-.expert-card-info-button-info,
-.expert-card-info-button-service{
-    width: 100%;
-    color: var(--black-50);
-    font-family: Circe;
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 21px;
-    border: none;
-    background-color: transparent;
-    border-radius: 30px;
-}
-.expert-card-info-button-info:hover,
-.expert-card-info-button-service:hover{
-    color: var(--primary-01);
-    background-color: var(--primary-08);
-}
 .expert-card-info-items{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

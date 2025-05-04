@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/appointment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/filter-dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/filter-dropdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/appointments.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/appointments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/client-profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/client-profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/expert-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/expert-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/expert-profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/expert-profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/faq.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/faq.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/icons/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/breadcrumb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +107,9 @@
       <workItem from="1745990464598" duration="16758000" />
       <workItem from="1746023541689" duration="5074000" />
       <workItem from="1746085610446" duration="2503000" />
+      <workItem from="1746275714473" duration="7488000" />
+      <workItem from="1746342926862" duration="6011000" />
+      <workItem from="1746369094872" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
@@ -134,6 +148,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="q" />

@@ -1,6 +1,4 @@
-/* ============================================
-   COMMON MODAL STYLES - used by all modals
-   ============================================ */
+/* GENERAL STYLES FOR MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -49,8 +47,8 @@
 
 .modal-window-close {
     position: absolute;
-    top: -5px;
-    right: -5px;
+    top: 5px;
+    right: 5px;
     width: 32px;
     height: 32px;
     padding: 8px;
@@ -210,7 +208,7 @@
 .modal-verification > div,
 .modal-founder > div {
     font-family: Circe;
-    max-width: 725px;
+    width: 800px;
     margin: 0 auto;
     background-color: var(--white-100);
     border-radius: 20px;
@@ -824,4 +822,166 @@
     .payment-method-info {
         padding-left: 24px;
     }
+}
+
+
+
+
+/* modal-incoming-about */
+.modal-incoming-about {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-incoming-about.active {
+    display: flex !important;
+}
+
+.modal-incoming-about .modal-content{
+    max-width: 600px;
+    padding: 0;
+}
+
+.modal-incoming-header{
+    display: flex;
+    gap: 10px;
+    padding: 20px 20px 0 20px;
+}
+
+.modal-incoming-img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    border-radius: 40px;
+    background-color: var(--secondary-08);
+}
+
+.modal-incoming-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-incoming-title{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+
+.modal-incoming-pills{
+    display: flex;
+    gap: 12px;
+    font-size: 10px;
+}
+
+.modal-incoming-pills div{
+    display: flex;
+    gap: 6px;
+}
+
+.price-pill{
+    width: fit-content;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--black-50);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: var(--white-100);
+    padding: 5px 25px 5px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+}
+
+.price-pill img{
+    width: 16px;
+    height: 16px;
+}
+
+.modal-incoming-body{
+    border-top: 1px solid var(--black-10);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin-bottom: 0;
+}
+
+.modal-incoming-info{
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+/* Добавляем правую границу для элементов в первой колонке */
+.modal-incoming-info:nth-child(odd){
+    border-right: 1px solid var(--black-10);
+}
+
+/* Добавляем нижнюю границу для элементов в первой строке */
+.modal-incoming-info:nth-child(1),
+.modal-incoming-info:nth-child(2){
+    border-bottom: 1px solid var(--black-10);
+}
+
+.modal-incoming-text{
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: var(--black-50);
+}
+
+.modal-incoming-user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-incoming-user img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.modal-incoming-user p{
+    font-weight: 800;
+    font-size: 14px;   
+}
+
+.modal-incoming-files button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: Circe;
+    background-color: var(--white-100);
+    color: var(--black-50);
+    border: 1px solid var(--black-10);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+.modal-incoming-files button p{
+    margin-top: 3px;
+}
+
+.modal-incoming-status img,
+.modal-incoming-payment-status img{
+    width: 32px;
+    height: 32px;
 }

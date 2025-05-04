@@ -191,14 +191,15 @@
     color: var(--black-50);
 }
 .last-meeting-price-value{
+    width: fit-content;
     font-size: 14px;
     line-height: 21px;
-    max-height: 21px;
     overflow: hidden;
     text-overflow: ellipsis;
     background-color: var(--white-100);
     padding: 6px 12px;
     border-radius: 12px;
+    border: 1px solid var(--black-10);
 }
 
 .last-meeting-status{

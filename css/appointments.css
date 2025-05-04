@@ -5,31 +5,7 @@
     color: var(--black-50);
     margin-bottom: 20px;
 }
-.appointments-buttons{
-    width: 100%;
-    margin-bottom: 20px;
-}
-.appointments-buttons-inner{
-    padding: 6px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-radius: 40px;
-    border: 1px solid var(--primary-07);
-}
-.appointments-buttons-link{
-    text-align: center;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    padding: 6px 12px;
-    color: var(--black-50);
-    border-radius: 30px;
-}
-.appointments-buttons-link:hover{
-    color: var(--primary-01);
-    background-color: var(--white-100);
 
-}
 .appointments-list{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -173,17 +149,4 @@
 .appointments-item-buttons p{
     font-weight: 800;
     line-height: 21px;
-}
-
-@media (max-width: 580px) {
-    .appointments-buttons-link{
-        font-size: 12px;
-        line-height: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .appointments-buttons-link{
-        padding: 6px;
-    }
 }

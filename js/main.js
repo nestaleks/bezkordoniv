@@ -421,34 +421,7 @@ function initFaqCategories() {
     showCategory(firstCategoryId);
 }
 
-// Expert card tabs
-document.addEventListener('DOMContentLoaded', function() {
-    const infoButton = document.querySelector('.expert-card-info-button-info');
-    const serviceButton = document.querySelector('.expert-card-info-button-service');
-    const infoBox = document.querySelector('.expert-card-info-box');
-    const serviceBox = document.querySelector('.expert-card-service-box');
 
-    if (infoButton && serviceButton && infoBox && serviceBox) {
-        // По умолчанию показываем информационный таб
-        infoBox.style.display = 'block';
-        serviceBox.style.display = 'none';
-        infoButton.classList.add('active');
-
-        infoButton.addEventListener('click', () => {
-            infoBox.style.display = 'block';
-            serviceBox.style.display = 'none';
-            infoButton.classList.add('active');
-            serviceButton.classList.remove('active');
-        });
-
-        serviceButton.addEventListener('click', () => {
-            infoBox.style.display = 'none';
-            serviceBox.style.display = 'block';
-            serviceButton.classList.add('active');
-            infoButton.classList.remove('active');
-        });
-    }
-});
 
 // Обработка кликов по фильтрам
 document.addEventListener('DOMContentLoaded', function() {
@@ -532,95 +505,70 @@ function initAppointmentTabs() {
     });
 }
 
-// Expert Profile Tabs
-function initExpertProfileTabs() {
-    console.log('Initializing expert profile tabs...');
-    const mainButton = document.querySelector('.expert-profile-button-main');
-    const contactsButton = document.querySelector('.expert-profile-button-contacts');
-    const profButton = document.querySelector('.expert-profile-button-prof');
-    const passwordButton = document.querySelector('.expert-profile-button-password');
-    
-    const mainContent = document.querySelector('.expert-profile-main');
-    const contactsContent = document.querySelector('.expert-profile-contacts');
-    const profContent = document.querySelector('.expert-profile-prof');
-    const passwordContent = document.querySelector('.expert-profile-password');
-    
-    if (!mainButton || !contactsButton || !profButton || !passwordButton || 
-        !mainContent || !contactsContent || !profContent || !passwordContent) {
-        console.log('Expert profile elements not found');
-        return; // Выходим, если какого-то элемента нет на странице
-    }
-    
-    // Функция для активации кнопки и показа соответствующего содержимого
-    function activateTab(button, content) {
-        console.log('Activating expert tab:', button, content);
-        // Сначала удаляем активный класс у всех кнопок
-        [mainButton, contactsButton, profButton, passwordButton].forEach(btn => {
-            btn.classList.remove('active');
+
+
+
+
+
+
+///////////////////////////////////////
+// TABS
+///////////////////////////////////////
+
+// Expert card tabs
+document.addEventListener('DOMContentLoaded', function() {
+    const infoButton = document.querySelector('.expert-card-tabs-info');
+    const serviceButton = document.querySelector('.expert-card-tabs-service');
+    const infoBox = document.querySelector('.expert-card-info-box');
+    const serviceBox = document.querySelector('.expert-card-service-box');
+
+    if (infoButton && serviceButton && infoBox && serviceBox) {
+        // По умолчанию показываем информационный таб
+        infoBox.style.display = 'block';
+        serviceBox.style.display = 'none';
+        infoButton.classList.add('active');
+
+        infoButton.addEventListener('click', () => {
+            infoBox.style.display = 'block';
+            serviceBox.style.display = 'none';
+            infoButton.classList.add('active');
+            serviceButton.classList.remove('active');
         });
-        
-        // Скрываем все контенты
-        [mainContent, contactsContent, profContent, passwordContent].forEach(cont => {
-            cont.classList.add('hidden');
+
+        serviceButton.addEventListener('click', () => {
+            infoBox.style.display = 'none';
+            serviceBox.style.display = 'block';
+            serviceButton.classList.add('active');
+            infoButton.classList.remove('active');
         });
-        
-        // Активируем выбранную кнопку и показываем соответствующий контент
-        button.classList.add('active');
-        content.classList.remove('hidden');
-        console.log('Expert tab activated');
     }
-    
-    // Обработчики событий для кнопок
-    mainButton.addEventListener('click', () => {
-        console.log('Expert main button clicked');
-        activateTab(mainButton, mainContent);
-    });
-    
-    contactsButton.addEventListener('click', () => {
-        console.log('Expert contacts button clicked');
-        activateTab(contactsButton, contactsContent);
-    });
-    
-    profButton.addEventListener('click', () => {
-        console.log('Expert prof button clicked');
-        activateTab(profButton, profContent);
-    });
-    
-    passwordButton.addEventListener('click', () => {
-        console.log('Expert password button clicked');
-        activateTab(passwordButton, passwordContent);
-    });
-    
-    // По умолчанию активируем первую вкладку
-    console.log('Setting expert default tab');
-    activateTab(mainButton, mainContent);
-    console.log('Expert profile tabs initialized');
-}
+});
+
 
 // Client Profile Tabs
 function initClientProfileTabs() {
     console.log('Initializing client profile tabs...');
-    const mainButton = document.querySelector('.client-profile-button-main');
-    const contactsButton = document.querySelector('.client-profile-button-contacts');
-    const passwordButton = document.querySelector('.client-profile-button-password');
-    
+    const mainButton = document.querySelector('.client-profile-tabs-main');
+    const contactsButton = document.querySelector('.client-profile-tabs-contacts');
+    const passwordButton = document.querySelector('.client-profile-tabs-password');
+
     const mainContent = document.querySelector('.client-profile-main');
     const contactsContent = document.querySelector('.client-profile-contacts');
     const passwordContent = document.querySelector('.client-profile-password');
-    
+
     console.log('Main button:', mainButton);
     console.log('Contacts button:', contactsButton);
     console.log('Password button:', passwordButton);
     console.log('Main content:', mainContent);
     console.log('Contacts content:', contactsContent);
     console.log('Password content:', passwordContent);
-    
-    if (!mainButton || !contactsButton || !passwordButton || 
+
+    if (!mainButton || !contactsButton || !passwordButton ||
         !mainContent || !contactsContent || !passwordContent) {
         console.log('Client profile elements not found');
         return; // Выходим, если какого-то элемента нет на странице
     }
-    
+
     // Функция для активации кнопки и показа соответствующего содержимого
     function activateTab(button, content) {
         console.log('Activating tab:', button, content);
@@ -628,34 +576,34 @@ function initClientProfileTabs() {
         [mainButton, contactsButton, passwordButton].forEach(btn => {
             btn.classList.remove('active');
         });
-        
+
         // Скрываем все контенты
         [mainContent, contactsContent, passwordContent].forEach(cont => {
             cont.classList.add('hidden');
         });
-        
+
         // Активируем выбранную кнопку и показываем соответствующий контент
         button.classList.add('active');
         content.classList.remove('hidden');
         console.log('Tab activated');
     }
-    
+
     // Обработчики событий для кнопок
     mainButton.addEventListener('click', () => {
         console.log('Main button clicked');
         activateTab(mainButton, mainContent);
     });
-    
+
     contactsButton.addEventListener('click', () => {
         console.log('Contacts button clicked');
         activateTab(contactsButton, contactsContent);
     });
-    
+
     passwordButton.addEventListener('click', () => {
         console.log('Password button clicked');
         activateTab(passwordButton, passwordContent);
     });
-    
+
     // По умолчанию активируем первую вкладку
     console.log('Setting default tab');
     activateTab(mainButton, mainContent);
@@ -674,8 +622,111 @@ document.addEventListener('DOMContentLoaded', function() {
     initClientProfileTabs();
 });
 
+
+
+// Expert Profile Tabs
+function initExpertProfileTabs() {
+    console.log('Initializing expert profile tabs...');
+    const mainButton = document.querySelector('.expert-profile-tabs-main');
+    const contactsButton = document.querySelector('.expert-profile-tabs-contacts');
+    const profButton = document.querySelector('.expert-profile-tabs-prof');
+    const passwordButton = document.querySelector('.expert-profile-tabs-password');
+
+    const mainContent = document.querySelector('.expert-profile-main');
+    const contactsContent = document.querySelector('.expert-profile-contacts');
+    const profContent = document.querySelector('.expert-profile-prof');
+    const passwordContent = document.querySelector('.expert-profile-password');
+
+    if (!mainButton || !contactsButton || !profButton || !passwordButton ||
+        !mainContent || !contactsContent || !profContent || !passwordContent) {
+        console.log('Expert profile elements not found');
+        return; // Выходим, если какого-то элемента нет на странице
+    }
+
+    // Функция для активации кнопки и показа соответствующего содержимого
+    function activateTab(button, content) {
+        console.log('Activating expert tab:', button, content);
+        // Сначала удаляем активный класс у всех кнопок
+        [mainButton, contactsButton, profButton, passwordButton].forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Скрываем все контенты
+        [mainContent, contactsContent, profContent, passwordContent].forEach(cont => {
+            cont.classList.add('hidden');
+        });
+
+        // Активируем выбранную кнопку и показываем соответствующий контент
+        button.classList.add('active');
+        content.classList.remove('hidden');
+        console.log('Expert tab activated');
+    }
+
+    // Обработчики событий для кнопок
+    mainButton.addEventListener('click', () => {
+        console.log('Expert main button clicked');
+        activateTab(mainButton, mainContent);
+    });
+
+    contactsButton.addEventListener('click', () => {
+        console.log('Expert contacts button clicked');
+        activateTab(contactsButton, contactsContent);
+    });
+
+    profButton.addEventListener('click', () => {
+        console.log('Expert prof button clicked');
+        activateTab(profButton, profContent);
+    });
+
+    passwordButton.addEventListener('click', () => {
+        console.log('Expert password button clicked');
+        activateTab(passwordButton, passwordContent);
+    });
+
+    // По умолчанию активируем первую вкладку
+    console.log('Setting expert default tab');
+    activateTab(mainButton, mainContent);
+    console.log('Expert profile tabs initialized');
+}
+
+
+
 // Modal verification and founder functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Код для модалок был перенесен в файл modal.js
     // Инициализация компонентов остается здесь
+});
+
+// Expert Wallet Tabs
+document.addEventListener('DOMContentLoaded', function() {
+    const incomingTab = document.querySelector('.expert-wallet-tabs-incoming');
+    const outcomingTab = document.querySelector('.expert-wallet-tabs-outcoming');
+    
+    const incomingContent = document.querySelector('.expert-wallet-incoming');
+    const outcomingContent = document.querySelector('.expert-wallet-outcoming');
+    
+    if (incomingTab && outcomingTab && incomingContent && outcomingContent) {
+        // Устанавливаем активную вкладку по умолчанию (Поповнення)
+        incomingTab.classList.add('tabs-item-active');
+        incomingContent.style.display = 'block';
+        outcomingContent.style.display = 'none';
+        
+        // Обработчик для вкладки "Поповнення"
+        incomingTab.addEventListener('click', function() {
+            incomingTab.classList.add('tabs-item-active');
+            outcomingTab.classList.remove('tabs-item-active');
+            
+            incomingContent.style.display = 'block';
+            outcomingContent.style.display = 'none';
+        });
+        
+        // Обработчик для вкладки "Виплати"
+        outcomingTab.addEventListener('click', function() {
+            outcomingTab.classList.add('tabs-item-active');
+            incomingTab.classList.remove('tabs-item-active');
+            
+            outcomingContent.style.display = 'block';
+            incomingContent.style.display = 'none';
+        });
+    }
 });
