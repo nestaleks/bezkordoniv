@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/appointments.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/appointments.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/client-profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/client-profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/expert-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/expert-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/expert-profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/expert-profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/faq.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/faq.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expert-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expert-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icons/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
-    </list>
+    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +89,7 @@
       <workItem from="1746275714473" duration="7488000" />
       <workItem from="1746342926862" duration="6011000" />
       <workItem from="1746369094872" duration="7000" />
+      <workItem from="1746373427212" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
@@ -143,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745933572748</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="qq">
+      <option name="closed" value="true" />
+      <created>1746373459827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746373459827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

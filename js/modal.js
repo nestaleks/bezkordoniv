@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const closeButtons = document.querySelectorAll('.modal-window-close, .modal-close-btn');
         closeButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const modal = this.closest('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about');
+                const modal = this.closest('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about, .modal-request-withdraw');
                 if (modal) {
                     closeModal(modal.id);
                 } else {
@@ -124,7 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
                  e.target.classList.contains('modal-pay-appointments') ||
                  e.target.classList.contains('payment-modal') ||
                  e.target.classList.contains('modal-pay-appointment-item') ||
-                 e.target.classList.contains('modal-incoming-about')) && 
+                 e.target.classList.contains('modal-incoming-about') ||
+                 e.target.classList.contains('modal-request-withdraw')) && 
                 e.target.classList.contains('active')) {
                 closeModal(e.target.id);
             }
@@ -136,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupPayAppointmentItemModal();
         setupPaymentNewcardModal();
         setupIncomingAboutModal();
+        setupRequestWithdrawModal();
         
         // НОВЫЙ ПОДХОД - прямые обработчики для специфических элементов
         setupSpecificHandlers();
@@ -297,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Modal.js: Closing all modals');
         
         // Находим все модальные окна
-        const modals = document.querySelectorAll('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about');
+        const modals = document.querySelectorAll('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about, .modal-request-withdraw');
         
         // Закрываем каждое модальное окно
         modals.forEach(modal => {
@@ -515,6 +517,63 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
             console.log('Modal.js: Close button not found in modal-incoming-about');
+        }
+    }
+    
+    /**
+     * Настройка модального окна для запроса на вывод средств
+     */
+    function setupRequestWithdrawModal() {
+        const requestWithdrawButton = document.querySelector('.expert-balance-request');
+        const requestWithdrawModal = document.getElementById('modal-request-withdraw');
+        
+        if (!requestWithdrawButton || !requestWithdrawModal) {
+            console.log('Modal.js: Request withdraw elements not found');
+            return;
+        }
+        
+        console.log('Modal.js: Setting up request withdraw modal');
+        
+        // Добавляем обработчик клика для кнопки "Запросити Зняття"
+        requestWithdrawButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Modal.js: expert-balance-request clicked');
+            
+            // Открываем модальное окно
+            requestWithdrawModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            activeModal = requestWithdrawModal;
+        });
+        
+        // Добавляем обработчик для кнопки закрытия модального окна
+        const closeButton = requestWithdrawModal.querySelector('.modal-window-close');
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                console.log('Modal.js: Close button clicked in request withdraw modal');
+                requestWithdrawModal.classList.remove('active');
+                document.body.style.overflow = '';
+                activeModal = null;
+            });
+        }
+        
+        // Добавляем обработчик для кнопки "Налаштувати Виплати"
+        const settingsButton = requestWithdrawModal.querySelector('.modal-request-payments-setting');
+        if (settingsButton) {
+            settingsButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Modal.js: Payment settings button clicked');
+                
+                // Закрываем модальное окно
+                requestWithdrawModal.classList.remove('active');
+                document.body.style.overflow = '';
+                activeModal = null;
+                
+                // Показываем раздел настроек выплат
+                const walletPage = document.querySelector('.expert-wallet-page');
+                if (walletPage) {
+                    walletPage.classList.add('show-payments-settings');
+                }
+            });
         }
     }
     

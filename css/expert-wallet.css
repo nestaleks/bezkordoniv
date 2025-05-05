@@ -135,7 +135,15 @@
 }
 
 .expert-history-dropdown{
+    width: 100%;
+}
 
+.expert-history-dropdown .form-select{
+    padding: 8px;
+}
+
+.expert-history-dropdown .form-input{
+    padding: 8px;
 }
 
 .expert-incoming-table-container,
@@ -248,11 +256,139 @@
 
 .expert-wallet-notify p:before{
     content: url("../img/icons/info.svg");
-    margin-right: 10px;
-    display: inline-block;
-    align-content: center;
-    height: 17px;
 }
+
+/* Стили для показа/скрытия блоков */
+.payments-settings {
+    display: none;
+}
+
+.expert-wallet-page.show-payments-settings .payments-settings {
+    display: block;
+}
+
+.expert-wallet-page.show-payments-settings .expert-wallet-history {
+    display: none;
+}
+
+/*Payment settings*/
+.payments-settings-inner{
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    background-color: var(--white-100);
+}
+
+.payments-settings-personal{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px solid var(--black-10);
+    padding: 12px;
+}
+
+.payments-settings-financial{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.payments-settings-title{
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--black-50);
+    margin-bottom: 12px;
+}
+
+.payments-settings-content{
+    display: grid;
+    grid-template-columns: 30% 69%;
+    gap: 12px;
+}
+
+.payments-settings-content-title{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    color: var(--black-50);
+    align-content: center;
+}
+
+.payments-settings-content-item{
+    width: 100%;
+}
+
+.payments-settings-content-item:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.payments-settings-user{
+    border: 1px dashed var(--black-10);
+    background-color: var(--background);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.payments-settings-user p + p{
+    margin-top: 16px;
+}
+
+.payments-settings-user p:first-child{
+    font-weight: 800;
+    color: var(--black-50);
+}
+
+.payments-settings-support{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+}
+
+.payments-settings-support div{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.payments-settings-support div:last-child{
+    color: var(--secondary-01);
+    font-weight: 800;
+}
+
+.payments-settings-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+    border-top: 1px solid var(--black-10);
+}
+
+.payments-settings-buttons button{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ADAPTIVE */
 @media (max-width: 768px) {
@@ -261,6 +397,12 @@
     }
     .expert-balance-available{
         margin-left: 0;
+    }
+    .expert-history-dropdowns{
+        flex-wrap: wrap;
+    }
+    .expert-history-dropdown{
+        width: 100%;
     }
 }
 @media (max-width: 560px) {
@@ -286,5 +428,9 @@
     }
     .expert-wallet-notify p{
         font-size: 12px;
+    }
+    .payments-settings-content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
 }
