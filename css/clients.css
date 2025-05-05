@@ -1,0 +1,103 @@
+/*CLIENTS*/
+
+.clients-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.clients-card{
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    background-color: var(--white-100);
+    padding: 12px;
+}
+
+.clients-content{
+    display: grid;
+    grid-template-areas: 'a b b b b' 'a c c c c';
+    margin-bottom: 12px;
+}
+
+.clients-img{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    grid-area: a;
+    object-fit: cover;
+    justify-self: start;
+    margin-right: 12px;
+}
+
+.clients-name{
+    font-size: 16px;
+    font-weight: 800;
+    grid-area: b;
+    text-align: left;
+    align-content: center;
+    margin-bottom: 8px;
+}
+
+.clients-data{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    line-height: 15px;
+    gap: 8px;
+    grid-area: c;
+}
+
+.clients-buttons{
+    display: grid;
+    grid-template-areas: 'a a' 'b c';
+    gap: 10px;
+}
+
+.clients-new-appointment{
+    background-image: url(../img/icons/calendar-white.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px top 45%;
+    padding: 9px 26px;
+    width: 100%;
+    grid-area: a;
+}
+
+.clients-write-message{
+    background-image: url(../img/icons/message.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px top 45%;
+    padding: 9px 26px;
+    width: 100%;
+    grid-area: b;
+}
+
+.clients-call{
+    background-image: url(../img/icons/video-camera-front.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px top 45%;
+    padding: 9px 26px;
+    width: 100%;
+    grid-area: c;
+}
+
+
+
+
+
+
+@media (max-width: 1280px) {
+    .clients-content{
+        gap: 12px;
+        grid-template-areas: 'a b b b b' 'c c c c c';
+    }
+    .clients-img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 640px) {
+    .clients-list{
+        grid-template-columns: 1fr;
+    }
+}

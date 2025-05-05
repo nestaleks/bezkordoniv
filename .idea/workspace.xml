@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq" />
+    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/experts.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/experts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experts.html" beforeDir="false" afterPath="$PROJECT_DIR$/experts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/breadcrumb.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +99,7 @@
       <workItem from="1746342926862" duration="6011000" />
       <workItem from="1746369094872" duration="7000" />
       <workItem from="1746373427212" duration="52000" />
+      <workItem from="1746446474843" duration="5353000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
@@ -131,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746373459827</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="qq">
+      <option name="closed" value="true" />
+      <created>1746446512788</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746446512788</updated>
+    </task>
+    <task id="LOCAL-00007" summary="qq">
+      <option name="closed" value="true" />
+      <created>1746446533507</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746446533507</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
