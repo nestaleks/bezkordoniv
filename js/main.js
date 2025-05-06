@@ -610,6 +610,34 @@ function initClientProfileTabs() {
     console.log('Client profile tabs initialized');
 }
 
+// Client Page Tabs
+function initClientPageTabs() {
+    const mainTabBtn = document.querySelector('.client-tabs-main');
+    const historyTabBtn = document.querySelector('.client-tabs-history');
+    const mainInfoContent = document.querySelector('.client-main-info');
+    const historyContent = document.querySelector('.client-history');
+    
+    if (!mainTabBtn || !historyTabBtn || !mainInfoContent || !historyContent) {
+        console.warn('Client page tabs elements not found');
+        return;
+    }
+    
+    function activateTab(activeButton, inactiveButton, activeContent, inactiveContent) {
+        activeButton.classList.add('active');
+        inactiveButton.classList.remove('active');
+        activeContent.classList.remove('hidden');
+        inactiveContent.classList.add('hidden');
+    }
+    
+    mainTabBtn.addEventListener('click', () => {
+        activateTab(mainTabBtn, historyTabBtn, mainInfoContent, historyContent);
+    });
+    
+    historyTabBtn.addEventListener('click', () => {
+        activateTab(historyTabBtn, mainTabBtn, historyContent, mainInfoContent);
+    });
+}
+
 // Initialize all components
 document.addEventListener('DOMContentLoaded', function() {
     // Инициализация слайдеров, если они есть на странице
@@ -618,8 +646,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initBlogSlider();
     initFaqCategories();
     initAppointmentTabs();
-    initExpertProfileTabs();
     initClientProfileTabs();
+    initExpertProfileTabs();
+    initClientPageTabs();
 });
 
 
@@ -730,3 +759,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Call updateHeader initially with default value (not logged in)
+updateHeader(false);

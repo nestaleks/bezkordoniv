@@ -1,0 +1,330 @@
+/*CLIENTS*/
+.client-box{
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    background-color: var(--white-100);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08),0px 1px 4px 0px rgba(0, 0, 0, 0.04);
+}
+
+.client-card{
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+
+.client-content{
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.client-img img{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.client-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.client-name{
+    font-size: 16px;
+    font-weight: 800;
+    text-align: left;
+    align-content: center;
+    margin-bottom: 8px;
+}
+
+.client-data{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    line-height: 15px;
+    gap: 8px;
+}
+
+.client-buttons{
+    width: 70%;
+    display: grid;
+    grid-template-areas: 'a a' 'b c';
+    gap: 10px;
+    align-content: center;
+}
+
+.client-new-appointment{
+    background-image: url(../img/icons/calendar-white.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px top 45%;
+    padding: 9px 26px;
+    width: 100%;
+    height: 42px;
+    grid-area: a;
+}
+
+.client-write-message{
+    background-image: url(../img/icons/message.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px top 45%;
+    padding: 9px 26px;
+    width: 100%;
+    height: 42px;
+    grid-area: b;
+}
+
+.client-call{
+    background-image: url(../img/icons/video-camera-front.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px top 45%;
+    padding: 9px 26px;
+    width: 100%;
+    height: 42px;
+    grid-area: c;
+}
+
+.client-tabs{
+    border-bottom: 1px solid var(--black-10);
+}
+
+.tabs-item.active {
+    background-color: var(--white-100);
+    color: var(--black-100);
+    border-bottom: 2px solid var(--secondary);
+}
+
+.client-main-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--background);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.client-languages{
+    border-right: 1px solid var(--black-10);
+    
+}
+
+.client-registration{
+    
+}
+.client-languages,
+.client-registration{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 73px;
+}
+
+.client-info-title{
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 800;
+    color: var(--black-50);
+    text-transform: uppercase;
+}
+
+.client-languages-pills{
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.client-languages-pills p:before{
+    content: url(../img/icons/translator-black.svg);
+    left: 0;
+}
+
+.client-registration-data{
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    color: var(--green-01);
+}
+
+
+.client-registration-data img:last-child{
+    margin-left: auto;
+}
+
+.client-history{
+    padding: 24px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.client-history-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.client-history-card{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid var(--black-10);
+    border-radius: 12px;
+    background-color: var(--background);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08),0px 1px 4px 0px rgba(0, 0, 0, 0.04);
+}
+
+.client-history-header{
+    background-color: var(--white-100);
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.client-history-img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    border-radius: 40px;
+    background-color: var(--secondary-08);
+}
+.client-history-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.client-history-header:hover{
+    background-color: var(--black-10);
+}
+
+.client-history-title{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+
+.client-history-pills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.client-history-pills div{
+    display: flex;
+    gap: 6px;
+}
+
+.client-history-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.client-history-content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px;
+    border-top: 1px solid var(--black-10);
+}
+
+.client-history-status{
+    width: 100%;
+    border-right: 1px solid var(--black-10);
+    padding: 12px;
+}
+.client-history-payment-status{
+    width: 100%;
+    padding: 12px;
+}
+.client-history-status p,
+.client-history-payment-status p{
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--black-50);
+}
+.client-history-status img,
+.client-history-payment-status img{
+    width: 32px;
+    height: 32px;
+}
+
+.client-history-files{
+    border-top: 1px solid var(--black-10);
+    padding: 12px;
+}
+.client-history button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: Circe;
+    background-color: var(--white-100);
+    color: var(--black-50);
+    border: 1px solid var(--black-10);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+.client-history-files button p{
+    margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1280px) {
+    
+}
+
+@media (max-width: 768px) {
+    .client-card{
+        flex-direction: column;
+    }
+    .client-img img{
+        width: 60px;
+        height: 60px;
+    }
+    .client-buttons{
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .client-list{
+        grid-template-columns: 1fr;
+    }
+    .client-main-info{
+        grid-template-columns: 1fr;
+    }
+    .client-languages{
+        border-right: none;
+        border-bottom: 1px solid var(--black-10);
+    }
+}
+
+@media (max-width: 480px) {
+    .client-content{
+        flex-direction: column;
+    }
+}

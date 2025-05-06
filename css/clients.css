@@ -17,6 +17,7 @@
     display: grid;
     grid-template-areas: 'a b b b b' 'a c c c c';
     margin-bottom: 12px;
+    position: relative;
 }
 
 .clients-img{
@@ -45,6 +46,14 @@
     line-height: 15px;
     gap: 8px;
     grid-area: c;
+}
+
+.clients-dots{
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
 }
 
 .clients-buttons{

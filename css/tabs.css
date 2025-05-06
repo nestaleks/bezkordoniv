@@ -2,6 +2,7 @@
     padding: 12px;
 }
 .tabs-inner{
+    background-color: var(--background);
     height: 47px;
     border-radius: 40px;
     border: 1px solid var(--primary-07);
@@ -32,4 +33,10 @@
 .tabs-inner button.active {
     color: var(--primary-01);
     background-color: var(--white-100);
+}
+
+@media (max-width: 480px) {
+    .tabs-inner button{
+       font-size: 12px;
+    }
 }

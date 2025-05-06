@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-meeting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-meetings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-wallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-wallet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients.html" beforeDir="false" afterPath="$PROJECT_DIR$/clients.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/client-meeting.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/appointments.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/client-meetings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expert-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expert-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expert-wallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-wallet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experts.html" beforeDir="false" afterPath="$PROJECT_DIR$/experts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/breadcrumb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/payment.js" afterDir="false" />
-    </list>
+    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +94,7 @@
       <workItem from="1746461832604" duration="1421000" />
       <workItem from="1746464936825" duration="599000" />
       <workItem from="1746509292270" duration="1526000" />
+      <workItem from="1746521185102" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
@@ -179,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746462932109</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="qq">
+      <option name="closed" value="true" />
+      <created>1746521219816</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746521219816</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

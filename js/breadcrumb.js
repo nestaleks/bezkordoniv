@@ -28,7 +28,7 @@ class BreadcrumbGenerator {
             "expert-wallet.html": { title: "Гаманець", icon: "./img/icons/money.svg", parent: "index.html" },
             "payments-settings.html": { title: "Налаштування Виплат", icon: "./img/icons/banknotes.svg", parent: "expert-wallet.html" },
             "clients.html": { title: "Клієнти", icon: "./img/icons/clients.svg", parent: "index.html" },
-            "client.html": { title: "Ім'я клієнта", icon: "./img/icons/clients.svg", parent: "index.html" }
+            "client-page.html": { title: "Ім'я клієнта", icon: "./img/icons/clients.svg", parent: "clients.html" }
         };
 
         return pages;
