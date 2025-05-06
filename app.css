@@ -46,9 +46,9 @@
 /* Calendar  */
 @import url(./css/calendar.css);
 /* Appointments List*/
-@import url(./css/appointments.css);
+@import url(./css/client-meetings.css);
 /* Appointment*/
-@import url(./css/appointment.css);
+@import url(./css/client-meeting.css);
 /* Client Profile */
 @import url(./css/client-profile.css);
 /* Expert Profile */

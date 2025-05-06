@@ -1,23 +1,23 @@
-/* APPOINTMENTS PAGE */
+/* client-meetings PAGE */
 
 /*FEATURES BUTTONS*/
-.appointments-title{
+.client-meetings-title{
     color: var(--black-50);
     margin-bottom: 20px;
 }
 
-.appointments-list{
+.client-meetings-list{
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.appointments-item{
+.client-meetings-item{
     border-radius: 8px;
     background-color: var(--white-100);
 }
-.appointments-item-header{
+.client-meetings-item-header{
     display: flex;
     gap: 12px;
     padding: 12px;
@@ -27,55 +27,55 @@
     font-size: 10px;
     line-height: 15px;
 }
-.appointments-item-date{
+.client-meetings-item-date{
     display: flex;
     gap: 6px;
     width: 78px;
 }
-.appointments-item-time{
+.client-meetings-item-time{
     display: flex;
     gap: 6px;
     width: 58px;
 }
-.appointments-item-location{
+.client-meetings-item-location{
     display: flex;
     gap: 6px;
 }
-.appointments-item-body{
+.client-meetings-item-body{
     border: 1px solid var(--black-10);
     border-radius: 8px;
 }
-.appointments-item-info{
+.client-meetings-item-info{
     display: flex;
     flex-direction: column;
     padding: 12px;
 }
-.appointments-item-expert{
+.client-meetings-item-expert{
     display: flex;
     gap: 10px;
     margin-bottom: 13px;
     cursor: pointer;
 }
-.appointments-item-img{
+.client-meetings-item-img{
     border-radius: 50%;
     width: 45px;
     height: 45px;
 }
-.appointments-item-expert-name{
+.client-meetings-item-expert-name{
     font-size: 14px;
     font-weight: 800;
     line-height: 21px;
 }
-.appointments-item-expert-speciality{
+.client-meetings-item-expert-speciality{
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
 }
-.appointments-item-payments{
+.client-meetings-item-payments{
     display: flex;
     gap: 10px;
 }
-.appointments-item-cost{
+.client-meetings-item-cost{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +88,7 @@
     font-weight: 800;
     line-height: 18px;
 }
-.appointments-item-pay{
+.client-meetings-item-pay{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,40 +100,40 @@
     line-height: 21px;
     
 }
-.appointments-item-cost img,
-.appointments-item-pay img{
+.client-meetings-item-cost img,
+.client-meetings-item-pay img{
     width: 16px;
     height: 16px;
 }
-.appointments-item-status-box{
+.client-meetings-item-status-box{
     width: 100%;
     display: flex;
     border-top: 1px solid var(--black-10);
     border-bottom: 1px solid var(--black-10);
 }
-.appointments-item-status{
+.client-meetings-item-status{
     width: 100%;
     border-right: 1px solid var(--black-10);
     padding: 12px;
 }
-.appointments-item-payment-status{
+.client-meetings-item-payment-status{
     width: 100%;
     padding: 12px;
 }
-.appointments-item-status p,
-.appointments-item-payment-status p{
+.client-meetings-item-status p,
+.client-meetings-item-payment-status p{
     font-size: 10px;
     font-weight: 800;
     line-height: 15px;
     text-transform: uppercase;
     color: var(--black-50);
 }
-.appointments-item-buttons{
+.client-meetings-item-buttons{
     display: flex;
     gap: 10px;
     padding: 12px;
 }
-.appointments-item-buttons button{
+.client-meetings-item-buttons button{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -142,11 +142,11 @@
     padding: 6px 12px;
     height: 42px;
 }
-.appointments-item-buttons img{
+.client-meetings-item-buttons img{
     width: 16px;
     height: 16px;
 }
-.appointments-item-buttons p{
+.client-meetings-item-buttons p{
     font-weight: 800;
     line-height: 21px;
 }

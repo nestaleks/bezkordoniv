@@ -5,7 +5,7 @@
 // Инициализация модального окна оплаты
 function initPaymentModal() {
     // Найдем все кнопки оплаты на странице
-    const paymentBtns = document.querySelectorAll('.appointment-item-pay, .appointments-item-pay, .button-pay, [data-action="pay"]');
+    const paymentBtns = document.querySelectorAll('.client-meeting-item-pay, .client-meetings-item-pay, .button-pay, [data-action="pay"]');
     const paymentModal = document.getElementById('paymentModal');
     const paymentModalContent = document.querySelector('.payment-modal-content');
     const paymentModalNewcard = document.querySelector('.payment-modal-newcard');
@@ -33,9 +33,9 @@ function initPaymentModal() {
                     updatePaymentAmount(btn.dataset.amount);
                 } else {
                     // Попробуем найти сумму рядом с кнопкой
-                    const parentContainer = btn.closest('.appointments-item-info, .appointment-item-payments');
+                    const parentContainer = btn.closest('.client-meetings-item-info, .client-meeting-item-payments');
                     if (parentContainer) {
-                        const costElement = parentContainer.querySelector('.appointments-item-cost p, .appointment-item-cost p');
+                        const costElement = parentContainer.querySelector('.client-meetings-item-cost p, .client-meeting-item-cost p');
                         if (costElement) {
                             updatePaymentAmount(costElement.textContent.trim());
                         }
@@ -46,9 +46,9 @@ function initPaymentModal() {
                     updatePaymentService(btn.dataset.service);
                 } else {
                     // Попробуем найти название услуги рядом с кнопкой
-                    const appointmentItem = btn.closest('.appointments-item, .appointment-item');
+                    const appointmentItem = btn.closest('.client-meetings-item, .client-meeting-item');
                     if (appointmentItem) {
-                        const expertNameElement = appointmentItem.querySelector('.appointments-item-expert-name, .appointment-item-expert-name');
+                        const expertNameElement = appointmentItem.querySelector('.client-meetings-item-expert-name, .client-meeting-item-expert-name');
                         if (expertNameElement) {
                             updatePaymentService(expertNameElement.textContent.trim());
                         }
@@ -429,15 +429,15 @@ function updatePaymentStatus() {
     
     if (clickedPayButton) {
         // Пытаемся найти статусный элемент на странице относительно кнопки, которую нажали
-        const appointmentItem = clickedPayButton.closest('.appointments-item, .appointment-item');
+        const appointmentItem = clickedPayButton.closest('.client-meetings-item, .client-meeting-item');
         if (appointmentItem) {
-            statusImg = appointmentItem.querySelector('.appointments-item-payment-status img, .appointment-item-payment-status img');
+            statusImg = appointmentItem.querySelector('.client-meetings-item-payment-status img, .client-meeting-item-payment-status img');
         }
     }
     
     // Если не нашли по кнопке, ищем на всей странице
     if (!statusImg) {
-        statusImg = document.querySelector('.appointments-item-payment-status img, .appointment-item-payment-status img');
+        statusImg = document.querySelector('.client-meetings-item-payment-status img, .client-meeting-item-payment-status img');
     }
     
     if (statusImg) {
@@ -446,8 +446,8 @@ function updatePaymentStatus() {
     
     // Скрыть кнопку оплаты, если нужно
     if (clickedPayButton && 
-        (clickedPayButton.classList.contains('appointment-item-pay') || 
-        clickedPayButton.classList.contains('appointments-item-pay'))) {
+        (clickedPayButton.classList.contains('client-meeting-item-pay') || 
+        clickedPayButton.classList.contains('client-meetings-item-pay'))) {
         clickedPayButton.style.display = 'none';
     }
 }
