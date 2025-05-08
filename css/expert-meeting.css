@@ -1,0 +1,331 @@
+.expert-meeting-item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--black-10);
+    border-radius: 12px;
+    background-color: var(--white-100);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08),0px 1px 4px 0px rgba(0, 0, 0, 0.04);
+}
+
+.expert-meeting-content{
+    width: 100%;
+    border-right: 1px solid var(--black-10);
+}
+
+.expert-meeting-card{
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+
+.expert-meeting-img img{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.expert-meeting-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.expert-meeting-name{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+.meetings-card-notes{
+    padding: 12px;
+    border-top: 1px solid var(--black-10);
+}
+
+.meetings-card-notes-inner{
+    border-radius: 12px;
+    background-color: var(--background);
+    border: 1px solid var(--black-10);
+    padding: 12px;
+}
+
+.meetings-card-notes-title{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 800;
+    color: var(--black-50);
+}
+
+.meetings-card-notes-title:before{
+    content: url(../img/icons/write.svg);
+    margin-right: 12px;
+}
+
+.meetings-card-notes-text{
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--black-50);
+}
+
+.meetings-card-notes-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.meetings-card-notes-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.meetings-card-notes-box{
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    background-color: var(--white-100);
+    padding: 12px;
+    width: 100%;
+    min-height: 79px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meetings-card-notes-box p:nth-child(1){
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--black-50);
+    font-weight: 800;
+}
+
+.meetings-card-notes-box p:nth-child(2){
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+.meetings-card-notes-button{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--black-10);
+}
+
+.meetings-card-notes-button:hover{
+    background-color: var(--black-20);
+}
+
+.meetings-card-notes-button img{
+    width: 100%;
+}
+
+
+.expert-meeting-chat{
+    width: 100%;
+    border-top-right-radius: 12px;
+    padding: 12px;
+}
+
+.expert-meeting-chat-inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--black-10);
+    border-radius: 12px;
+    background-color: var(--background);
+}
+
+.expert-meeting-chat-box{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+}
+
+.expert-meeting-messages{
+    margin-top: auto;
+    padding: 12px;
+}
+
+.expert-meeting-chat-message{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 345px;
+}
+
+.message-from-expert{
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+.message-from-client{
+    flex-direction: row;
+}
+
+.expert-meeting-message-img img{
+    width: 34px;
+    height: 34px;
+}
+.expert-meeting-message-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+.expert-meeting-message-user{
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;    align-content: center;
+}
+.expert-meeting-message-user span{
+    color: var(--black-50);
+    margin-left: 12px;
+}
+.expert-meeting-message-text{
+    min-width: 300px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--black-100);
+    padding: 12px;
+    border: 1px solid var(--black-10);
+}
+
+.message-from-expert .expert-meeting-message-text{
+    background-color: var(--primary-08);
+    border-radius: 20px 4px 20px 20px;
+}
+
+.message-from-client .expert-meeting-message-text{
+    background-color: var(--white-100);
+    border-radius: 4px 20px 20px 20px;
+}
+
+.message-from-expert .expert-meeting-message-content{
+    align-items: flex-end;
+}
+
+.expert-meeting-chat-actions{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    border-top: 1px solid var(--black-10);
+    padding: 12px;
+}
+
+.expert-meeting-chat-file{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: var(--secondary-08);
+    text-align: center;
+    align-content: center;
+}
+
+.expert-meeting-chat-input-box{
+    border-radius: 12px;
+    width: 100%;
+    border: 1px solid var(--secondary-05);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.expert-meeting-chat-input{
+    padding: 0 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+}
+.expert-meeting-chat-input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.expert-meeting-chat-send{
+    width: 42px;
+    height: 42px;
+    padding: 13px;
+    border-radius: 12px;
+    background-color: var(--secondary-01);
+    text-align: center;
+    align-content: center;
+}
+
+.message-status{
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .expert-meeting-img img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .expert-meeting-item{
+        flex-direction: column;
+    }
+
+    .expert-meeting-img img{
+        width: 96px;
+        height: 96px;
+    }
+
+    .expert-meeting-content{
+        border-right: none;
+        border-bottom: 1px solid var(--black-10);
+    }
+
+    .expert-meeting-chat{
+        border-top-right-radius: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .expert-meeting-img img{
+        width: 60px;
+        height: 60px;
+    }
+    .expert-meeting-message-text{
+        min-width: calc(100% - 35px);
+        padding-right: 35px;
+    }
+}
