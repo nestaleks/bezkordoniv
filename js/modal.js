@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupPaymentNewcardModal();
         setupIncomingAboutModal();
         setupRequestWithdrawModal();
+        setupChatFilesModal(); // Добавляем инициализацию нового модального окна
         
         // НОВЫЙ ПОДХОД - прямые обработчики для специфических элементов
         setupSpecificHandlers();
@@ -577,6 +578,79 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    /**
+     * Настройка модального окна для просмотра файлов чата
+     */
+    function setupChatFilesModal() {
+        const filesBtnModal = document.querySelector('.client-chat-files button');
+        const chatFileModal = document.getElementById('chatFileModal');
+        const modalClose = chatFileModal?.querySelector('.modal-window-close');
+        const chatFilesTabs = document.querySelectorAll('.chat-files-tabs-media, .chat-files-tabs-links, .chat-files-tabs-documents');
+
+        if (!filesBtnModal || !chatFileModal) {
+            console.log('Modal.js: Chat files modal elements not found on this page');
+            return;
+        }
+
+        console.log('Modal.js: Setting up chat files modal');
+
+        // Открытие модального окна
+        filesBtnModal.addEventListener('click', function() {
+            chatFileModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            activeModal = chatFileModal;
+        });
+
+        // Закрытие по клику на крестик
+        if (modalClose) {
+            modalClose.addEventListener('click', function() {
+                chatFileModal.classList.remove('active');
+                document.body.style.overflow = '';
+                activeModal = null;
+            });
+        }
+
+        // Закрытие при клике вне контента
+        chatFileModal.addEventListener('click', function(e) {
+            if (e.target === chatFileModal) {
+                chatFileModal.classList.remove('active');
+                document.body.style.overflow = '';
+                activeModal = null;
+            }
+        });
+
+        // Обработка табов
+        if (chatFilesTabs.length > 0) {
+            chatFilesTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Убираем active у всех табов
+                    chatFilesTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Добавляем active на текущий таб
+                    this.classList.add('active');
+                    
+                    // Скрываем все блоки контента
+                    const contentBlocks = document.querySelectorAll('.modal-tab-content');
+                    contentBlocks.forEach(block => block.classList.remove('active'));
+                    
+                    // Показываем нужный блок контента
+                    let targetBlock;
+                    if (this.classList.contains('chat-files-tabs-media')) {
+                        targetBlock = document.querySelector('.modal-files-media');
+                    } else if (this.classList.contains('chat-files-tabs-links')) {
+                        targetBlock = document.querySelector('.modal-files-links');
+                    } else if (this.classList.contains('chat-files-tabs-documents')) {
+                        targetBlock = document.querySelector('.modal-files-documents');
+                    }
+                    
+                    if (targetBlock) {
+                        targetBlock.classList.add('active');
+                    }
+                });
+            });
+        }
+    }
+
     /* ============== ВАЛИДАЦИЯ КАРТЫ ============== */
     
     /**
@@ -844,4 +918,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(setupExpertIncomingTableHandlers, 1000);
     });
-}); 
+});

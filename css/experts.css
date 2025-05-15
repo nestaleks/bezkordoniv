@@ -73,7 +73,6 @@
 .experts-amount-appoints{
     display: flex;
     align-items: center;
-    gap: 12px;
     white-space: nowrap;
 }
 .experts-new-appointment{

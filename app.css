@@ -64,4 +64,8 @@
 /*Clients*/
 @import url(./css/clients.css);
 /* Client Page */
-@import url(./css/client-page.css); 
+@import url(./css/client-page.css);
+/* Client Chat */
+@import url(./css/client-chat.css);
+/* Expert Chat */
+@import url(./css/expert-chat.css);

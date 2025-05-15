@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/client-meeting copy.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/components.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/expert-meeting.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/expert-meeting.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/experts.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/experts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert-meeting copy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/breadcrumb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,32 +57,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "Z:/bezkordoniv/css",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Z:/bezkordoniv&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="Z:\bezkordoniv\css" />
       <recent name="Z:\bezkordoniv" />
+      <recent name="Z:\bezkordoniv\css" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -101,6 +112,20 @@
       <workItem from="1746532890050" duration="1031000" />
       <workItem from="1746536300017" duration="77000" />
       <workItem from="1746613235089" duration="3096000" />
+      <workItem from="1746708390586" duration="862000" />
+      <workItem from="1746721537285" duration="147000" />
+      <workItem from="1746887117501" duration="611000" />
+      <workItem from="1746887790354" duration="686000" />
+      <workItem from="1746895021573" duration="624000" />
+      <workItem from="1746897246867" duration="1000000" />
+      <workItem from="1746958077490" duration="2214000" />
+      <workItem from="1746979301880" duration="5707000" />
+      <workItem from="1747057159789" duration="7000" />
+      <workItem from="1747152816679" duration="2128000" />
+      <workItem from="1747218036341" duration="607000" />
+      <workItem from="1747223756033" duration="675000" />
+      <workItem from="1747306108176" duration="3535000" />
+      <workItem from="1747315918356" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
@@ -190,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746613288507</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="qq">
+      <option name="closed" value="true" />
+      <created>1746708453339</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746708453339</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

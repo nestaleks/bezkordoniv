@@ -285,7 +285,7 @@
     display: flex;
     gap: 10px;
 }
-.client-meeting-chat-file{
+.client-meeting-chat-file {
     width: 50px;
     height: 50px;
     padding: 10px;
@@ -293,6 +293,33 @@
     background-color: var(--secondary-08);
     text-align: center;
     align-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.client-meeting-chat-file input[type=file] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.client-meeting-chat-file:hover {
+    background-color: var(--secondary-05);
+}
+
+.client-meeting-file-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
 }
 
 .client-meeting-chat-input-box{
