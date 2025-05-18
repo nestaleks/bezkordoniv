@@ -1,0 +1,842 @@
+.expert-chat-content{    display: flex;    gap: 10px;    }
+
+.expert-chat-sidebar{
+    background-color: var(--white-100);
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    min-width: 300px;
+}
+
+.expert-chat-box{
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    width: 100%;
+}
+
+.expert-chat-client{
+    background-color: var(--white-100);
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    min-width: 300px;
+    height: fit-content;
+    order: 1;
+}
+
+.chat-search-header{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.chat-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--secondary-05);
+    border-radius: 12px;
+    padding: 10px 16px;
+    height: 42px;
+}
+
+.chat-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    width: inherit;
+}
+
+.chat-search input::placeholder {
+    color: var(--black-50);
+}
+
+.chat-search-button {
+    width: 42px;
+    height: 42px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--secondary-01);
+    text-align: center;
+    align-content: center;
+    border: none;
+}
+
+.chat-search-button:hover {
+    background-color: var(--secondary-02);
+}
+
+.chat-list{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-list-item{
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    position: relative;
+}
+
+.chat-list-item:hover{
+    background-color: var(--background);
+}
+
+.chat-list-item-header{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.chat-list-item-img{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.chat-list-item-about{
+    align-content: center;
+}
+
+.chat-list-item-client-name{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+
+.chat-list-item-time{
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    color: var(--black-50);
+    margin-left: auto;
+}
+
+.chat-list-item-content{
+    overflow: hidden;
+    max-height: 21px;
+}
+
+.chat-list-item-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-list-item-counter{
+    position: absolute;
+    top: 9px;
+    left: 6px;
+    background-color: var(--red-01);
+    color: var(--white-100);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 15px;
+    padding: 0 4px;
+    border-radius: 12px;
+}
+
+.expert-chat-files{
+    border-bottom: 1px solid var(--black-10);
+    padding: 12px;
+}
+.expert-chat-files button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: Circe;
+    background-color: var(--white-100);
+    color: var(--black-50);
+    border: 1px solid var(--black-10);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+
+.expert-chat-messages{
+    margin-top: auto;
+    padding: 12px;
+}
+
+.expert-chat-message{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 345px;
+}
+
+.expert-chat-from-client{
+    flex-direction: row;
+}
+
+.expert-chat-from-expert{
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+.expert-chat-message-img img{
+    width: 34px;
+    height: 34px;
+}
+.expert-chat-message-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+.expert-chat-message-user{
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;    align-content: center;
+}
+.expert-chat-message-user span{
+    color: var(--black-50);
+    margin-left: 12px;
+}
+.expert-chat-message-text{
+    min-width: 300px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--black-100);
+    padding: 12px;
+    border: 1px solid var(--black-10);
+}
+
+.expert-chat-from-expert .expert-chat-message-text{
+    background-color: var(--primary-08);
+    border-radius: 20px 4px 20px 20px;
+}
+
+.expert-chat-from-client .expert-chat-message-text{
+    background-color: var(--white-100);
+    border-radius: 4px 20px 20px 20px;
+}
+
+.expert-chat-from-expert .expert-chat-message-content{
+    align-items: flex-end;
+}
+
+.expert-chat-actions{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    border-top: 1px solid var(--black-10);
+    padding: 12px;
+    background-color: var(--white-100);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.expert-chat-file {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: var(--secondary-08);
+    text-align: center;
+    align-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expert-chat-file input[type=file] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.expert-chat-file:hover {
+    background-color: var(--secondary-05);
+}
+
+.expert-chat-file-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.expert-chat-input-box{
+    border-radius: 12px;
+    width: 100%;
+    border: 1px solid var(--secondary-05);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expert-chat-input{
+    padding: 0 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+}
+.expert-chat-input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.expert-chat-send{
+    width: 42px;
+    height: 42px;
+    padding: 13px;
+    border-radius: 12px;
+    background-color: var(--secondary-01);
+    text-align: center;
+    align-content: center;
+    margin-right: 3px;
+    border: none;
+}
+
+.expert-chat-client-content{
+    padding: 12px;
+}
+
+.expert-chat-client-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.expert-chat-client-img{
+    object-fit: cover;
+}
+
+.expert-chat-client-img img{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
+.expert-chat-client-name{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.expert-chat-client-data{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.expert-chat-client-data .highlight-pill{
+    font-size: 10px;
+}
+
+
+.expert-chat-client-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.expert-chat-client-buttons button{
+    padding: 10px;
+    width: 100%;
+}
+
+.expert-chat-client-remind{
+    background-image: url(../img/icons/video-camera-front.svg);
+    background-repeat: no-repeat;
+    background-position: left 28px top 45%;
+
+}
+
+.expert-chat-client-call{
+    background-image: url(../img/icons/alarm.svg);
+    background-repeat: no-repeat;
+    background-position: left 28px top 45%;
+}
+
+.chat-back-button-container{
+    display: none;
+}
+
+/* REMIND WINDOW */
+.expert-remind{    display: none;    grid-template-columns: 1fr 1fr;    gap: 20px;}
+
+.remind-content{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--black-10);
+    border-radius: 12px;
+    background-color: var(--white-100);
+    width: 100%;
+}
+
+.remind-section{
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+
+.remind-section-header{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.remind-section-header img{
+    margin-top: 2px;
+}
+
+.remind-section-title p:nth-child(1){
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    color: var(--black-50);
+}
+.remind-section-title p:nth-child(2){
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--black-50);
+}
+
+.remind-auto-checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.remind-section-search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.remind-add-user,
+.remind-delete-user{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.remind-add-user:hover,
+.remind-delete-user:hover{
+    scale: 1.1;
+    background-color: transparent;
+}
+
+.remind-add-user:active,
+.remind-delete-user:active{
+    scale: 0.9;
+    background-color: transparent;
+}
+
+.remind-user-list{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.remind-user-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.remind-user-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid var(--secondary-05);
+}
+
+.remind-user-info img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.remind-section-description {
+    width: 100%;
+    border: 1px solid var(--secondary-05);
+    border-radius: 12px;
+    padding: 16px;
+    height: 150px;
+}
+.toolbar {
+    width: 266px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toolbar-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--black-30);
+}
+.toolbar button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 5px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.description-textarea {
+    font-family: Circe;
+    width: 100%;
+    height: 80px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+}
+
+.add-file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 12px;
+    background-color: var(--secondary-08);
+    border: 1px dashed var(--secondary-05);
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 150px;
+}
+
+.add-file:hover {
+    background-color: var(--secondary-05);
+}
+
+.add-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.add-file p {
+    color: var(--black-100);
+    text-align: center;
+}
+
+.remind-section-buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 10px;
+    width: 100%;
+    border-top: 1px solid var(--black-10);
+}
+
+.remind-section-buttons button{
+    width: 100%;
+    padding: 10px 26px;
+}
+
+.remind-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.remind-item{
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+}
+
+.remind-item-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+    background-color: var(--white-100);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.remind-item-img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    border-radius: 40px;
+    background-color: var(--secondary-08);
+}
+
+.remind-item-header p{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+}
+
+.remind-item-header button{
+    background-color: var(--secondary-08);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.remind-item-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+
+.remind-item-about-title,
+.remind-item-files-title,
+.remind-item-users-title{
+    font-weight: 800;
+    color: var(--black-50);
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.remind-item-pills{
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+}
+
+.remind-item-pills p{
+    margin-top: 2px;
+}
+
+.remind-item-pills .highlight-pill{
+    padding: 6px 10px;
+}
+
+.remind-item-files{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid var(--black-10);
+}
+
+.remind-item-files-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.remind-item-files-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--black-10);
+    background-color: var(--white-100);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    color: var(--black-50);
+}
+
+.remind-item-files-item p{
+    margin-top: 2px;
+}
+
+.remind-item-users{
+    padding: 12px;
+}
+
+.remind-item-users-list{
+    display: flex;
+    margin-top: 12px;
+}
+
+.remind-item-users-item + .remind-item-users-item{
+    margin-left: -15px;
+}
+.remind-item-users-item img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+
+/* ADAPTIVE STYLES */
+
+@media (max-width: 1024px) {    
+    .expert-chat-sidebar{
+        width: 250px;
+        min-width: 250px;
+    }
+    .expert-chat-content {
+        display: grid !important;
+        grid-template-columns: 250px 1fr;        grid-template-rows: auto 1fr;
+        gap: 10px;
+    }
+    
+    .expert-chat-sidebar {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+    
+    .expert-chat-client {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .expert-chat-box {
+        grid-column: 2;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .expert-chat-client-info{
+        flex-direction: row;
+    }
+    /* Display speciality and price in one row */
+    .expert-chat-client-speciality,
+    .expert-chat-client-price {
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+    
+    .expert-chat-client-speciality {
+        border-right: 1px solid var(--black-10);
+    }
+    
+    .expert-chat-client-price {
+        border-top: none;
+    }
+    .expert-chat-client-buttons{
+        flex-direction: row;
+    }
+}
+
+/* Mobile styles for chat */
+@media (max-width: 768px) {    .expert-chat-content {        display: block !important;        position: relative;    }        .expert-chat-sidebar {        width: 100% !important;        min-width: 100% !important;        display: block;        grid-column: unset;        grid-row: unset;    }
+    
+    .expert-chat-client {
+        display: none;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 0;
+        padding-top: 40px; /* Space for back button */
+        grid-column: unset;
+        grid-row: unset;
+    }
+    
+    .expert-chat-box {
+        display: none;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        grid-column: unset;
+        grid-row: unset;
+    }
+    
+    /* Back button for mobile */
+    .chat-back-button {
+        font-family: Circe;
+        display: flex;
+        gap: 5px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 10;
+        background-color: transparent;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        color: var(--black-50);
+        font-weight: 800;
+    }
+    
+    .chat-back-button:hover {
+        background-color: var(--primary-08);
+        border-radius: 4px;
+    }
+    
+    /* When chat is active */
+    .chat-is-active .expert-chat-sidebar {
+        display: none;
+    }
+    
+    .chat-is-active .expert-chat-client {
+        display: block;
+    }
+    
+    .chat-is-active .expert-chat-box {
+        display: block;
+    }
+    
+    .chat-is-active .chat-back-button-container {
+        display: flex;
+    }
+    
+    /* Better message display on mobile */
+    .expert-chat-message-text {
+        min-width: auto;
+        /* max-width: 280px; */
+        padding-right: 40px;
+    }
+    
+    /* Adjust message container for better mobile view */
+    .expert-chat-messages {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .expert-remind{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .expert-chat-client-buttons{
+        flex-direction: column;
+    }
+}
+
+.chat-is-active .chat-back-button-container {
+    display: flex;
+}

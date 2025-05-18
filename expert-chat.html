@@ -169,28 +169,31 @@
                     <!-- Breadcrumb will be generated automatically by JavaScript -->
                 </div>
             </nav>
-            <!--MY client-meetings-->
-            <section class="client-chat">
+            <!--EXPERT CHAT PAGE-->
+            <section class="expert-chat">
                 <div class="container">
                     <h4 class="page-title">Повідомлення</h4>
-                    <div class="tabs">
+                    <div class="tabs expert-chat-tabs">
                         <div class="tabs-inner">
-                            <button class="tabs-item client-chat-tabs-all">
+                            <button class="tabs-item expert-chat-tabs-all">
                                 <p>Всі</p>
                             </button>
-                            <button class="tabs-item client-chat-tabs-meetings">
+                            <button class="tabs-item expert-chat-tabs-meetings">
                                 <p>Зустрічі</p>
                             </button>
-                            <button class="tabs-item client-chat-tabs-experts">
-                                <p>Експерти</p>
+                            <button class="tabs-item expert-chat-tabs-clients">
+                                <p>Клієнти</p>
                             </button>
-                            <button class="tabs-item client-chat-tabs-support">
+                            <button class="tabs-item expert-chat-tabs-remind">
+                                <p>Нагадування</p>
+                            </button>
+                            <button class="tabs-item expert-chat-tabs-support">
                                 <p>Підтримка</p>
                             </button>
                         </div>
                     </div>
-                    <div class="client-chat-content">
-                        <div class="client-chat-sidebar">
+                    <div class="expert-chat-content">
+                        <div class="expert-chat-sidebar">
                             <div class="chat-search-header">
                                 <div class="chat-search">
                                     <img src="./img/icons/search.svg" alt="">
@@ -203,10 +206,9 @@
                             <ul class="chat-list">
                                 <li class="chat-list-item">
                                     <div class="chat-list-item-header">
-                                        <img class="chat-list-item-img" src="./img/expert-1.png" alt="">
+                                        <img class="chat-list-item-img" src="./img/expert-9.png" alt="">
                                         <div class="chat-list-item-about">
-                                            <p class="chat-list-item-expert-name">Антон Багінський</p>
-                                            <div class="chat-list-item-expert-speciality">Сімейний лікар</div>
+                                            <p class="chat-list-item-client-name">Аліна Берікова</p>
                                         </div>
                                         <p class="chat-list-item-time">12.15</p>
                                     </div>
@@ -219,10 +221,9 @@
                                 </li>
                                 <li class="chat-list-item">
                                     <div class="chat-list-item-header">
-                                        <img class="chat-list-item-img" src="./img/expert-1.png" alt="">
+                                        <img class="chat-list-item-img" src="./img/expert-5.png" alt="">
                                         <div class="chat-list-item-about">
-                                            <p class="chat-list-item-expert-name">Антон Багінський</p>
-                                            <div class="chat-list-item-expert-speciality">Сімейний лікар</div>
+                                            <p class="chat-list-item-client-name">Марина Іванова</p>
                                         </div>
                                         <p class="chat-list-item-time">12.15</p>
                                     </div>
@@ -235,10 +236,9 @@
                                 </li>
                                 <li class="chat-list-item">
                                     <div class="chat-list-item-header">
-                                        <img class="chat-list-item-img" src="./img/expert-3.png" alt="">
+                                        <img class="chat-list-item-img" src="./img/expert-7.png" alt="">
                                         <div class="chat-list-item-about">
-                                            <p class="chat-list-item-expert-name">Ганна Степанова</p>
-                                            <div class="chat-list-item-expert-speciality">Нігтьовий сервіс</div>
+                                            <p class="chat-list-item-client-name">Кирило Павлюченко</p>
                                         </div>
                                         <p class="chat-list-item-time">12.15</p>
                                     </div>
@@ -252,7 +252,7 @@
                             </ul>
                         </div>
                         <!-- Moving expert block before the chat box -->
-                        <div class="client-chat-expert">
+                        <div class="expert-chat-client">
                             <!-- Back button for mobile -->
                             <div class="chat-back-button-container">
                                 <button class="chat-back-button">
@@ -262,97 +262,325 @@
                                     <p>Назад</p>
                                 </button>
                             </div>
-                            <div class="client-chat-expert-content">
-                                <div class="client-chat-expert-img">
-                                    <img src="./img/expert-1.png" alt="">
+                            <div class="expert-chat-client-content">
+                                <div class="expert-chat-client-header">
+                                    <div class="expert-chat-client-img">
+                                        <img src="./img/expert-9.png" alt="">
+                                    </div>
+                                    <a href="./expert-page.html" class="expert-chat-client-name">Аліна Берікова</a>
                                 </div>
-                                <div class="client-chat-expert-data">
-                                    <a href="./expert-page.html" class="client-chat-expert-name">Антон Багінський</a>
-                                    <a class="client-chat-expert-country highlight-pill" href="#">Німеччина</a>
-                                    <div class="client-chat-expert-amount" style="gap: 2px;">
-                                        <div class="client-chat-expert-amount-rating highlight-pill">
-                                            <img src="./img/icons/star.svg" alt="">
-                                            <p>4,5 / 5</p>
-                                        </div>
-                                        <div class="client-chat-expert-amount-appoints highlight-pill" style="background-color: var(--white-100); border: 1px solid var(--black-10);">
-                                            <img src="./img/icons/clients.svg" alt="">
-                                            <p>12 <span>зустрічей</span></p>
-                                        </div>
+                                <div class="expert-chat-client-data">
+                                    <div class="clients-appoints highlight-pill">
+                                        <img src="./img/icons/clients.svg" alt="">
+                                        <p>12 <span>консультацій</span></p>
+                                    </div>
+                                    <a class="clients-country highlight-pill" href="#">Німеччина</a>
+                                    <div class="clients-age highlight-pill">
+                                        <img src="./img/icons/age.svg" alt="">
+                                        <p>24 <span>роки</span></p>
+                                    </div>
+                                    <div class="clients-mail highlight-pill">
+                                        <img src="./img/icons/mail.svg" alt="">
+                                        <p>emailexm@gmail.com</p>
+                                    </div>
+                                    <div class="clients-phone highlight-pill">
+                                        <img src="./img/icons/phone.svg" alt="">
+                                        <p>+49 123 4567 2100</p>
+                                    </div>
+                                    <div class="clients-language highlight-pill">
+                                        <img src="./img/icons/translator-black.svg" alt="">
+                                        <p>Українська</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="client-chat-expert-info">
-                                <div class="client-chat-expert-speciality">
-                                    <div class="experts-info-speciality" style="border: none;">
-                                        <p class="experts-info-title">спеціальність</p>
-                                        <p class="experts-info-value">Сімейний лікар</p>
-                                    </div>
-                                </div>
-                                <div class="client-chat-expert-price">
-                                    <p class="client-chat-price-title">ціна за консультацію</p>
-                                    <div class="client-chat-price">
-                                        <img src="./img/icons/money.svg" alt="">
-                                        <p>$100.00</p>
-                                    </div>
-                                </div>
+                            <div class="expert-chat-client-buttons">
+                                <button class="expert-chat-client-remind button-secondary">
+                                    <p>Дзвінок</p>
+                                </button>
+                                <button class="expert-chat-client-call button-secondary">
+                                    <p>Нагадати</p>
+                                </button>
                             </div>
                         </div>
-                        <div class="client-chat-box">
-                            <div class="client-chat-files" style="border-bottom: none;">
-                                <button data-modal="chatFileModal">
+                        <div class="expert-chat-box">
+                            <div class="expert-chat-files" style="border-bottom: none;">
+                                <button>
                                     <p>Файли: <span>0</span></p>
                                     <img src="./img/icons/files.svg" alt="">
                                 </button>
                             </div>
-                            <div class="client-chat-messages">
-                                <div class="client-chat-message client-chat-from-expert">
-                                    <div class="client-chat-message-img">
+                            <div class="expert-chat-messages">
+                                <div class="expert-chat-message expert-chat-from-client">
+                                    <div class="expert-chat-message-img">
                                         <img src="./img/expert-1.png" alt="">
                                     </div>
-                                    <div class="client-chat-message-content">
-                                        <p class="client-chat-message-user">Антон Багінський<span>12:15</span></p>
-                                        <p class="client-chat-message-text">Перепрошую за спізнення</p>
+                                    <div class="expert-chat-message-content">
+                                        <p class="expert-chat-message-user">Антон Багінський<span>12:15</span></p>
+                                        <p class="expert-chat-message-text">Перепрошую за спізнення</p>
                                         <img class="message-status" src="./img/icons/message-read.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="client-chat-message client-chat-from-client">
-                                    <div class="client-chat-message-content">
-                                        <p class="client-chat-message-user">Ви<span>12:15</span></p>
-                                        <p class="client-chat-message-text">Доброго дня! В вас вимкнено мікрофон</p>
+                                <div class="expert-chat-message expert-chat-from-expert">
+                                    <div class="expert-chat-message-content">
+                                        <p class="expert-chat-message-user">Ви<span>12:15</span></p>
+                                        <p class="expert-chat-message-text">Доброго дня! В вас вимкнено мікрофон</p>
                                         <img class="message-status" src="./img/icons/message-read.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="client-chat-message client-chat-from-expert">
-                                    <div class="client-chat-message-img">
+                                <div class="expert-chat-message expert-chat-from-client">
+                                    <div class="expert-chat-message-img">
                                         <img src="./img/expert-1.png" alt="">
                                     </div>
-                                    <div class="client-chat-message-content">
-                                        <p class="client-chat-message-user">Антон Багінський<span>12:15</span></p>
-                                        <p class="client-chat-message-text">Я перевірю налаштування</p>
+                                    <div class="expert-chat-message-content">
+                                        <p class="expert-chat-message-user">Антон Багінський<span>12:15</span></p>
+                                        <p class="expert-chat-message-text">Я перевірю налаштування</p>
                                         <img class="message-status" src="./img/icons/message-delivered.svg" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="client-chat-actions">
-                                <div class="client-chat-file" style="cursor: pointer;">
-                                    <img src="./img/icons/attach-file.svg" alt="">
-                                    <input type="file" class="chat-file-input" style="display: none;" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.txt" multiple>
+                            <div class="expert-chat-actions">
+                                <div class="expert-chat-file">
+                                    <input type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.txt" multiple>
+                                    <div class="expert-chat-file-icon">
+                                        <img src="./img/icons/attach-file.svg" alt="Прикрепить файл">
+                                    </div>
                                 </div>
-                                <div class="client-chat-input-box">
-                                    <input class="client-chat-input" type="text" placeholder="Ваше повідомлення...">
-                                    <button type="submit" class="client-chat-send">
+                                <div class="expert-chat-input-box">
+                                    <input class="expert-chat-input" type="text" placeholder="Ваше повідомлення...">
+                                    <button type="submit" class="expert-chat-send">
                                         <img src="./img/icons/send-white.svg" alt="">
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="expert-remind">
+                        <div class="remind-content">
+                            <div class="remind-section">
+                                <div class="remind-section-header">
+                                    <img src="./img/icons/letter.svg" alt="">
+                                    <div class="remind-section-title">
+                                        <p>Назва</p>
+                                        <p>Напишіть назву нагадування</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Назва нагадування" class="form-input">
+                                </div>
+                            </div>
+                            <div class="remind-section">
+                                <div class="remind-auto-checkbox">
+                                    <input type="checkbox" id="remind-auto" class="remind-auto-checkbox-input">
+                                    <label for="remind-auto" class="remind-auto-checkbox-label">
+                                        <p>Автоматичне нагадування</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="remind-section">
+                                <div class="remind-section-header">
+                                    <img src="./img/icons/clock-gray.svg" alt="">
+                                    <div class="remind-section-title">
+                                        <p>Час</p>
+                                        <p>Налаштуйте, коли має надійти нагадування</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-select">
+                                        <option value="" disabled selected>Оберіть період</option>
+                                        <option value="1-hour">1 година</option>
+                                        <option value="3-hour">3 години</option>
+                                        <option value="12-hour">12 годин</option>
+                                        <option value="1-day">1 день</option>
+                                        <!-- ... и так далее -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="remind-section">
+                                <div class="remind-section-header">
+                                    <img src="./img/icons/user.svg" alt="">
+                                    <div class="remind-section-title">
+                                        <p>Користувач</p>
+                                        <p>Хто має отримувати нагадування</p>
+                                    </div>
+                                </div>
+                                <div class="remind-section-search">
+                                    <div class="chat-search">
+                                        <img src="./img/icons/search.svg" alt="">
+                                        <input type="text" class="chat-search-input" placeholder="Пошук">
+                                    </div>
+                                    <button class="remind-add-user">
+                                        <img src="./img/icons/add-black.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="remind-user-list">
+                                    <li class="remind-user-item">
+                                        <div class="remind-user-info">
+                                            <img src="./img/expert-5.png" alt="">
+                                            <p>Іванна Максименко</p>
+                                        </div>
+                                        <button class="remind-delete-user">
+                                            <img src="./img/icons/cancel.svg" alt="">
+                                        </button>
+                                    </li>
+                                    <li class="remind-user-item">
+                                        <div class="remind-user-info">
+                                            <img src="./img/expert-7.png" alt="">
+                                            <p>Остап Шевченко</p>
+                                        </div>
+                                        <button class="remind-delete-user">
+                                            <img src="./img/icons/cancel.svg" alt="">
+                                        </button>
+                                    </li>
+                                    <li class="remind-user-item">
+                                        <div class="remind-user-info">
+                                            <img src="./img/expert-8.png" alt="">
+                                            <p>Іванна Поліщук</p>
+                                        </div>
+                                        <button class="remind-delete-user">
+                                            <img src="./img/icons/cancel.svg" alt="">
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="remind-section">
+                                <div class="remind-section-header">
+                                    <img src="./img/icons/write.svg" alt="">
+                                    <div class="remind-section-title">
+                                        <p>Опис</p>
+                                        <p>Додайте опис до вашого нагадування</p>
+                                    </div>
+                                </div>
+                                <div class="remind-section-description">
+                                    <div class="toolbar">
+                                        <button>
+                                            <img src="./img/icons/toolbar-1.svg" alt="">
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons/toolbar-2.svg" alt="">
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons/toolbar-3.svg" alt="">
+                                        </button>
+                                        <div class="toolbar-divider"></div>
+                                        <button>
+                                            <img src="./img/icons/toolbar-4.svg" alt="">
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons/toolbar-5.svg" alt="">
+                                        </button>
+                                        <div class="toolbar-divider"></div>
+                                        <button>
+                                            <img src="./img/icons/toolbar-6.svg" alt="">
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons/toolbar-7.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <textarea class="description-textarea" placeholder="Додати опис"></textarea>
+                                </div>
+                            </div>
+                            <div class="remind-section">
+                                <div class="remind-section-header">
+                                    <img src="./img/icons/documents.svg" alt="">
+                                    <div class="remind-section-title">
+                                        <p>Файл</p>
+                                        <p>Додайте файли за необхідністю</p>
+                                    </div>
+                                </div>
+                                <div class="expert-profile-prof-files">
+                                    <div class="add-file">
+                                        <input type="file" name="" id="">
+                                        <img src="./img/icons/add.svg" alt="">
+                                        <p>Додати файл</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="remind-section-buttons">
+                                <button class="remind-cancel button-secondary">
+                                    <p>Скасувати</p>
+                                </button>
+                                <button class="remind-save button-primary">
+                                    <p>Зберегти</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="remind-created-items">
+                            <ul class="remind-list">
+                                <li class="remind-item">
+                                    <div class="remind-item-header">
+                                        <div class="remind-item-img">
+                                            <img src="./img/icons/calendar-yellow.svg" alt="">
+                                        </div>
+                                        <p>Перша Консультація</p>
+                                        <button>
+                                            <img src="./img/icons/note.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="remind-item-about">
+                                        <p class="remind-item-about-title">опис</p>
+                                        <p>Доброго дня!</p>
+                                        <p>Нагадуємо, що незабаром відбудеться консультація.</p>
+                                        <div class="remind-item-pills">
+                                            <div class="highlight-pill">
+                                                <img src="./img/icons/calendar-black.svg" alt="">
+                                                <p>Вів, 28 Січня, 14:30</p>
+                                            </div>
+                                            <div class="highlight-pill">
+                                                <img src="./img/icons/target.svg" alt="">
+                                                <p>Онлайн</p>
+                                            </div>
+                                            <div class="highlight-pill">
+                                                <img src="./img/icons/time.svg" alt="">
+                                                <p>45 хвилин</p>
+                                            </div>
+                                        </div>
+                                        <p>Якщо у вас виникли запитання або ви не зможете бути присутніми — будь ласка, повідомте заздалегідь.</p>
+                                        <p>До зустрічі!</p>
+                                    </div>
+                                    <div class="remind-item-files">
+                                        <p class="remind-item-files-title">файли</p>
+                                        <ul class="remind-item-files-list">
+                                            <li class="remind-item-files-item">
+                                                <img src="./img/icons/documents.svg" alt="">
+                                                <p>Files</p>
+                                            </li>
+                                            <li class="remind-item-files-item">
+                                                <img src="./img/icons/documents.svg" alt="">
+                                                <p>Files</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="remind-item-users">
+                                        <p class="remind-item-users-title">користувачі</p>
+                                        <ul class="remind-item-users-list">
+                                            <li class="remind-item-users-item">
+                                                <img src="./img/expert-5.png" alt="">
+                                            </li>
+                                            <li class="remind-item-users-item">
+                                                <img src="./img/expert-7.png" alt="">
+                                            </li>
+                                            <li class="remind-item-users-item">
+                                                <img src="./img/expert-8.png" alt="">
+                                            </li>
+                                            <li class="remind-item-users-item">
+                                                <img src="./img/expert-4.png" alt="">
+                                            </li>
+                                            <li class="remind-item-users-item">
+                                                <img src="./img/expert-6.png" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    expert-call
                 </div>
             </section>
             <!-- modal windows -->
              <div class="chat-modals">
                 <!-- modal chat files window -->
-                <div class="modal modal-chat-files" id="chatFileModal">
+                <div class="chat-files-modal" id="chatFileModal">
                     <div class="modal-content modal-chat-files-content">
                         <div class="modal-window-close">
                             <img src="./img/icons/close.svg" alt="">
@@ -512,7 +740,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Get elements
-                const chatContent = document.querySelector('.client-chat-content');
+                const chatContent = document.querySelector('.expert-chat-content');
                 const chatItems = document.querySelectorAll('.chat-list-item');
                 const backButton = document.querySelector('.chat-back-button');
                 
@@ -536,56 +764,6 @@
                         chatContent.classList.remove('chat-is-active');
                     }
                 });
-                
-                // Chat files modal tabs functionality
-                const chatFilesTabs = document.querySelectorAll('.chat-files-tabs-media, .chat-files-tabs-links, .chat-files-tabs-documents');
-                
-                if (chatFilesTabs.length > 0) {
-                    chatFilesTabs.forEach(tab => {
-                        tab.addEventListener('click', function() {
-                            // Remove active class from all tabs
-                            chatFilesTabs.forEach(t => t.classList.remove('active'));
-                            
-                            // Add active class to clicked tab
-                            this.classList.add('active');
-                            
-                            // Hide all content blocks
-                            const contentBlocks = document.querySelectorAll('.modal-tab-content');
-                            contentBlocks.forEach(block => block.classList.remove('active'));
-                            
-                            // Show the corresponding content block
-                            let targetBlock;
-                            if (this.classList.contains('chat-files-tabs-media')) {
-                                targetBlock = document.querySelector('.modal-files-media');
-                            } else if (this.classList.contains('chat-files-tabs-links')) {
-                                targetBlock = document.querySelector('.modal-files-links');
-                            } else if (this.classList.contains('chat-files-tabs-documents')) {
-                                targetBlock = document.querySelector('.modal-files-documents');
-                            }
-                            
-                            if (targetBlock) {
-                                targetBlock.classList.add('active');
-                            }
-                        });
-                    });
-                }
-                
-                // File input functionality
-                const chatFileBtn = document.querySelector('.client-chat-file');
-                const chatFileInput = document.querySelector('.client-chat-file-input');
-                
-                if (chatFileBtn && chatFileInput) {
-                    chatFileBtn.addEventListener('click', function() {
-                        chatFileInput.click();
-                    });
-                    
-                    chatFileInput.addEventListener('change', function() {
-                        if (this.files.length > 0) {
-                            console.log('Файл выбран:', this.files[0].name);
-                            // Здесь можно добавить дополнительную логику обработки файла
-                        }
-                    });
-                }
             });
         </script>
 </body>

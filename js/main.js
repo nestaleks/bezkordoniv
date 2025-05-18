@@ -649,6 +649,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initClientProfileTabs();
     initExpertProfileTabs();
     initClientPageTabs();
+    initExpertChatTabs();
 });
 
 
@@ -718,7 +719,72 @@ function initExpertProfileTabs() {
     console.log('Expert profile tabs initialized');
 }
 
-
+// Expert chat tabs
+function initExpertChatTabs() {
+    console.log('Инициализация вкладок чата эксперта...');
+    
+    // Находим все кнопки вкладок
+    const allTab = document.querySelector('.expert-chat-tabs-all');
+    const meetingsTab = document.querySelector('.expert-chat-tabs-meetings');
+    const clientsTab = document.querySelector('.expert-chat-tabs-clients');
+    const remindTab = document.querySelector('.expert-chat-tabs-remind');
+    const supportTab = document.querySelector('.expert-chat-tabs-support');
+    
+    // Находим содержимое
+    const chatContent = document.querySelector('.expert-chat-content');
+    const remindContent = document.querySelector('.expert-remind');
+    
+    if (!allTab || !meetingsTab || !clientsTab || !remindTab || !supportTab || 
+        !chatContent || !remindContent) {
+        console.warn('Элементы вкладок чата не найдены');
+        return;
+    }
+    
+    // Функция для активации вкладки
+    function activateTab(activeTab) {
+        // Удаляем активный класс у всех вкладок
+        [allTab, meetingsTab, clientsTab, remindTab, supportTab].forEach(tab => {
+            tab.classList.remove('active');
+        });
+        
+        // Добавляем активный класс к выбранной вкладке
+        activeTab.classList.add('active');
+        
+        // Показываем соответствующий контент
+        if (activeTab === remindTab) {
+            chatContent.style.display = 'none';
+            remindContent.style.display = 'grid';
+        } else {
+            chatContent.style.display = 'flex';
+            remindContent.style.display = 'none';
+        }
+    }
+    
+    // Обработчики событий для кнопок вкладок
+    allTab.addEventListener('click', () => {
+        activateTab(allTab);
+    });
+    
+    meetingsTab.addEventListener('click', () => {
+        activateTab(meetingsTab);
+    });
+    
+    clientsTab.addEventListener('click', () => {
+        activateTab(clientsTab);
+    });
+    
+    remindTab.addEventListener('click', () => {
+        activateTab(remindTab);
+    });
+    
+    supportTab.addEventListener('click', () => {
+        activateTab(supportTab);
+    });
+    
+    // По умолчанию активируем первую вкладку
+    activateTab(allTab);
+    console.log('Вкладки чата эксперта инициализированы');
+}
 
 // Modal verification and founder functionality
 document.addEventListener('DOMContentLoaded', function() {

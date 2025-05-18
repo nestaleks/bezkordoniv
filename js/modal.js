@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                  e.target.classList.contains('payment-modal') ||
                  e.target.classList.contains('modal-pay-appointment-item') ||
                  e.target.classList.contains('modal-incoming-about') ||
+                 e.target.classList.contains('chat-files-modal') ||
                  e.target.classList.contains('modal-request-withdraw')) && 
                 e.target.classList.contains('active')) {
                 closeModal(e.target.id);
@@ -300,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Modal.js: Closing all modals');
         
         // Находим все модальные окна
-        const modals = document.querySelectorAll('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about, .modal-request-withdraw');
+        const modals = document.querySelectorAll('.modal, .modal-recharge-balance, .modal-pay-appointments, .payment-modal, .modal-pay-appointment-item, .payment-modal-newcard, .modal-incoming-about, .modal-request-withdraw, .chat-files-modal');
         
         // Закрываем каждое модальное окно
         modals.forEach(modal => {
@@ -582,7 +583,12 @@ document.addEventListener('DOMContentLoaded', function() {
      * Настройка модального окна для просмотра файлов чата
      */
     function setupChatFilesModal() {
-        const filesBtnModal = document.querySelector('.client-chat-files button');
+        // Проверяем оба возможных селектора - для client-chat и expert-chat
+        let filesBtnModal = document.querySelector('.client-chat-files button');
+        if (!filesBtnModal) {
+            filesBtnModal = document.querySelector('.expert-chat-files button');
+        }
+        
         const chatFileModal = document.getElementById('chatFileModal');
         const modalClose = chatFileModal?.querySelector('.modal-window-close');
         const chatFilesTabs = document.querySelectorAll('.chat-files-tabs-media, .chat-files-tabs-links, .chat-files-tabs-documents');
@@ -597,6 +603,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Открытие модального окна
         filesBtnModal.addEventListener('click', function() {
             chatFileModal.classList.add('active');
+            chatFileModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
             activeModal = chatFileModal;
         });
@@ -605,6 +612,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (modalClose) {
             modalClose.addEventListener('click', function() {
                 chatFileModal.classList.remove('active');
+                chatFileModal.style.display = 'none';
                 document.body.style.overflow = '';
                 activeModal = null;
             });
@@ -614,6 +622,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chatFileModal.addEventListener('click', function(e) {
             if (e.target === chatFileModal) {
                 chatFileModal.classList.remove('active');
+                chatFileModal.style.display = 'none';
                 document.body.style.overflow = '';
                 activeModal = null;
             }
@@ -645,6 +654,42 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     if (targetBlock) {
                         targetBlock.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        // Дополнительно для вкладок в общем списке
+        const allTabButtons = document.querySelectorAll('.chat-files-modal .tabs-item');
+        if (allTabButtons.length > 0) {
+            allTabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Убираем active у всех кнопок табов
+                    allTabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Активируем текущую кнопку
+                    this.classList.add('active');
+                    
+                    // Определяем, какой контент показать
+                    let contentSelector;
+                    if (this.classList.contains('chat-files-tabs-media')) {
+                        contentSelector = '.modal-files-media';
+                    } else if (this.classList.contains('chat-files-tabs-links')) {
+                        contentSelector = '.modal-files-links';
+                    } else if (this.classList.contains('chat-files-tabs-documents')) {
+                        contentSelector = '.modal-files-documents';
+                    }
+                    
+                    if (contentSelector) {
+                        // Скрываем все блоки контента
+                        const contentBlocks = document.querySelectorAll('.modal-tab-content');
+                        contentBlocks.forEach(block => block.classList.remove('active'));
+                        
+                        // Показываем нужный блок
+                        const targetContent = document.querySelector(contentSelector);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        }
                     }
                 });
             });
