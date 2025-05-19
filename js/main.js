@@ -828,3 +828,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Call updateHeader initially with default value (not logged in)
 updateHeader(false);
+
+// Expert call functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим кнопки и элементы
+    const callButton = document.querySelector('.expert-chat-client-call');
+    const backButton = document.querySelector('.call-back-button');
+    const expertChatSection = document.querySelector('.expert-chat');
+    const expertCallSection = document.querySelector('.expert-call');
+    
+    if (callButton && backButton && expertChatSection && expertCallSection) {
+        // Обработчик для кнопки вызова
+        callButton.addEventListener('click', function() {
+            expertChatSection.style.display = 'none';
+            expertCallSection.style.display = 'block';
+        });
+        
+        // Обработчик для кнопки возврата
+        backButton.addEventListener('click', function() {
+            expertCallSection.style.display = 'none';
+            expertChatSection.style.display = 'block';
+        });
+        
+        // По умолчанию скрываем секцию звонка при загрузке страницы
+        expertCallSection.style.display = 'none';
+    }
+});

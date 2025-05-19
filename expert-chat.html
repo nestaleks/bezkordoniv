@@ -294,17 +294,17 @@
                                 </div>
                             </div>
                             <div class="expert-chat-client-buttons">
-                                <button class="expert-chat-client-remind button-secondary">
+                                <button class="expert-chat-client-call button-secondary">
                                     <p>Дзвінок</p>
                                 </button>
-                                <button class="expert-chat-client-call button-secondary">
+                                <button class="expert-chat-client-remind button-secondary">
                                     <p>Нагадати</p>
                                 </button>
                             </div>
                         </div>
                         <div class="expert-chat-box">
                             <div class="expert-chat-files" style="border-bottom: none;">
-                                <button>
+                                <button data-modal="chatFileModal">
                                     <p>Файли: <span>0</span></p>
                                     <img src="./img/icons/files.svg" alt="">
                                 </button>
@@ -574,7 +574,192 @@
                             </ul>
                         </div>
                     </div>
-                    expert-call
+                </div>
+            </section>
+            <section class="expert-call">
+                <div class="container">
+                    <div class="call-back-button-container">
+                        <button class="call-back-button">
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 9L1 5L5 1" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p>Назад</p>
+                        </button>
+                    </div>
+                    <div class="expert-call-page">
+                        <div class="expert-call-content">
+                            <div class="expert-call-top">
+                                <div class="expert-call-time">
+                                    <img src="./img/icons/rec.svg" alt="">
+                                    <p>Зустріч - <span>00:25:14</span></p>
+                                </div>
+                                <div class="expert-call-add-user">
+                                    <p>Додати користувача</p>
+                                    <img src="./img/icons/add-blue.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="expert-call-display">
+                                <img src="./img/icons/video-camera-front.svg" alt="">
+                            </div>
+                            <div class="expert-call-controls">
+                                <div class="call-volume">
+                                    <img src="./img/icons/volume-min.svg" alt="">
+                                    <label class="slider" for="slider-input">
+                                        <!-- Range input -->
+                                        <input class="slider-input" id="slider-input" type="range" min="0" max="100" value="33">
+                                    </label>
+                                    <img src="./img/icons/volume-max.svg" alt="">
+                                </div>
+                                <div class="expert-call-controls-buttons">
+                                    <div>
+                                        <button class="expert-call-controls-button button-secondary">
+                                            <img src="./img/icons/mic-off.svg" alt="">
+                                        </button>
+                                        <p>Мікрофон</p>
+                                    </div>
+                                    <div>
+                                        <button class="expert-call-controls-button button-secondary">
+                                            <img src="./img/icons/camera-off.svg" alt="">
+                                        </button>
+                                        <p>Камера</p>
+                                    </div>
+                                    <div>
+                                        <button class="expert-call-controls-button button-secondary">
+                                            <img src="./img/icons/subtitles.svg" alt="">
+                                        </button>
+                                        <p>Титри</p>
+                                    </div>
+                                    <div>
+                                        <button class="expert-call-controls-button button-secondary">
+                                            <img src="./img/icons/fullscreen.svg" alt="">
+                                        </button>
+                                        <p>Дисплей</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expert-call-notes">
+                                <div class="expert-call-notes-header">
+                                    <p class="expert-call-notes-title">Нотатки</p>
+                                    <p class="expert-call-notes-text">Додайте нотатки до вашої зустрічі</p>
+                                </div>
+                                <div class="expert-call-notes-new">
+                                    <div class="expert-call-notes-add">
+                                        <div class="expert-call-notes-description">
+                                            <div class="toolbar">
+                                                <button>
+                                                    <img src="./img/icons/toolbar-1.svg" alt="">
+                                                </button>
+                                                <button>
+                                                    <img src="./img/icons/toolbar-2.svg" alt="">
+                                                </button>
+                                                <button>
+                                                    <img src="./img/icons/toolbar-3.svg" alt="">
+                                                </button>
+                                                <div class="toolbar-divider"></div>
+                                                <button>
+                                                    <img src="./img/icons/toolbar-4.svg" alt="">
+                                                </button>
+                                                <button>
+                                                    <img src="./img/icons/toolbar-5.svg" alt="">
+                                                </button>
+                                                <div class="toolbar-divider"></div>
+                                                <button>
+                                                    <img src="./img/icons/toolbar-6.svg" alt="">
+                                                </button>
+                                                <button>
+                                                    <img src="./img/icons/toolbar-7.svg" alt="">
+                                                </button>
+                                            </div>
+                                            <textarea class="description-textarea" placeholder="Додати опис"></textarea>
+                                        </div>
+                                        <div class="expert-call-notes-button-container">
+                                            <button class="expert-call-notes-button">
+                                                <img src="./img/icons/cancel.svg" alt="">
+                                            </button>
+                                            <button class="expert-call-notes-button">
+                                                <img src="./img/icons/add-yellow.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button class="expert-call-notes-create">
+                                        <img src="./img/icons/add.svg" alt="">
+                                        <p>Додати</p>
+                                    </button>
+                                </div>
+                                <div class="expert-call-notes-list">
+                                    <div class="expert-call-notes-item">
+                                        <div class="expert-call-notes-box">
+                                            <p>12:24</p>
+                                            <p>Червень 2019 - початок практики</p>
+                                        </div>
+                                        <button class="expert-call-notes-button">
+                                            <img src="./img/icons/cancel.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="expert-call-notes-item">
+                                        <div class="expert-call-notes-box">
+                                            <p>12:12</p>
+                                            <p>Отримання магістратури - 12.06.2019</p>
+                                        </div>
+                                        <button class="expert-call-notes-button">
+                                            <img src="./img/icons/cancel.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expert-call-chat">
+                            <div class="expert-call-files">
+                                <button data-modal="chatFileModal">
+                                    <p>Файли: <span>0</span></p>
+                                    <img src="./img/icons/files.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="expert-chat-messages" style="margin-top: 0">
+                                <div class="expert-chat-message expert-chat-from-client">
+                                    <div class="expert-chat-message-img">
+                                        <img src="./img/expert-1.png" alt="">
+                                    </div>
+                                    <div class="expert-chat-message-content">
+                                        <p class="expert-chat-message-user">Антон Багінський<span>12:15</span></p>
+                                        <p class="expert-chat-message-text">Перепрошую за спізнення</p>
+                                        <img class="message-status" src="./img/icons/message-read.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="expert-chat-message expert-chat-from-expert">
+                                    <div class="expert-chat-message-content">
+                                        <p class="expert-chat-message-user">Ви<span>12:15</span></p>
+                                        <p class="expert-chat-message-text">Доброго дня! В вас вимкнено мікрофон</p>
+                                        <img class="message-status" src="./img/icons/message-read.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="expert-chat-message expert-chat-from-client">
+                                    <div class="expert-chat-message-img">
+                                        <img src="./img/expert-1.png" alt="">
+                                    </div>
+                                    <div class="expert-chat-message-content">
+                                        <p class="expert-chat-message-user">Антон Багінський<span>12:15</span></p>
+                                        <p class="expert-chat-message-text">Я перевірю налаштування</p>
+                                        <img class="message-status" src="./img/icons/message-delivered.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expert-chat-actions" style="margin-top: 0">
+                                <div class="expert-chat-file">
+                                    <input type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.txt" multiple>
+                                    <div class="expert-chat-file-icon">
+                                        <img src="./img/icons/attach-file.svg" alt="Прикрепить файл">
+                                    </div>
+                                </div>
+                                <div class="expert-chat-input-box">
+                                    <input class="expert-chat-input" type="text" placeholder="Ваше повідомлення...">
+                                    <button type="submit" class="expert-chat-send">
+                                        <img src="./img/icons/send-white.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- modal windows -->

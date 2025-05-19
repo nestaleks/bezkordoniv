@@ -163,46 +163,82 @@
         </div>
     </header>
         <main class="main">
-            <!--BREADCRUMB-->
-            <nav class="breadcrumb">
-                <div class="container">
-                    <!-- Breadcrumb will be generated automatically by JavaScript -->
-                </div>
-            </nav>
-            <!--FAQ-->
-             <section class="faq-page">
-                <div class="container">
-                    <h4 class="faq-title page-title">FAQ</h4>
-                    <div class="faq-input-container mb-20" style="width: 100%;">
-                        <div class="search-input-text">
-                            <img src="./img/icons/search.svg" alt="">
-                            <input type="text" placeholder="Опишіть ваше питання">
-                        </div>
-                        <button class="faq-search-btn button-primary" type="submit">
-                            <p>Пошук</p>
-                            <svg width="6.004028" height="10.008179" viewBox="0 0 6.00403 10.0082" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path id="Vector" d="M1 9L5 5L1 1" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                            </svg>
-                        </button>
+            <div class="faq-page">
+                <!--BREADCRUMB-->
+                <nav class="breadcrumb">
+                    <div class="container">
+                        <!-- Breadcrumb will be generated automatically by JavaScript -->
                     </div>
-                    <div class="tabs">
-                        <div class="tabs-inner">
-                            <button class="tabs-item faq-tabs-all">
-                                <p>Всі</p>
-                            </button>
-                            <button class="tabs-item faq-tabs-clients">
-                                <p>Клієнту</p>
-                            </button>
-                            <button class="tabs-item faq-tabs-experts">
-                                <p>Лікарям</p>
+                </nav>
+                <!--FAQ-->
+                <section class="faq">
+                    <div class="container">
+                        <h4 class="faq-title page-title">FAQ</h4>
+                        <div class="faq-input-container mb-20" style="width: 100%;">
+                            <div class="search-input-text">
+                                <img src="./img/icons/search.svg" alt="">
+                                <input type="text" placeholder="Опишіть ваше питання">
+                            </div>
+                            <button class="faq-search-btn button-primary" type="submit">
+                                <p>Пошук</p>
+                                <svg width="6.004028" height="10.008179" viewBox="0 0 6.00403 10.0082" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector" d="M1 9L5 5L1 1" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
                             </button>
                         </div>
+                        <div class="tabs">
+                            <div class="tabs-inner">
+                                <button class="tabs-item faq-tabs-for-all">
+                                    <p>Загальні</p>
+                                </button>
+                                <button class="tabs-item faq-tabs-for-clients">
+                                    <p>Клієнту</p>
+                                </button>
+                                <button class="tabs-item faq-tabs-for-experts">
+                                    <p>Експерту</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-content-item faq-for-all">
+                                <p class="faq-content-item-category">Консультації</p>
+                                <p class="faq-content-item-title">Як працює платформа «Без кордонів»: швидкий гайд ?</p>
+                                <p class="faq-content-item-title">Як обрати потрібного експерта і перевірити його кваліфікацію?</p>
+                                <p class="faq-content-item-title">Скільки коштують консультації і які методи оплати доступні?</p>
+                                <a class="faq-content-item-link" href="">Детальніше</a>
+                            </div>
+                            <div class="faq-content-item faq-for-all">
+                                <p class="faq-content-item-category">Користувачам</p>
+                                <p class="faq-content-item-title">Як я можу оновити або керувати своїм профілем та налаштуваннями облікового запису?</p>
+                                <p class="faq-content-item-title">Що робити, якщо виникла технічна проблема під час використання платформи?</p>
+                                <p class="faq-content-item-title">Чи є правила або рекомендації для користувачів щодо взаємодії з іншими на платформі?</p>
+                                <a class="faq-content-item-link" href="">Детальніше</a>
+                            </div>
+                            <div class="faq-content-item faq-for-experts">
+                                <p class="faq-content-item-category">Експертам</p>
+                                <p class="faq-content-item-title">Як налаштувати та керувати профілем експерта/лікаря та своєю доступністю?</p>
+                                <p class="faq-content-item-title">Що робити, якщо виникають технічні проблеми під час консультації або сеансу?</p>
+                                <p class="faq-content-item-title">Правила ті Стандарти, експертів під час надання консультацій на платформі</p>
+                                <a class="faq-content-item-link" href="">Детальніше</a>
+                            </div>
+                            <div class="faq-content-item faq-for-clients">
+                                <p class="faq-content-item-category">Користувачам</p>
+                                <p class="faq-content-item-title">Як працює платформа «Без кордонів»: швидкий гайд ?</p>
+                                <p class="faq-content-item-title">Як обрати потрібного експерта і перевірити його кваліфікацію?</p>
+                                <p class="faq-content-item-title">Скільки коштують консультації і які методи оплати доступні?</p>
+                                <a class="faq-content-item-link" href="">Детальніше</a>
+                            </div>
+                            <div class="faq-content-item faq-for-all">
+                                <p class="faq-content-item-category">Консультації</p>
+                                <p class="faq-content-item-title">Як працює платформа «Без кордонів»: швидкий гайд ?</p>
+                                <p class="faq-content-item-title">Як обрати потрібного експерта і перевірити його кваліфікацію?</p>
+                                <p class="faq-content-item-title">Скільки коштують консультації і які методи оплати доступні?</p>
+                                <a class="faq-content-item-link" href="">Детальніше</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="faq-content">
-                        
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
             
 
 
