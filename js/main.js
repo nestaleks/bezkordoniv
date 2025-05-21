@@ -638,6 +638,125 @@ function initClientPageTabs() {
     });
 }
 
+// FAQ Tabs
+function initFaqTabs() {
+    const allTab = document.querySelector('.faq-tabs-all');
+    const generalTab = document.querySelector('.faq-tabs-for-all');
+    const clientsTab = document.querySelector('.faq-tabs-for-clients');
+    const expertsTab = document.querySelector('.faq-tabs-for-experts');
+    
+    const allContent = document.querySelectorAll('.faq-for-all');
+    const clientsContent = document.querySelectorAll('.faq-for-clients');
+    const expertsContent = document.querySelectorAll('.faq-for-experts');
+    
+    if (!allTab || !generalTab || !clientsTab || !expertsTab) {
+        console.warn('FAQ tab elements not found');
+        return;
+    }
+    
+    function activateTab(activeTab, activeContents, inactiveContents1, inactiveContents2) {
+        // Remove active class from all tabs
+        [allTab, generalTab, clientsTab, expertsTab].forEach(tab => {
+            tab.classList.remove('active');
+        });
+        
+        // Add active class to clicked tab
+        activeTab.classList.add('active');
+        
+        // Hide all content
+        [...allContent, ...clientsContent, ...expertsContent].forEach(content => {
+            content.style.display = 'none';
+        });
+        
+        // Show active content
+        activeContents.forEach(content => {
+            content.style.display = 'flex';
+        });
+    }
+    
+    function showAllContent() {
+        // Remove active class from all tabs
+        [allTab, generalTab, clientsTab, expertsTab].forEach(tab => {
+            tab.classList.remove('active');
+        });
+        
+        // Add active class to "All" tab
+        allTab.classList.add('active');
+        
+        // Show all content
+        [...allContent, ...clientsContent, ...expertsContent].forEach(content => {
+            content.style.display = 'flex';
+        });
+    }
+    
+    // Event listeners for tabs
+    allTab.addEventListener('click', () => {
+        showAllContent();
+    });
+    
+    generalTab.addEventListener('click', () => {
+        activateTab(generalTab, allContent, clientsContent, expertsContent);
+    });
+    
+    clientsTab.addEventListener('click', () => {
+        activateTab(clientsTab, clientsContent, allContent, expertsContent);
+    });
+    
+    expertsTab.addEventListener('click', () => {
+        activateTab(expertsTab, expertsContent, allContent, clientsContent);
+    });
+    
+    // Set default view - show all content
+    showAllContent();
+}
+
+// FAQ Content and Answers Navigation
+function initFaqNavigation() {
+    const faqContent = document.querySelector('.faq-content');
+    const faqAnswers = document.querySelectorAll('.faq-answers');
+    const backButtons = document.querySelectorAll('.faq-back-button');
+    
+    if (!faqContent || !faqAnswers.length) {
+        console.warn('FAQ navigation elements not found');
+        return;
+    }
+    
+    // Hide all answers sections initially
+    faqAnswers.forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // Handle click on FAQ content items
+    document.querySelectorAll('.faq-content-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const answersId = item.getAttribute('data-answers');
+            if (answersId) {
+                // Hide FAQ content
+                faqContent.style.display = 'none';
+                
+                // Show corresponding answers section
+                const answersSection = document.getElementById(answersId);
+                if (answersSection) {
+                    answersSection.style.display = 'block';
+                }
+            }
+        });
+    });
+    
+    // Handle back button clicks
+    backButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Hide all answers sections
+            faqAnswers.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show FAQ content
+            faqContent.style.display = 'grid';
+        });
+    });
+}
+
 // Initialize all components
 document.addEventListener('DOMContentLoaded', function() {
     // Инициализация слайдеров, если они есть на странице
@@ -650,6 +769,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initExpertProfileTabs();
     initClientPageTabs();
     initExpertChatTabs();
+    initFaqTabs();
+    initFaqNavigation();
 });
 
 
