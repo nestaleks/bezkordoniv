@@ -10,6 +10,7 @@
     font-size: 14px;
     font-weight: 800;
     line-height: 21px;
+    cursor: pointer;
 }
 .button-primary:hover{
     background-color: var(--secondary-03);
@@ -29,6 +30,7 @@
     font-weight: 800;
     line-height: 21px;
     color: var(--black-50);
+    cursor: pointer;
 }
 .button-secondary:hover{
     background-color: var(--white-10);
@@ -47,6 +49,7 @@
     font-size: 14px;
     font-weight: 800;
     line-height: 21px;
+    cursor: pointer;
 }
 .button-contained:hover{
     background-color: var(--secondary-03);
@@ -66,6 +69,7 @@
     font-weight: 800;
     line-height: 21px;
     color: var(--secondary-02);
+    cursor: pointer;
 }
 .button-clear:hover{
     background-color: var(--black-10);

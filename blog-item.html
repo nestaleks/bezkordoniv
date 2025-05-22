@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bezkordoniv - Блог</title>
+    <link href="./app.css" rel="stylesheet">
+    <link href="./css/blog-item.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-top">
+            <a href="./index.html" class="header-logo">
+                <img src="./img/logo.svg" alt="">
+                <p>Без Кордонів</p>
+            </a>
+
+            <!-- buttons for unauthorized users -->
+            <div class="header-if-logout">
+                <div class="header-buttons">
+                    <button class="header-button-expert button-secondary">
+                        <p>Шукаєте Клієнта або Експерта?</p>
+                    </button>
+                    <button class="header-button-support button-clear">
+                        <p>Техн-підтримка</p>
+                    </button>
+                    <button class="header-button-login button-primary">
+                        <img src="./img/icons/login.svg" alt="">
+                        <p>Увійти</p>
+                    </button>
+                    <button class="header-button-signup button-clear">
+                        <img src="./img/icons/signup.svg" alt="">
+                        <p>Реєстрація</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu toggle -->
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- First divider line -->
+        <div class="header-divider"></div>
+
+        <!-- Menu navigation -->
+        <nav class="menu">
+            <!-- General menu (always visible) -->
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="./index.html" class="menu-link">
+                        <svg class="menu-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 0.125L13.3 4.85L13 5.75H12.5V11.5H1.50001V5.75H1.00001L0.700012 4.85L7.00001 0.125ZM2.50001 4.75V10.5H11.5V4.75L7.00001 1.375L2.50001 4.75Z" fill="black" fill-opacity="0.7"/>
+                        </svg>
+                        <p class="menu-item-text">Головна</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="./blog.html" class="menu-link">
+                        <svg class="menu-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6667 1.16666H2.33333C1.59695 1.16666 1 1.76361 1 2.49999V11.6667C1 12.403 1.59695 13 2.33333 13H11.6667C12.403 13 13 12.403 13 11.6667V2.49999C13 1.76361 12.403 1.16666 11.6667 1.16666Z" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.66667 4.66666H9.33333M4.66667 7H9.33333M4.66667 9.33333H6.5" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="menu-item-text">Блог</p>
+                    </a>
+                </li>
+            </ul>
+            <!-- Blur and gray overlay when mobile menu is open -->
+            <div class="overlay"></div>
+        </nav>
+        <!-- Second divider line -->
+        <div class="header-divider2"></div>
+    </div>
+</header>
+<main class="main">
+    <!--BREADCRUMB-->
+    <nav class="breadcrumb">
+        <div class="container">
+            <!-- Breadcrumb will be generated automatically by JavaScript -->
+        </div>
+    </nav>
+
+    <section class="blog-item">
+        <div class="container">
+            <div class="blog-item-inner">
+                <div class="blog-item-header">
+                    <div class="blog-item-meta">
+                        <span class="blog-item-date">15 березня 2024</span>
+                        <span class="blog-item-category">Медицина</span>
+                    </div>
+                    <h1 class="blog-item-title">Як отримати максимум користі від онлайн-консультації з лікарем: інструкція для пацієнтів</h1>
+                </div>
+                <div class="blog-item-content">
+                    <img class="blog-item-image" src="./img/blog-item-1.png" alt="">
+                    <div class="blog-item-text">
+                        <p>Онлайн-консультації з лікарями стали невід'ємною частиною сучасної медицини. Вони дозволяють отримати професійну медичну допомогу, не виходячи з дому. Однак, щоб така консультація була максимально ефективною, важливо правильно до неї підготуватися.</p>
+                        
+                        <h2>Підготовка до консультації</h2>
+                        <p>Перед початком консультації необхідно:</p>
+                        <ul>
+                            <li>Підготувати всі наявні медичні документи</li>
+                            <li>Записати основні симптоми та їх тривалість</li>
+                            <li>Скласти список прийманих ліків</li>
+                            <li>Підготувати список запитань до лікаря</li>
+                        </ul>
+
+                        <h2>Під час консультації</h2>
+                        <p>Для отримання максимальної користі від консультації:</p>
+                        <ul>
+                            <li>Чітко описуйте свої симптоми</li>
+                            <li>Записуйте рекомендації лікаря</li>
+                            <li>Не соромтеся задавати уточнювальні запитання</li>
+                            <li>Переконайтеся, що ви правильно зрозуміли всі рекомендації</li>
+                        </ul>
+
+                        <h2>Після консультації</h2>
+                        <p>Після завершення консультації важливо:</p>
+                        <ul>
+                            <li>Дотримуватися всіх рекомендацій лікаря</li>
+                            <li>Приймати призначені препарати за схемою</li>
+                            <li>Відстежувати зміни у своєму стані</li>
+                            <li>За потреби записатися на повторну консультацію</li>
+                        </ul>
+
+                        <p>Пам'ятайте, що якість онлайн-консультації багато в чому залежить від вашої підготовки та активного участі в процесі. Дотримуючись цих рекомендацій, ви зможете отримати максимальну користь від спілкування з лікарем.</p>
+                    </div>
+                </div>
+                <div class="blog-item-footer">
+                    <div class="blog-item-tags">
+                        <span class="blog-item-tag">#медицина</span>
+                        <span class="blog-item-tag">#онлайн-консультації</span>
+                        <span class="blog-item-tag">#здоров'я</span>
+                    </div>
+                    <div class="blog-item-share">
+                        <p>Поділитися:</p>
+                        <div class="blog-item-socials">
+                            <a href="#" class="blog-item-social">
+                                <img src="./img/icons/facebook.svg" alt="Facebook">
+                            </a>
+                            <a href="#" class="blog-item-social">
+                                <img src="./img/icons/telegram.svg" alt="Telegram">
+                            </a>
+                            <a href="#" class="blog-item-social">
+                                <img src="./img/icons/whatsapp.svg" alt="WhatsApp">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <img src="./img/logo.svg" alt="">
+            <p>Без Кордонів</p>
+        </div>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="">Про нас</a>
+                <a href="">Партнерам</a>
+                <a href="">Правила сервісу</a>
+                <a href="">Політика конфіденційності </a>
+                <a href="">Політика безпеки передачі реквізитів платіжної картки</a>
+                <a href="">Умови повернення грошей</a>
+                <a href="">FAQ</a>
+                <a href="">Блог</a>
+            </nav>
+            <div class="footer-contacts">
+                <p class="footer-contacts-title">Контакти: Телефонуйте нам:</p>
+                <p class="footer-contacts-text">
+                    <span>Пн-Пт:</span> з 8:00 до 20:00
+                </p>
+                <p class="footer-contacts-text">
+                    <span>Сб-Нд:</span> з 9:00 до 20:00
+                </p>
+                <p class="footer-contacts-text">
+                    <span>Служба турботи:</span> <a href="tel:+380977777777">0977777777</a>
+                </p>
+                <div class="footer-socials">
+                    <img src="./img/icons/facebook.svg" alt="">
+                    <img src="./img/icons/instagram.svg" alt="">
+                    <img src="./img/icons/linkedin.svg" alt="">
+                    <img src="./img/icons/telegram.svg" alt="">
+                    <img src="./img/icons/whatsapp.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-copyright">
+        <p>©bezkordoniv.com, 2025 Використання матеріалів дозволено тільки при наявності активного посилання на джерело</p>
+        <p class="footer-copyright-lang">UA</p>
+    </div>
+</footer>
+<script src="./js/breadcrumb.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html> 

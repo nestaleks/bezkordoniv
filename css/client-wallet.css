@@ -71,6 +71,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    border: none;
 }
 
 .client-wallet-incoming{
@@ -100,10 +101,11 @@
 .client-wallet-incoming p,
 .client-wallet-outcoming p{
     color: var(--white-100);
-    font-size: 14px;
-    font-weight: 800;
     width: 100%;
     text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 800;
 }
 
 .client-wallet-history{

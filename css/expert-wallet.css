@@ -81,11 +81,13 @@
     width: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .expert-balance-request{
     background-color: var(--green-01);
     color: var(--white-100);
+    border: none;
 }
 
 .expert-balance-request:hover{
@@ -220,6 +222,11 @@
 .expert-incoming-table tbody tr,
 .expert-outcoming-table tbody tr {
     border-bottom: 1px solid var(--black-10);
+}
+
+.expert-incoming-table tbody tr:hover,
+.expert-outcoming-table tbody tr:hover {
+    background-color: var(--primary-08);
 }
 
 .expert-incoming-table tbody tr:last-child,

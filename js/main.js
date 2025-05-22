@@ -975,3 +975,20 @@ document.addEventListener('DOMContentLoaded', function() {
         expertCallSection.style.display = 'none';
     }
 });
+
+// Categories toggle functionality
+const categoriesToggle = document.querySelector('.blog-page-categories-toggle');
+const categoriesContainer = document.querySelector('.blog-page-categories');
+
+if (categoriesToggle && categoriesContainer) {
+    categoriesToggle.addEventListener('click', () => {
+        categoriesToggle.classList.toggle('active');
+        categoriesContainer.classList.toggle('active');
+        
+        // Update button text
+        const buttonText = categoriesToggle.querySelector('span');
+        buttonText.textContent = categoriesContainer.classList.contains('active') 
+            ? 'Сховати категорії' 
+            : 'Показати категорії';
+    });
+}

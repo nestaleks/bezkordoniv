@@ -143,7 +143,13 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    transition: all 0.3s ease;
 }
+
+.search-banner:hover{
+    transform: translateY(-3px);
+}
+
 .search-banner-content{
     padding: 24px 0 24px 24px;
     display: flex;
@@ -260,6 +266,12 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
 }
+
+.category-tile:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .category-tile a{
     width: calc(100% - 24px);
     padding: 12px;
@@ -349,7 +361,14 @@
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+.top-experts-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .top-experts-box{
     display: flex;
     gap: 10px;
@@ -409,7 +428,14 @@
     border-radius: 12px;
     border: 1px solid var(--black-10);
     background-color: var(--primary-08);
+    transition: all 0.3s ease;
 }
+
+.how-to-order-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .how-to-order-images{
     margin: 0 auto 10px;
     max-width: 234px;
@@ -592,6 +618,12 @@
     height: 240px;
     transition: all 0.3s ease;
 }
+
+.main-blog-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .main-blog-content{
     display: flex;
     flex-direction: column;
@@ -665,6 +697,7 @@
     gap: 10px;
     text-align: center;
 }
+
 .advantages-banner-img{
     height: 123px;
 }
@@ -791,7 +824,13 @@
     flex-direction: column;
     align-items: center;
     padding: 12px;
+    transition: all 0.3s ease;
 }
+
+.question-list-item:hover{
+    background-color: var(--primary-08);
+}
+
 .question-list-item input {
     display: none;
 }
@@ -807,6 +846,7 @@
     text-align: left;
     transition: background 0.3s;
 }
+
 .faq-question img{
     height: 24px;
     width: 24px;
@@ -843,7 +883,14 @@
 .locations-item{
     display: flex;
     gap: 10px;
+    transition: all 0.3s ease;
 }
+
+.locations-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .locations-item-img{
     width: 80px;
     height: 80px;
