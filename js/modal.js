@@ -583,34 +583,49 @@ document.addEventListener('DOMContentLoaded', function() {
      * Настройка модального окна для просмотра файлов чата
      */
     function setupChatFilesModal() {
-        // Проверяем оба возможных селектора - для client-chat и expert-chat
-        let filesBtnModal = document.querySelector('.client-chat-files button');
-        if (!filesBtnModal) {
-            filesBtnModal = document.querySelector('.expert-chat-files button');
-        }
+        console.log('Modal.js: Setting up chat files modal');
         
+        // Find all buttons with data-modal="chatFileModal"
+        const filesBtnModals = document.querySelectorAll('[data-modal="chatFileModal"]');
         const chatFileModal = document.getElementById('chatFileModal');
-        const modalClose = chatFileModal?.querySelector('.modal-window-close');
-        const chatFilesTabs = document.querySelectorAll('.chat-files-tabs-media, .chat-files-tabs-links, .chat-files-tabs-documents');
-
-        if (!filesBtnModal || !chatFileModal) {
+        
+        if (!filesBtnModals.length || !chatFileModal) {
             console.log('Modal.js: Chat files modal elements not found on this page');
             return;
         }
 
-        console.log('Modal.js: Setting up chat files modal');
+        console.log(`Modal.js: Found ${filesBtnModals.length} chat file buttons`);
 
-        // Открытие модального окна
-        filesBtnModal.addEventListener('click', function() {
-            chatFileModal.classList.add('active');
-            chatFileModal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-            activeModal = chatFileModal;
+        // Add click handler for each button
+        filesBtnModals.forEach(button => {
+            // Remove any existing click handlers
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            
+            newButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Modal.js: Chat files button clicked');
+                
+                // Close any active modal first
+                if (activeModal) {
+                    activeModal.classList.remove('active');
+                    activeModal.style.display = 'none';
+                }
+                
+                // Open the chat files modal
+                chatFileModal.classList.add('active');
+                chatFileModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                activeModal = chatFileModal;
+            });
         });
 
-        // Закрытие по клику на крестик
+        // Close button handler
+        const modalClose = chatFileModal.querySelector('.modal-window-close');
         if (modalClose) {
             modalClose.addEventListener('click', function() {
+                console.log('Modal.js: Close button clicked in chat files modal');
                 chatFileModal.classList.remove('active');
                 chatFileModal.style.display = 'none';
                 document.body.style.overflow = '';
@@ -618,9 +633,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Закрытие при клике вне контента
+        // Close on outside click
         chatFileModal.addEventListener('click', function(e) {
             if (e.target === chatFileModal) {
+                console.log('Modal.js: Outside click detected in chat files modal');
                 chatFileModal.classList.remove('active');
                 chatFileModal.style.display = 'none';
                 document.body.style.overflow = '';
@@ -628,68 +644,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Обработка табов
+        // Handle tabs
+        const chatFilesTabs = chatFileModal.querySelectorAll('.chat-files-tabs-media, .chat-files-tabs-links, .chat-files-tabs-documents');
         if (chatFilesTabs.length > 0) {
             chatFilesTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    // Убираем active у всех табов
+                    // Remove active from all tabs
                     chatFilesTabs.forEach(t => t.classList.remove('active'));
                     
-                    // Добавляем active на текущий таб
+                    // Add active to current tab
                     this.classList.add('active');
                     
-                    // Скрываем все блоки контента
-                    const contentBlocks = document.querySelectorAll('.modal-tab-content');
+                    // Hide all content blocks
+                    const contentBlocks = chatFileModal.querySelectorAll('.modal-tab-content');
                     contentBlocks.forEach(block => block.classList.remove('active'));
                     
-                    // Показываем нужный блок контента
+                    // Show target content block
                     let targetBlock;
                     if (this.classList.contains('chat-files-tabs-media')) {
-                        targetBlock = document.querySelector('.modal-files-media');
+                        targetBlock = chatFileModal.querySelector('.modal-files-media');
                     } else if (this.classList.contains('chat-files-tabs-links')) {
-                        targetBlock = document.querySelector('.modal-files-links');
+                        targetBlock = chatFileModal.querySelector('.modal-files-links');
                     } else if (this.classList.contains('chat-files-tabs-documents')) {
-                        targetBlock = document.querySelector('.modal-files-documents');
+                        targetBlock = chatFileModal.querySelector('.modal-files-documents');
                     }
                     
                     if (targetBlock) {
                         targetBlock.classList.add('active');
-                    }
-                });
-            });
-        }
-        
-        // Дополнительно для вкладок в общем списке
-        const allTabButtons = document.querySelectorAll('.chat-files-modal .tabs-item');
-        if (allTabButtons.length > 0) {
-            allTabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Убираем active у всех кнопок табов
-                    allTabButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Активируем текущую кнопку
-                    this.classList.add('active');
-                    
-                    // Определяем, какой контент показать
-                    let contentSelector;
-                    if (this.classList.contains('chat-files-tabs-media')) {
-                        contentSelector = '.modal-files-media';
-                    } else if (this.classList.contains('chat-files-tabs-links')) {
-                        contentSelector = '.modal-files-links';
-                    } else if (this.classList.contains('chat-files-tabs-documents')) {
-                        contentSelector = '.modal-files-documents';
-                    }
-                    
-                    if (contentSelector) {
-                        // Скрываем все блоки контента
-                        const contentBlocks = document.querySelectorAll('.modal-tab-content');
-                        contentBlocks.forEach(block => block.classList.remove('active'));
-                        
-                        // Показываем нужный блок
-                        const targetContent = document.querySelector(contentSelector);
-                        if (targetContent) {
-                            targetContent.classList.add('active');
-                        }
                     }
                 });
             });

@@ -253,7 +253,7 @@
                                 </div>
                                 <div class="client-meeting-item-right" id="chat-tab">
                                     <div class="client-meeting-item-files">
-                                        <button>
+                                        <button data-modal="chatFileModal">
                                             <p>Файли</p>
                                             <img src="./img/icons/files.svg" alt="">
                                         </button>
@@ -383,6 +383,134 @@
                     </div>
                 </div>
             </div>
+            <!-- modal chat files window -->
+            <div class="chat-files-modal" id="chatFileModal">
+                <div class="modal-content modal-chat-files-content">
+                    <div class="modal-window-close">
+                        <img src="./img/icons/close.svg" alt="">
+                    </div>
+                    <div class="modal-header modal-chat-files-header">
+                        <div class="tabs">
+                            <div class="tabs-inner">
+                                <button class="tabs-item chat-files-tabs-media active">
+                                    <p>Медіа</p>
+                                </button>
+                                <button class="tabs-item chat-files-tabs-links">
+                                    <p>Посилання</p>
+                                </button>
+                                <button class="tabs-item chat-files-tabs-documents">
+                                    <p>Документи</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-chat-files-body">
+                        <!-- Media Content (Active by default) -->
+                        <div class="modal-tab-content modal-files-media active">
+                            <div class="modal-file-choose">
+                                <button>
+                                    <p>Обрати</p>
+                                </button>
+                            </div>
+                            <div class="modal-files-grid">
+                                <!-- Example media files -->
+                                <div class="modal-file-item">
+                                    <img src="./img/files-img1.jpg" alt="Фото">
+                                    <div class="modal-file-info">
+                                        <p class="modal-file-name">Фото.jpg</p>
+                                        <p class="modal-file-date">12.05.2023</p>
+                                    </div>
+                                </div>
+                                <div class="modal-file-item">
+                                    <img src="./img/files-img2.jpg" alt="Фото">
+                                    <div class="modal-file-info">
+                                        <p class="modal-file-name">Результати.jpg</p>
+                                        <p class="modal-file-date">14.05.2023</p>
+                                    </div>
+                                </div>
+                                <div class="modal-file-item">
+                                    <img src="./img/files-img1.jpg" alt="Фото">
+                                    <div class="modal-file-info">
+                                        <p class="modal-file-name">Фото.jpg</p>
+                                        <p class="modal-file-date">12.05.2023</p>
+                                    </div>
+                                </div>
+                                <div class="modal-file-item">
+                                    <img src="./img/files-img2.jpg" alt="Фото">
+                                    <div class="modal-file-info">
+                                        <p class="modal-file-name">Результати.jpg</p>
+                                        <p class="modal-file-date">14.05.2023</p>
+                                    </div>
+                                </div>
+                                <div class="modal-file-item">
+                                    <img src="./img/files-img1.jpg" alt="Фото">
+                                    <div class="modal-file-info">
+                                        <p class="modal-file-name">Фото.jpg</p>
+                                        <p class="modal-file-date">12.05.2023</p>
+                                    </div>
+                                </div>
+                                <div class="modal-file-item">
+                                    <img src="./img/files-img2.jpg" alt="Фото">
+                                    <div class="modal-file-info">
+                                        <p class="modal-file-name">Результати.jpg</p>
+                                        <p class="modal-file-date">14.05.2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Links Content -->
+                        <div class="modal-tab-content modal-files-links">
+                            <div class="modal-links-list">
+                                <div class="modal-link-item">
+                                    <img src="./img/icons/link-gray.svg" alt="Посилання">
+                                    <div class="modal-link-info">
+                                        <p class="modal-link-title">Корисна стаття</p>
+                                        <a href="https://suspilne.media/sport/1004585-liverpul-dostrokovo-zdobuv-perse-za-pat-rokiv-cempionstvo-apl/" target="_blank" class="modal-link-url">Посилання</a>
+                                        <p class="modal-link-date">15.05.2023</p>
+                                    </div>
+                                </div>
+                                <div class="modal-link-item">
+                                    <img src="./img/icons/link-gray.svg" alt="Посилання">
+                                    <div class="modal-link-info">
+                                        <p class="modal-link-title">Відео інструкція</p>
+                                        <a href="https://youtu.be/0IHbz4e3BO8?si=3qJaO4nR8w-eauJP" target="_blank" class="modal-link-url">Посилання</a>
+                                        <p class="modal-link-date">16.05.2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Documents Content -->
+                        <div class="modal-tab-content modal-files-documents">
+                            <div class="modal-documents-list">
+                                <div class="modal-document-item">
+                                    <img src="./img/icons/documents.svg" alt="Документ">
+                                    <div class="modal-document-info">
+                                        <p class="modal-document-name">Звіт.pdf</p>
+                                        <p class="modal-document-size">1.2 MB</p>
+                                        <p class="modal-document-date">18.05.2023</p>
+                                    </div>
+                                    <div class="modal-document-download">
+                                        <img src="./img/icons/download.svg" alt="Завантажити">
+                                    </div>
+                                </div>
+                                <div class="modal-document-item">
+                                    <img src="./img/icons/documents.svg" alt="Документ">
+                                    <div class="modal-document-info">
+                                        <p class="modal-document-name">Договір.docx</p>
+                                        <p class="modal-document-size">850 KB</p>
+                                        <p class="modal-document-date">20.05.2023</p>
+                                    </div>
+                                    <div class="modal-document-download">
+                                        <img src="./img/icons/download.svg" alt="Завантажити">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <!--FOOTER-->
         <footer class="footer">
@@ -412,5 +540,6 @@
         <script src="./js/main.js"></script>
         <script src="./js/modal-manager.js"></script>
         <script src="./js/payment.js"></script>
+        <script src="./js/modal.js"></script>
 </body>
 </html>
