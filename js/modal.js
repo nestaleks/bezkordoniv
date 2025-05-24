@@ -1,15 +1,20 @@
 /**
  * Модуль для управления модальными окнами
  */
+
+// Глобальные переменные для отслеживания состояния модальных окон
+let activeModal = null;
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Modal.js: Initializing modal windows');
-    
-    // Глобальные переменные для отслеживания состояния модальных окон
-    let activeModal = null;
     
     // Сначала проверим, есть ли на странице нужные элементы
     const paymentCard = document.querySelector('.payment-modal-card');
     const paymentModalNewcard = document.getElementById('payment-modal-newcard');
+    
+    console.log('Modal.js: Checking for modal elements');
+    console.log('Modal.js: paymentCard element:', paymentCard);
+    console.log('Modal.js: paymentModalNewcard element:', paymentModalNewcard);
     
     // Если обнаружены элементы, добавляем прямой обработчик
     if (paymentCard && paymentModalNewcard) {
@@ -94,26 +99,37 @@ document.addEventListener('DOMContentLoaded', function() {
 function openModal(modalId) {
     console.log(`Modal.js: Opening modal: ${modalId}`);
     
+    if (!modalId) {
+        console.error('Modal.js: No modal ID provided');
+        return;
+    }
+    
     if (activeModal) {
+        console.log(`Modal.js: Closing active modal: ${activeModal.id}`);
         closeModal(activeModal.id);
     }
     
     const modal = document.getElementById(modalId);
+    console.log(`Modal.js: Found modal element:`, modal);
     
     if (!modal) {
         console.error(`Modal.js: Modal with ID ${modalId} not found`);
         return;
     }
     
-    modal.classList.add('active');
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    activeModal = modal;
-    
-    console.log(`Modal.js: Modal ${modalId} opened`);
-    
-    const event = new CustomEvent('modal:opened', { detail: { modalId } });
-    document.dispatchEvent(event);
+    try {
+        modal.classList.add('active');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        activeModal = modal;
+        
+        console.log(`Modal.js: Modal ${modalId} opened successfully`);
+        
+        const event = new CustomEvent('modal:opened', { detail: { modalId } });
+        document.dispatchEvent(event);
+    } catch (error) {
+        console.error(`Modal.js: Error opening modal ${modalId}:`, error);
+    }
 }
 
 function closeModal(modalId) {
@@ -166,10 +182,12 @@ function initModals() {
     modalTriggers.forEach(trigger => {
         const modalId = trigger.getAttribute('data-modal');
         console.log(`Modal.js: Setting up trigger for modal: ${modalId}`);
+        console.log(`Modal.js: Trigger element:`, trigger);
         
         trigger.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            console.log(`Modal.js: Trigger clicked for modal: ${modalId}`);
             openModal(modalId);
         });
     });
@@ -234,7 +252,7 @@ function setupSpecificHandlers() {
         });
     });
     
-    const backButtons = document.querySelectorAll('.prev-page-btn');
+    const backButtons = document.querySelectorAll('.prev-page-btn:not(.to-prev-page .prev-page-btn)');
     backButtons.forEach(button => {
         const buttonClone = button.cloneNode(true);
         button.parentNode.replaceChild(buttonClone, button);

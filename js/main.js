@@ -842,67 +842,51 @@ function initExpertProfileTabs() {
 // Description: Expert chat tabs management
 // Functionality: Switching between different chat types
 function initExpertChatTabs() {
-    console.log('Инициализация вкладок чата эксперта...');
+    console.log('Initializing expert chat tabs...');
     
-    const allTab = document.querySelector('.expert-chat-tabs-all');
-    const meetingsTab = document.querySelector('.expert-chat-tabs-meetings');
-    const clientsTab = document.querySelector('.expert-chat-tabs-clients');
-    const remindTab = document.querySelector('.expert-chat-tabs-remind');
-    const supportTab = document.querySelector('.expert-chat-tabs-support');
-    
-    const chatContent = document.querySelector('.expert-chat-content');
-    const remindContent = document.querySelector('.expert-remind');
-    
-    if (!allTab || !meetingsTab || !clientsTab || !remindTab || !supportTab || 
-        !chatContent || !remindContent) {
-        console.warn('Элементы вкладок чата не найдены');
-        return;
-    }
-    
-    // Функция для активации вкладки
-    function activateTab(activeTab) {
-        // Удаляем активный класс у всех вкладок
-        [allTab, meetingsTab, clientsTab, remindTab, supportTab].forEach(tab => {
-            tab.classList.remove('active');
+    const expertChatTabs = document.querySelectorAll('.expert-chat-tabs .tabs-item');
+    const expertRemind = document.querySelector('.expert-remind');
+    const expertChatContent = document.querySelector('.expert-chat-content');
+
+    console.log('Found elements:', {
+        tabs: expertChatTabs.length,
+        remind: !!expertRemind,
+        chatContent: !!expertChatContent
+    });
+
+    if (expertChatTabs.length && expertRemind && expertChatContent) {
+        // Initially hide the remind content
+        expertRemind.style.display = 'none';
+        
+        expertChatTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                console.log('Tab clicked:', this.classList.toString());
+                
+                // Remove active class from all tabs
+                expertChatTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Show/hide content based on clicked tab
+                if (this.classList.contains('expert-chat-tabs-remind')) {
+                    console.log('Switching to remind view');
+                    expertChatContent.style.display = 'none';
+                    expertRemind.style.display = 'grid';
+                } else {
+                    console.log('Switching to chat view');
+                    expertChatContent.style.display = 'flex';
+                    expertRemind.style.display = 'none';
+                }
+            });
         });
-        
-        // Добавляем активный класс к выбранной вкладке
-        activeTab.classList.add('active');
-        
-        // Показываем соответствующий контент
-        if (activeTab === remindTab) {
-            chatContent.style.display = 'none';
-            remindContent.style.display = 'grid';
-        } else {
-            chatContent.style.display = 'flex';
-            remindContent.style.display = 'none';
-        }
+    } else {
+        console.error('Some required elements were not found:', {
+            tabs: expertChatTabs.length,
+            remind: !!expertRemind,
+            chatContent: !!expertChatContent
+        });
     }
-    
-    // Обработчики событий для кнопок вкладок
-    allTab.addEventListener('click', () => {
-        activateTab(allTab);
-    });
-    
-    meetingsTab.addEventListener('click', () => {
-        activateTab(meetingsTab);
-    });
-    
-    clientsTab.addEventListener('click', () => {
-        activateTab(clientsTab);
-    });
-    
-    remindTab.addEventListener('click', () => {
-        activateTab(remindTab);
-    });
-    
-    supportTab.addEventListener('click', () => {
-        activateTab(supportTab);
-    });
-    
-    // По умолчанию активируем первую вкладку
-    activateTab(allTab);
-    console.log('Вкладки чата эксперта инициализированы');
 }
 
 // 16. Expert Wallet Tabs
@@ -1125,33 +1109,57 @@ function initExpertChatMobileNavigation() {
 // Description: Expert wallet payment settings management
 // Functionality: Handles showing/hiding payment settings section
 function initExpertWalletPaymentSettings() {
+    console.log('=== Инициализация настроек платежей эксперта ===');
+    
     const settingsButton = document.querySelector('.expert-balance-settings');
     const walletPage = document.querySelector('.expert-wallet-page');
-    const backButton = document.querySelector('.prev-page-btn');
+    const backButton = document.querySelector('.to-prev-page .prev-page-btn');
+    const paymentsSettings = document.querySelector('.payments-settings');
     
-    if (!settingsButton || !walletPage || !backButton) {
-        console.warn('Expert wallet payment settings elements not found');
+    console.log('Найденные элементы:', {
+        settingsButton: settingsButton ? 'Да' : 'Нет',
+        walletPage: walletPage ? 'Да' : 'Нет',
+        backButton: backButton ? 'Да' : 'Нет',
+        paymentsSettings: paymentsSettings ? 'Да' : 'Нет'
+    });
+    
+    if (!settingsButton || !walletPage || !backButton || !paymentsSettings) {
+        console.error('Не найдены необходимые элементы для настроек платежей');
         return;
     }
     
-    // Show history screen by default
-    walletPage.classList.remove('show-payments-settings');
-    
-    // Settings button click handler
-    settingsButton.addEventListener('click', function() {
-        walletPage.classList.add('show-payments-settings');
-    });
-    
-    // Back button click handler
-    backButton.addEventListener('click', function(e) {
+    // Обработчик для кнопки настроек
+    settingsButton.addEventListener('click', function(e) {
+        console.log('=== Клик по кнопке настроек ===');
         e.preventDefault();
-        walletPage.classList.remove('show-payments-settings');
+        e.stopPropagation();
+        
+        walletPage.classList.add('show-payments-settings');
+        paymentsSettings.style.display = 'block';
     });
+    
+    // Обработчик для кнопки "Назад"
+    backButton.addEventListener('click', function(e) {
+        console.log('=== Клик по кнопке "Назад" ===');
+        e.preventDefault();
+        e.stopPropagation();
+        
+        walletPage.classList.remove('show-payments-settings');
+        paymentsSettings.style.display = 'none';
+        
+        // Добавляем небольшую задержку для плавного перехода
+        setTimeout(() => {
+            paymentsSettings.style.display = 'none';
+        }, 300);
+    });
+    
+    console.log('=== Инициализация настроек платежей завершена ===');
 }
 
 // 24. Signup Form Management
 // Description: Registration form management for clients and experts
 // Functionality: Handles form validation, tab switching, and form submission
+
 function initSignupForm() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const forms = document.querySelectorAll('.signup-form');
@@ -1703,10 +1711,16 @@ function updatePaymentStatus() {
 function initPaymentModalHandlers() {
     console.log('Initializing payment modal handlers');
     
+    // Проверяем, находимся ли мы на странице, где должен быть payment modal
+    const shouldHavePaymentModal = document.querySelector('.client-meeting-item-pay, .client-meetings-item-pay, .button-pay, [data-action="pay"]');
+    if (!shouldHavePaymentModal) {
+        console.log('Payment modal not needed on this page');
+        return;
+    }
+    
     const paymentModal = document.querySelector('.payment-modal');
     if (!paymentModal) {
-        console.warn('Payment modal not found in DOM, scheduling retry');
-        setTimeout(initPaymentModalHandlers, 500);
+        console.warn('Payment modal not found in DOM');
         return;
     }
     
