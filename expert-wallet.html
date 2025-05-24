@@ -702,32 +702,6 @@
         <script src="./js/breadcrumb.js"></script>
         <script src="./js/filters.js"></script>
         <script src="./js/main.js"></script>
-        <!-- Подключаем общий скрипт для модальных окон -->
         <script src="./js/modal.js"></script>
-        <!-- Скрипт для страницы кошелька эксперта -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Обработчик для кнопки "Налаштування Виплат"
-                const settingsButton = document.querySelector('.expert-balance-settings');
-                const walletPage = document.querySelector('.expert-wallet-page');
-                const backButton = document.querySelector('.prev-page-btn');
-                
-                if (settingsButton && walletPage && backButton) {
-                    // Показываем экран истории при загрузке страницы
-                    walletPage.classList.remove('show-payments-settings');
-                    
-                    // Обработчик клика на кнопку настроек
-                    settingsButton.addEventListener('click', function() {
-                        walletPage.classList.add('show-payments-settings');
-                    });
-                    
-                    // Обработчик клика на кнопку "Назад"
-                    backButton.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        walletPage.classList.remove('show-payments-settings');
-                    });
-                }
-            });
-        </script>
 </body>
 </html>

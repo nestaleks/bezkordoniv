@@ -921,35 +921,5 @@
         <script src="./js/filters.js"></script>
         <script src="./js/modal.js"></script>
         <script src="./js/main.js"></script>
-        <!-- Chat mobile script -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Get elements
-                const chatContent = document.querySelector('.expert-chat-content');
-                const chatItems = document.querySelectorAll('.chat-list-item');
-                const backButton = document.querySelector('.chat-back-button');
-                
-                // Add click event to chat items
-                chatItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        if (window.innerWidth <= 768) {
-                            chatContent.classList.add('chat-is-active');
-                        }
-                    });
-                });
-                
-                // Add click event to back button
-                backButton.addEventListener('click', function() {
-                    chatContent.classList.remove('chat-is-active');
-                });
-                
-                // Handle window resize
-                window.addEventListener('resize', function() {
-                    if (window.innerWidth > 768) {
-                        chatContent.classList.remove('chat-is-active');
-                    }
-                });
-            });
-        </script>
 </body>
 </html>

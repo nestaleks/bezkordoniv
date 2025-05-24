@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq" />
+    <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert-chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert-wallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/expert-wallet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/wallet-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +142,10 @@
       <workItem from="1747922532721" duration="2000" />
       <workItem from="1747982988841" duration="269000" />
       <workItem from="1747984424327" duration="39000" />
+      <workItem from="1747984878122" duration="32000" />
+      <workItem from="1747985084455" duration="626000" />
+      <workItem from="1748031025028" duration="396000" />
+      <workItem from="1748067846086" duration="2337000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
@@ -284,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747984441617</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="qq">
+      <option name="closed" value="true" />
+      <created>1747984890671</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1747984890671</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
