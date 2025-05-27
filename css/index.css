@@ -307,6 +307,10 @@
     background: radial-gradient(50% 50% at 50% 50%, #E8D6FF 0%, #DCC2FF 100%);
     border: 1px solid var(--purple-05);
 }
+.category-tile.color-5 {
+    background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(253, 233, 233),rgb(250, 211, 211) 100%);
+    border: 1px solid rgb(243, 146, 146);
+}
 .arrow-prev,
 .arrow-next {
     cursor: pointer;
