@@ -1,0 +1,13 @@
+<svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<path id="Ellipse 7" d="M20.36 2.55C28.72 7.97 30.09 17.44 25.08 23.47C20.07 29.5 8.54 29.19 2.23 24.39C-4.07 19.6 4.92 14.95 5.24 7.97C5.56 1 12 -2.87 20.36 2.55Z" fill="#F7AD30" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<mask id="mask4_2383" mask-type="alpha" maskUnits="userSpaceOnUse" x="3.000000" y="3.500000" width="24.000000" height="24.000000">
+		<rect id="Bounding box" x="3.000000" y="3.500000" width="24.000000" height="24.000000" fill="#D9D9D9" fill-opacity="1.000000"/>
+	</mask>
+	<g mask="url(#mask4_2383)">
+		<path id="devices" d="M5 23.5L5 20.5L7 20.5L7 9.5C7 8.95 7.19 8.47 7.58 8.08C7.97 7.69 8.45 7.5 9 7.5L24 7.5L24 9.5L9 9.5L9 20.5L15 20.5L15 23.5L5 23.5ZM18 23.5C17.71 23.5 17.47 23.4 17.28 23.21C17.09 23.02 17 22.78 17 22.5L17 12.5C17 12.21 17.09 11.97 17.28 11.78C17.47 11.59 17.71 11.5 18 11.5L24 11.5C24.28 11.5 24.52 11.59 24.71 11.78C24.9 11.97 25 12.21 25 12.5L25 22.5C25 22.78 24.9 23.02 24.71 23.21C24.52 23.4 24.28 23.5 24 23.5L18 23.5ZM19 20.5L23 20.5L23 13.5L19 13.5L19 20.5Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

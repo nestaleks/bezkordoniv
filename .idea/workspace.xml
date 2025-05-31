@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/countries/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/patterns/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/patterns/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/patterns/education.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/patterns/education.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/patterns/law-service.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/patterns/law-service.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/patterns/med.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/patterns/psyhology.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/patterns/psyhology.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +153,15 @@
       <workItem from="1748177867991" duration="15000" />
       <workItem from="1748246057516" duration="182000" />
       <workItem from="1748246975133" duration="616000" />
-      <workItem from="1748351821935" duration="3350000" />
+      <workItem from="1748351821935" duration="3611000" />
+      <workItem from="1748359799623" duration="1290000" />
+      <workItem from="1748412651765" duration="6000" />
+      <workItem from="1748503767015" duration="114000" />
+      <workItem from="1748535502638" duration="318000" />
+      <workItem from="1748584005315" duration="66000" />
+      <workItem from="1748587076577" duration="1923000" />
+      <workItem from="1748673717711" duration="1850000" />
+      <workItem from="1748704002819" duration="544000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
@@ -337,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748351876078</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="qq">
+      <option name="closed" value="true" />
+      <created>1748355826470</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1748355826470</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
