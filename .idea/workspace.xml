@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f272535f-1493-4b1b-a6b1-8690f91dcc2c" name="Changes" comment="qq">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/Thumbs.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;Z:/bezkordoniv&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -71,7 +73,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
       </set>
     </attachedChunks>
   </component>
@@ -153,6 +155,8 @@
       <workItem from="1748852771974" duration="15000" />
       <workItem from="1748956053459" duration="1441000" />
       <workItem from="1748967423755" duration="8000" />
+      <workItem from="1749573863389" duration="612000" />
+      <workItem from="1749664377310" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="q">
       <option name="closed" value="true" />
