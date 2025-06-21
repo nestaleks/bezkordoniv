@@ -248,6 +248,40 @@
     border-bottom-right-radius: 12px;
 }
 
+/* Blog list pagination */
+.blog-list-pagination{
+    margin-top: 20px;
+}
+
+.blog-list-pagination-pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.blog-list-pagination-page{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: var(--primary-08);
+    color: var(--black-100);
+    cursor: pointer;
+}
+
+.blog-list-pagination-page:hover{
+    background-color: var(--primary-06);
+}
+
+.blog-list-pagination-page.active{
+    background-color: var(--primary-02);
+    color: var(--white-100);
+}
+
+
 @media (max-width: 1280px) {
     .blog-banner-left{
         min-width: 295px;
